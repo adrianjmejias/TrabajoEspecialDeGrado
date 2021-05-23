@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[spanish=nohyphenation]{hyphsubst}
+\usepackage[spanish]{babel}
+\usepackage{selinput}
+\usepackage{tikz}
+\usepackage{blindtext}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage[font=footnotesize,labelfont=bf,justification=centering,textfont=it]{caption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{datetime}
+\usepackage{listingsutf8}
+\usepackage{mwe}
+\usepackage{biblatex}
+
+\addbibresource{teg/references.bib}
+
+\addto\captionsspanish{
+  \renewcommand{\listfigurename}
+    {índice de figuras}
+  \renewcommand{\listtablename}
+    {índice de tablas}
+  \renewcommand\lstlistingname{Código Fuente}
+  \renewcommand\lstlistlistingname{índice de código fuente}
+}
+\renewcommand\spanishtablename{Tabla}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\begin{document}
+
+    \include{teg/Cover}
+    
+    \tableofcontents
+    
+    \include{teg/Problemas-Objetivos}
+    
+    \include{teg/Metodologia}
+    
+    \include{teg/SeleccionDeTecnologia}
+    
+    \printbibliography
+
+\end{document}
