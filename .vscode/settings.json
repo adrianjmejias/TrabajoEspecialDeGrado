@@ -1,0 +1,10 @@
+{
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.magic.args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%",
+        "-shell-escape"
+    ]
+}

@@ -22,6 +22,26 @@
 
 \addbibresource{teg/references.bib}
 
+\makeatletter
+
+\setlength\bibitemsep{0.5\baselineskip}
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\newdateformat{mydate}{\shortmonthname[\THEMONTH], \THEYEAR}
+
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+\graphicspath{ {images/} }
+\title{
+	{Desarrollo de un editor de visualizaciones de propiedades de historiales de wikis}\\
+	{\large Universidad Central de Venezuela}\\
+}
+\author{Adrian J. Mejias. O.}
+
+
+
 \addto\captionsspanish{
   \renewcommand{\listfigurename}
     {índice de figuras}
@@ -35,16 +55,24 @@
 
 \begin{document}
 
-    \include{teg/Cover}
-    
-    \tableofcontents
-    
-    \include{teg/Problemas-Objetivos}
-    
-    \include{teg/Metodologia}
-    
-    \include{teg/SeleccionDeTecnologia}
-    
-    \printbibliography
+  \include{teg/Cover}
+
+  \include{teg/Resumen.tex}
+
+  \tableofcontents
+
+  \listoffigures
+
+  \include{teg/Introduccion.tex}
+
+  \include{teg/MarcoTeorico.tex}
+
+  \include{teg/MarcoTecnologico.tex}
+
+  \include{teg/MarcoAplicativo.tex}
+
+  \include{teg/Conclusiones.tex}
+
+  \printbibliography
 
 \end{document}
