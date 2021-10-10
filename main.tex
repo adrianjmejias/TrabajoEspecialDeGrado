@@ -1,6 +1,8 @@
-\documentclass[12pt,a4paper]{article}
-\usepackage[spanish=nohyphenation]{hyphsubst}
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage[spanish=nohyphenation]{hyphsubst}
+
 \usepackage{selinput}
 \usepackage{tikz}
 \usepackage{blindtext}
@@ -21,7 +23,7 @@
 \usepackage{biblatex}
 
 \addbibresource{teg/references.bib}
-
+% \bibliography{teg/references.bib}
 \makeatletter
 
 \setlength\bibitemsep{0.5\baselineskip}
@@ -39,7 +41,7 @@
 	{Desarrollo de un editor de visualizaciones de propiedades de historiales de wikis}\\
 	{\large Universidad Central de Venezuela}\\
 }
-\author{Adrian J. Mejias. O.}
+\author{Adrian J. Mejias. O. y Jose Tirado}
 
 
 
@@ -56,24 +58,27 @@
 
 \begin{document}
 
-  \include{teg/Cover}
+\input{teg/Cover}
 
-  \include{teg/Resumen.tex}
+\chapter*{Resumen}
+\input{teg/Resumen.tex}
 
-  \tableofcontents
+\tableofcontents
 
-  \listoffigures
+\listoffigures
 
-  \include{teg/Introduccion.tex}
+\chapter{Introduccion}
+\input{teg/Introduccion.tex}
 
-  \include{teg/MarcoTeorico.tex}
+\chapter{Marco Teorico}
+\input{teg/MarcoTeorico.tex}
 
-  \include{teg/MarcoTecnologico.tex}
+% \input{teg/MarcoTecnologico.tex}
 
-  \include{teg/MarcoAplicativo.tex}
+% \input{teg/MarcoAplicativo.tex}
 
-  \include{teg/Conclusiones.tex}
+% \input{teg/Conclusiones.tex}
 
-  \printbibliography
+\printbibliography
 
 \end{document}
