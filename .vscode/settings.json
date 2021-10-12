@@ -6,5 +6,6 @@
         "-file-line-error",
         "%DOC%",
         "-shell-escape"
-    ]
+    ],
+    "cSpell.language": "en,es-ES"
 }
