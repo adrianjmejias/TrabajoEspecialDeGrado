@@ -7,5 +7,9 @@
         "%DOC%",
         "-shell-escape"
     ],
-    "cSpell.language": "en,es-ES"
+    "cSpell.language": "en,es-ES",
+    "cSpell.words": [
+        "mantenibilidad",
+        "Scalise"
+    ]
 }
