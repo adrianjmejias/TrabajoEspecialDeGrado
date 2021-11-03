@@ -19,7 +19,7 @@ const p = queryFactory<GetArticleListResponse>({
   method: "GET",
 });
 
-export const getArticleList = p.axiosQuery;
-export const useGetArticleList = p.useAxiosQuery;
+export const getArticleListQuery = p.axiosQuery;
+export const useGetArticleListQuery = p.useAxiosQuery;
 
-export default useGetArticleList;
+export default useGetArticleListQuery;

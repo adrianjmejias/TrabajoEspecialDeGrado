@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import React from "react";
-import useGetArticleList from "api/article/useGetArticleList";
+import useGetArticleListQuery from "api/article/useGetArticleList";
 
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
@@ -8,22 +8,28 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import useGetRevisionsQuery from "api/article/useGetRevisions";
 
 const useArticleDetailsPageViewModel = () => {
-  const articleQuery = useGetArticleList({
+  const articleQuery = useGetArticleListQuery({
     params: {
       title: undefined && "Orgia",
     },
   });
 
-  return { articleQuery };
+  const revisionsQuery = useGetRevisionsQuery({});
+
+  return { articleQuery, revisionsQuery };
 };
 
 const ArticleDetailsPage: NextPage = () => {
-  const { articleQuery } = useArticleDetailsPageViewModel();
+  const { articleQuery, revisionsQuery } = useArticleDetailsPageViewModel();
 
   return (
     <div>
+      <pre>{JSON.stringify(revisionsQuery, null, 2)}</pre>
+
+      <br />
       <pre>{JSON.stringify(articleQuery, null, 2)}</pre>
 
       <Box display="flex">
