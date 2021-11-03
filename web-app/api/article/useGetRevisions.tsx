@@ -1,6 +1,6 @@
 import { queryFactory } from "../wikimetrix";
 
-export type GetRevisionsResponse = {
+export type GetRevisionsResponse = Partial<{
   comment: string;
   size: number;
   contentformat: string;
@@ -20,7 +20,7 @@ export type GetRevisionsResponse = {
   };
   minor: "";
   user: string;
-}[];
+}>[];
 
 const p = queryFactory<GetRevisionsResponse>({
   url: "revisions",
