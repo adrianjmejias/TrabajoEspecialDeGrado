@@ -9,6 +9,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import useGetRevisionsQuery from "api/article/useGetRevisions";
+import useGetModeQuery from "api/article/useGetMode";
 
 const useArticleDetailsPageViewModel = () => {
   const articleQuery = useGetArticleListQuery({
@@ -19,14 +20,24 @@ const useArticleDetailsPageViewModel = () => {
 
   const revisionsQuery = useGetRevisionsQuery({});
 
-  return { articleQuery, revisionsQuery };
+  const modeQuery = useGetModeQuery({
+    params: {
+      attribute: "user",
+      datestart: "2010-01-01",
+    },
+  });
+
+  return { articleQuery, revisionsQuery, modeQuery };
 };
 
 const ArticleDetailsPage: NextPage = () => {
-  const { articleQuery, revisionsQuery } = useArticleDetailsPageViewModel();
+  const { articleQuery, revisionsQuery, modeQuery } =
+    useArticleDetailsPageViewModel();
 
   return (
     <div>
+      <pre>{JSON.stringify(modeQuery, null, 2)}</pre>
+
       <pre>{JSON.stringify(revisionsQuery, null, 2)}</pre>
 
       <br />
