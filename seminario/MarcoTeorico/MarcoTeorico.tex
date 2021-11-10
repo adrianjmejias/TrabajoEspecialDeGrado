@@ -1,6 +1,3 @@
-
-\iffalse \input{./MarcoTeorico/Definicion/VisualizacionDatos.tex} \fi
-
 \section{Dominio del problema}
     \subsection{Wiki, Mediawiki y Wikimedia}
 
@@ -25,7 +22,7 @@
             \item No posee una estructura predefinida a la que se tengan que acomodar los usuarios, lo que otorga flexibilidad.
         \end{enumerate}
 
-        \subsection{Moderación de contenido en Wikipedia}
+    \subsection{Moderación de contenido en Wikipedia}
 
         \iffalse \input{https://design.wikimedia.org/blog/2020/07/30/content-moderation-anti-vandalism-wikipedia.html} \fi
 
@@ -42,36 +39,79 @@
 
     \subsection{Visualizacion cientifica}
 
+    
 
-\subsection{Tecnologias a utilizar}
+
+\section{Tecnologias a utilizar}
 
     Para la realización de este proyecto se usarán las siguientes tecnologías:
 
-    \subsubsection{ReactJS}
+    \subsection{ReactJS}
 
-        ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos, reutilizables, para desarrollos de interfaces de usuario, especialmente aplicaciones de una sola página.
+        ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos, reutilizables, para desarrollos de interfaces de usuario, especialmente aplicaciones de una sola página.\\
 
-        React maneja el concepto de \say{programación reactiva} haciendo uso de un DOM Virtual, lo le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada den el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, los datos \say {reaccionan} ejecutando una serie de eventos.
+        React maneja el concepto de \say{programación reactiva} haciendo uso de un DOM Virtual, lo le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada den el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, los datos \say {reaccionan} ejecutando una serie de eventos.\\
 
-        \iffalse 
-            \begin{figure}
-                \includegraphics[scale=0.5]{virtual_dom}
-                \caption{Propagación de datos usando el Virtual DOM}
-            \end{figure}
-        \fi
+        Este concepto de reactividad es lo que hace a la libreria altamente eficiente, ya que limita la actualización del DOM solamente a los elementos que han cambiado.\\
 
-        Este concepto de reactividad es lo que hace a la libreria altamente eficiente, ya que limita la actualización del DOM solamente a los elementos que han cambiado.
+        Otras características que destacan en React son:\\
+
+        \begin{itemize}
+            \item \textbf{Componentes} \hfill \\
+
+            El código de React es hecho con entidades llamadas componentes. Los componentes pueden ser renderizados en elementos particulares del DOM usando la libreria de React DOM. Estos componentes son capaces de recibir parametros conocidos como "propiedades del componente" de la siguiente forma: \hfill \\
+
+            \begin{lstlisting}
+                ReactDOM.render(<Greeter greeting="Hello World!" />, document.getElementById('myReactApp'));
+            \end{lstlisting}
+
+            Las 2 formas de declarar componentes en react es mediante el uso de funciones o clases, y generalmente se usa una de las dos opciones de forma situacional.
+
+            \item \textbf{JSX} \hfill \\
+
+            JSX, tambien llamado Javascript XML, es una extension a la sintaxis del lenguaje javascript. Este provee una forma de estructurar componentes usando una sintexis familiar para muchos desarrolladores. Los componentes de React son usualmente escritos usando JSX, aunque tambien pueden ser escritos usando Javascript puro.
+
+            Un ejemplo de codigo JSX:
+
+            \begin{lstlisting}
+                class App extends React.Component {
+                    render() {
+                        return (
+                        <div>
+                            <p>Header</p>
+                            <p>Content</p>
+                            <p>Footer</p>
+                        </div>
+                        );
+                    }
+                }
+            \end{lstlisting}
+
+            \item \textbf{Hooks} \hfill \\
+
+            Los hooks son funciones que permiten a los desarrolladores \say{engancharse} a los estados de React y a ciertos puntos dentro del ciclo de vida de los componentes.
+
+            React proporciona algunos hooks integrados tales como: useState, useContext, useReducer, useMemo y useEffect, los cuales son los mas usados y permiten controlar los estados y eventos respectivamente.
+
+
+        \end{itemize}
         
-    \subsubsection{SEO}
-    
-        Se trata del proceso de mejorar un sitio web en relación con los motores de búsqueda. También representa el cargo de la persona que trabaja en este proceso: Acabamos de contratar a un nuevo SEO para que mejore nuestra presencia en la Web.
+    \subsection{Next.js}
 
-    \subsubsection{NextJS}
+        Next.js es un framework desarrollado encima de Node.js que permite a las aplicaciones de React usar funcionalidades como el renderizado del lado servidor y la generación de paginas web estáticas.\\
 
-        NextJS es un framework desarrollado encima de Node.js que permite a las aplicaciones de React usar funcionalidades como el renderizado del lado de servidor o la generación estática de paginas, que permite realizar aplicaciones con mejor desempeño en cuanto a SEO.
+        Por defecto, Next.js pre-renderiza cada pagina. Esto significa que Next.js genera HTML para cada pagina en adelanto, en vez de hacerse con Javascript del lado del cliente. Pre-renderizado puede resultar en mejor rendimiento y SEO.\\
 
+        Cada HTML generado es asociado con el mínimo código Javascript necesario para que funcione la pagina. Cuando una página es cargada en el explorador, su código javascript se ejecuta y hace la página totalmente interactiva. A este proceso de le conoce como \say{hydration}
 
-    \subsubsection{Mongo}
+        Next.js ofrece 2 formas de pre-renderizado: 
+
+        \begin{itemize}
+            \item Generación estática: El HTML es generado a tiempo de ejecución y será reutilizado en cada petición.
+            \item Renderizado lado servidor: El HTML es generado en cada petición
+        \end{itemize}
+
+    \subsection{MongoDB}
 
         MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
 
@@ -82,26 +122,44 @@
             \end{figure}
         \fi
 
-    \subsubsection{Fastify}
+    \subsection{Fastify}
+
+        Fastify es un framework web para Node.js de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. \\
+
+        Si comparamos la velocidad de fastify con otros frameworks web como express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que fastify es aproximadamente un 20\% más rápido que express. \\
+
+        \begin{figure}
+            \includegraphics[scale=0.5]{fastify_vs_express.png}
+            \caption{ Número de peticiones por segundo para distinta cantidad de conexiones}
+            \label{fig:fastify_vs_express}
+        \end{figure}
+    
+        Sin embargo, como se puede ver en la figura \ref{popularity_web_f}, express es considerado el framework web de Node.js mas popular de la actualidad. \\
+
+        \begin{figure}
+            \includegraphics[scale=0.5]{popularity_web_f.png}
+            \caption{ Comparación de cantidad de descargas entre distintos frameworks web }
+            \label{fig:popularity_web_f}
+        \end{figure}
 
 
 
-\subsection{Metodologias agiles}
 
+\section{Metodologias ágiles}
 
-    \subsubsection{Frameworks}
+    \section{Frameworks}
 
     \begin{enumerate}
         \item Kanban: Tiene como objetivo la mejora continua, la flexibilidad en la gestión de tareas y un flujo de trabajo mejorado. Con este enfoque ilustrativo, el progreso de todo el proyecto se puede comprender fácilmente de un vistazo. Para esto hace uso del tablero Kanban, que es una herramienta que visualiza todo el proyecto para rastrear el flujo de su proyecto. A través de este enfoque gráfico de los tableros Kanban, un miembro nuevo o una entidad externa puede comprender lo que está sucediendo en este momento, las tareas completadas y las tareas futuras.
         \item Scrum: Es un framework para desarrollo, entrega, y mantenimiento de proyectos en un ambiente complejo, con un enfasis inicial en el desarrollo de software, aunque tambien ha sido utilizado en otras areas como la investigación, ventas, mercadeo y tecnologías avanzadas. Esta diseñado para equipos de 10 personas o menos, quienes rompen su trabajo en metas que pueden ser completadas en iteraciones de tiempo fijo, llamadas \emph{sprints}, con duraciones aproximadas de 2 semanas. 
         \item Lean software development: Es un framework popular basado en optimizar tiempo de desarrollo y recursos, eliminando desperdicios y entregando solamente lo que el producto necesita. El método Lean es usualmente referido como la estrategia del \say{Producto Minimo Viable (PMV)}, 
         estrategia, en la que un equipo lanza una versión mínima de su producto al mercado, aprende de los usuarios lo que les gusta, lo que no les gusta y lo que quieren que se agregue, y luego itera en función de estos comentarios.
-        \item Extreme programming (XP)
+        \item Extreme programming (XP): 
         \item Adaptive Software Development (ASD):
         \item Rapid application development (RAD)
     \end{enumerate}
 
-    \subsubsection{Prácticas}
+    \section{Prácticas}
 
     \begin{enumerate}
         \item Backlogs (Product and Sprint)
