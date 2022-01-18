@@ -15,6 +15,7 @@ import Badge from "@mui/material/Badge";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
+
 import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
@@ -23,6 +24,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import StarIcon from "@mui/icons-material/Star";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
+import ArticleCard from "components/ArticleCard";
 
 function Copyright(props: any) {
   return (
@@ -196,13 +198,14 @@ function DashboardContent() {
                   p: 2,
                   display: "flex",
                   flexDirection: "column",
-                  height: 240,
+                  // height: 240,
                 }}
               >
-                {/* <Chart /> */}
+                <ArticleCard />
+                <ArticleCard />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+
             <Grid item xs={12} md={4} lg={3}>
               <Paper
                 sx={{
@@ -211,15 +214,13 @@ function DashboardContent() {
                   flexDirection: "column",
                   height: 240,
                 }}
-              >
-                {/* <Deposits /> */}
-              </Paper>
+              ></Paper>
             </Grid>
-            {/* Recent Orders */}
+
             <Grid item xs={12}>
-              <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-                {/* <Orders /> */}
-              </Paper>
+              <Paper
+                sx={{ p: 2, display: "flex", flexDirection: "column" }}
+              ></Paper>
             </Grid>
           </Grid>
           <Copyright sx={{ pt: 4 }} />
