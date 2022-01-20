@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import useGetRevisionsQuery from "api/article/useGetRevisions";
 import useGetModeQuery from "api/article/useGetMode";
+import useExtractRevisionDataQuery from "api/article/useExtractRevisionData";
 
 const useArticleDetailsPageViewModel = () => {
   const articleQuery = useGetArticleListQuery({
@@ -27,21 +28,24 @@ const useArticleDetailsPageViewModel = () => {
     },
   });
 
-  return { articleQuery, revisionsQuery, modeQuery };
+  const extractRevisionQuery = useExtractRevisionDataQuery({});
+
+  return { articleQuery, revisionsQuery, modeQuery, extractRevisionQuery };
 };
 
 const ArticleDetailsPage: NextPage = () => {
-  const { articleQuery, revisionsQuery, modeQuery } =
+  const { articleQuery, revisionsQuery, modeQuery, extractRevisionQuery } =
     useArticleDetailsPageViewModel();
 
   return (
     <div>
-      <pre>{JSON.stringify(modeQuery, null, 2)}</pre>
+      <Box component="pre">{JSON.stringify(modeQuery, null, 2)}</Box>
 
-      <pre>{JSON.stringify(revisionsQuery, null, 2)}</pre>
+      <Box component="pre">{JSON.stringify(revisionsQuery, null, 2)}</Box>
 
       <br />
-      <pre>{JSON.stringify(articleQuery, null, 2)}</pre>
+      <Box component="pre">{JSON.stringify(articleQuery, null, 2)}</Box>
+      <Box component="pre">{JSON.stringify(extractRevisionQuery, null, 2)}</Box>
 
       <Box display="flex">
         {articleQuery.data?.map((article) => {
