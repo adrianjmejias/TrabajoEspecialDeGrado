@@ -3,6 +3,7 @@
 \usepackage[spanish]{babel}
 \usepackage[spanish=nohyphenation]{hyphsubst}
 
+\usepackage{parskip} 
 \usepackage{selinput}
 \usepackage{tikz}
 \usepackage{blindtext}
@@ -23,10 +24,48 @@
 \usepackage{mwe}
 \usepackage{biblatex}
 
-\addbibresource{teg/references.bib}
+\addbibresource{references.bib}
 % \bibliography{teg/references.bib}
 \makeatletter
 
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset {
+    language=JavaScript,           % language code
+    basicstyle=\footnotesize,      % font size
+    numbers=none,                  % where to put line numbers
+    numberstyle=\footnotesize,     % numbers size
+    numbersep=5pt,                 % how far the line numbers are from the code
+    backgroundcolor=\color{white}, % background color
+    showspaces=false,              % show spaces (with underscores)
+    showstringspaces=false,        % underline spaces within strings
+    showtabs=false,                % show tabs using underscores
+    frame=single,                  % adds a frame around the code
+    tabsize=4,                     % default tabsize
+    breaklines=true,               % automatic line breaking
+    columns=fullflexible,
+    breakautoindent=false,
+    framerule=1pt,
+    xleftmargin=0pt,
+    xrightmargin=0pt,
+    breakindent=0pt,
+    resetmargins=true
+}
+
+\setlength{\parindent}{15pt}
 \setlength\bibitemsep{0.5\baselineskip}
 
 \definecolor{lightgray}{rgb}{.9,.9,.9}
