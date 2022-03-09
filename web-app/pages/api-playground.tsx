@@ -32,7 +32,11 @@ const useArticleDetailsPageViewModel = () => {
     },
   });
 
-  const extractRevisionQuery = useExtractRevisionDataQuery({});
+  const extractRevisionQuery = useExtractRevisionDataQuery({
+    params:{
+      title: "RabbitMQ"
+    }
+  });
 
   return { articleQuery, revisionsQuery, modeQuery, extractRevisionQuery };
 };
@@ -40,12 +44,6 @@ const useArticleDetailsPageViewModel = () => {
 const ArticleDetailsPage: NextPage = () => {
   const { articleQuery, revisionsQuery, modeQuery, extractRevisionQuery } =
     useArticleDetailsPageViewModel();
-
-  const [value, setValue] = React.useState("one");
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
 
   return (
     <Box >

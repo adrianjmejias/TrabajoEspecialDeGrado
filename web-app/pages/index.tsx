@@ -20,11 +20,18 @@ import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import ListAltIcon from "@mui/icons-material/ListAlt";
+import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
+
+import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 import StarIcon from "@mui/icons-material/Star";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import QueryBuilderIcon from "@mui/icons-material/QueryBuilder";
 import ArticleCard from "components/ArticleCard";
+
+import RequestArticleModal from "components/Modal/RequestArticleModal";
+import useBooleanState from "hooks/useBooleanState";
 
 function Copyright(props: any) {
   return (
@@ -96,12 +103,70 @@ const Drawer = styled(MuiDrawer, {
 
 const mdTheme = createTheme();
 
-const DrawerLink: React.FC<{ text: string }> = ({ text, children }) => {
+const DrawerLink: React.FC<{ text: string; onClick?: () => void }> = ({
+  text,
+  children,
+  onClick,
+}) => {
   return (
-    <ListItem button key={text}>
+    <ListItem button onClick={onClick} key={text}>
       <ListItemIcon>{children}</ListItemIcon>
       <ListItemText primary={text} />
     </ListItem>
+  );
+};
+
+const SideDrawer: React.FC = () => {
+  const [requestArticleModalOpen, requestArticleModalOpenMutators] =
+    useBooleanState(false);
+
+  return (
+    <Drawer variant="permanent" open={true}>
+      <Toolbar
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          px: [1],
+        }}
+      >
+        {/* <IconButton onClick={toggleDrawer}>
+          <ChevronLeftIcon />
+        </IconButton> */}
+      </Toolbar>
+      <Divider />
+      <List>
+        <DrawerLink text="Favorites">
+          <StarIcon />
+        </DrawerLink>
+        <DrawerLink text="Watched">
+          <VisibilityIcon />
+        </DrawerLink>
+        <DrawerLink text="Recently Updated">
+          <QueryBuilderIcon />
+        </DrawerLink>
+      </List>
+      <Divider />
+
+      <List>
+        <DrawerLink text="New Watchlist">
+          <CreateNewFolderIcon />
+        </DrawerLink>
+        <DrawerLink
+          text="New Article"
+          onClick={requestArticleModalOpenMutators.setTrue}
+        >
+          <AddCircleIcon />
+        </DrawerLink>
+      </List>
+
+      <RequestArticleModal
+        open={requestArticleModalOpen}
+        closeModal={requestArticleModalOpenMutators.setFalse}
+      />
+      <Divider />
+      {/* <List>{secondaryListItems}</List> */}
+    </Drawer>
   );
 };
 
@@ -147,35 +212,8 @@ function DashboardContent() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
-        <Toolbar
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            px: [1],
-          }}
-        >
-          <IconButton onClick={toggleDrawer}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </Toolbar>
-        <Divider />
-        <List>
-          <DrawerLink text="Favorites">
-            <StarIcon />
-          </DrawerLink>
-          <DrawerLink text="Watched">
-            <VisibilityIcon />
-          </DrawerLink>
-          <DrawerLink text="Recently Updated">
-            <QueryBuilderIcon />
-          </DrawerLink>
-        </List>
+      <SideDrawer />
 
-        <Divider />
-        {/* <List>{secondaryListItems}</List> */}
-      </Drawer>
       <Box
         component="main"
         sx={{

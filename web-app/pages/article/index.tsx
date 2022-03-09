@@ -3,19 +3,39 @@ import React from "react";
 import useGetArticleListQuery from "api/article/useGetArticleList";
 
 import Card from "@mui/material/Card";
-import Box from "@mui/material/Box";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
+
+import Box from "@mui/material/Box";
+
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+
 import useGetRevisionsQuery from "api/article/useGetRevisions";
 import useGetModeQuery from "api/article/useGetMode";
 import useExtractRevisionDataQuery from "api/article/useExtractRevisionData";
 
-const useArticleDetailsPageViewModel = () => {
+import { useRouter } from "next/router";
+
+const useArticleDetailsPageViewModel = (wikiid: string) => {
+  console.log("wikiid", wikiid);
+
+  let title: string | undefined = undefined;
+  let url: string | undefined = undefined;
+
+  if (wikiid.startsWith("https://")) {
+    url = wikiid;
+  } else {
+    title = wikiid;
+  }
+
+  console.log("title:", title);
+  console.log("url:", url);
+
   const articleQuery = useGetArticleListQuery({
     params: {
-      title: undefined && "Orgia",
+      title,
+      url,
     },
   });
 
@@ -28,14 +48,24 @@ const useArticleDetailsPageViewModel = () => {
     },
   });
 
-  const extractRevisionQuery = useExtractRevisionDataQuery({});
+  const extractRevisionQuery = useExtractRevisionDataQuery({
+    params: {
+      title,
+      url,
+    },
+  });
 
   return { articleQuery, revisionsQuery, modeQuery, extractRevisionQuery };
 };
 
 const ArticleDetailsPage: NextPage = () => {
+  const router = useRouter();
+
+  let wikiid = (router.query.title as string) || (router.query.url as string);
+  console.log(wikiid);
   const { articleQuery, revisionsQuery, modeQuery, extractRevisionQuery } =
-    useArticleDetailsPageViewModel();
+    useArticleDetailsPageViewModel(  (wikiid)
+    );
 
   return (
     <div>
@@ -50,7 +80,7 @@ const ArticleDetailsPage: NextPage = () => {
       <Box display="flex">
         {articleQuery.data?.map((article) => {
           return (
-            <Card sx={{ minWidth: 275 }}>
+            <Card key={article.title} sx={{ minWidth: 275 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
