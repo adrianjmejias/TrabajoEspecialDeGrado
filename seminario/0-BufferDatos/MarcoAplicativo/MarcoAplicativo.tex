@@ -1,8 +1,9 @@
 \section{Marco Aplicativo}
 
-Revision de metodologias agiles vs pesadas, usos comunes y puntos a favor para seleccionar agile
+Revision de metodologías ágiles vs pesadas, usos comunes y puntos a favor para seleccionar agile
 
-agiles es mejor, comparemos entre ellas
+ágiles es mejor, comparemos entre ellas
+
 \cite{ComparacionFrameworks}
 \subsection{Revisión de metodologías ágiles para web }
 % POST_SEMINARIO: Comparar y definir
@@ -13,28 +14,28 @@ agiles es mejor, comparemos entre ellas
 \subsubsection{RAD}
 
 Requerimientos
-watchpage/:watcherId: Home page debe ser personalizable por los watchers. (tambien debe ser un perfil publico)
+watchpage/:watcherId: Home page debe ser personalizable por los watchers. (también debe ser un perfil publico)
 
 
 Posibles adiciones
 
 \begin{list}{}{}
-    \item Dejar de manejar los usuarios internamente y manejar la autenticaci´on
-          con el API de Wikipedia. Lo principal ser´ıa cumplir con los requerimientos que pide MediaWiki como API para crear la aplicaci´on usando
-          OAuth2. De esta forma solo manejaremos un inicio de sesi´on usando el
+    \item Dejar de manejar los usuarios internamente y manejar la autenticación
+          con el API de Wikipedia. Lo principal sería cumplir con los requerimientos que pide MediaWiki como API para crear la aplicación usando
+          OAuth2. De esta forma solo manejaremos un inicio de sesión usando el
           usuario de Wikipedia.
-    \item Habilitar una opci´on para poder sincronizar los art´ıculos del watchlist
-          del usuario de Wikipedia con los art´ıculos de esta plataforma.
-          Analizar qu´e visualizaciones pueden ser frecuentes en los usuarios y
+    \item Habilitar una opción para poder sincronizar los articulás del watchlist
+          del usuario de Wikipedia con los artículos de esta plataforma.
+          Analizar que visualizaciones pueden ser frecuentes en los usuarios y
           ofrecerlas como visualizaciones predeterminadas.
-    \item Implementar la gr´afica original de History Flow. Esta visualizaci´on requiere de mucho c´omputo, por lo que calcularlas en el front-end es
+    \item Implementar la gráfica original de History Flow. Esta visualización requiere de mucho computo, por lo que calcularlas en el front-end es
           inviable. La idea es delegarle esta funcionalidad a un servicio en el
-          back-end que env´ıe los datos preparados para la visualizaci´on.
+          back-end que envíe los datos preparados para la visualización.
     \item Alguna funcionalidad para compartir dashboard de visualizaciones o
           visualizaciones individuales en modo de solo lectura
           79
     \item Implementar un servicio en el backend que se encargue de actualizar
-          el estado de los art´ıculos extra´ıdos en el API de Usuarios. De esta
-          manera, se evitan constantes peticiones HTTP en la aplicaci´on web
+          el estado de los artículos extraídos en el API de Usuarios. De esta
+          manera, se evitan constantes peticiones HTTP en la aplicación web
           (HTTP Polling).
 \end{list}
