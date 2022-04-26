@@ -164,8 +164,6 @@ const SideDrawer: React.FC = () => {
         open={requestArticleModalOpen}
         closeModal={requestArticleModalOpenMutators.setFalse}
       />
-      <Divider />
-      {/* <List>{secondaryListItems}</List> */}
     </Drawer>
   );
 };

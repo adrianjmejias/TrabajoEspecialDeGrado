@@ -23,7 +23,9 @@ const useArticleDetailsPageViewModel = (wikiid: string) => {
   let title: string | undefined = undefined;
   let url: string | undefined = undefined;
 
-  if (wikiid.startsWith("https://")) {
+  console.log("wikiid", wikiid);
+
+  if (wikiid?.startsWith("https://")) {
     url = wikiid;
   } else {
     title = wikiid;
@@ -64,8 +66,7 @@ const ArticleDetailsPage: NextPage = () => {
   let wikiid = (router.query.title as string) || (router.query.url as string);
   console.log(wikiid);
   const { articleQuery, revisionsQuery, modeQuery, extractRevisionQuery } =
-    useArticleDetailsPageViewModel(  (wikiid)
-    );
+    useArticleDetailsPageViewModel(wikiid);
 
   return (
     <div>

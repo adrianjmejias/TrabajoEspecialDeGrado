@@ -50,13 +50,18 @@ export const queryFactory = <Response>(
           console.groupEnd();
         })
         .catch((error) => {
+
+          console.log(error)
+          console.log(error.response)
+          console.log(error.response.data)
+          console.log(error.code)
           error.message = error.response.data.message;
           setError(error);
         })
         .finally(() => {
           setLoading(false);
         });
-    }, []);
+    }, [hookConfig]);
 
     return { loading, data, status, error };
   };
