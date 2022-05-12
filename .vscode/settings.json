@@ -7,10 +7,13 @@
         "%DOC%",
         "-shell-escape"
     ],
-    "cSpell.language": "en,es-ES",
+    "cSpell.language": "es",
     "cSpell.words": [
         "mantenibilidad",
-        "Scalise"
+        "Scalise",
+        "watcher",
+        "watchers",
+        "wikipedia"
     ],
     "editor.formatOnSave": false
 }
