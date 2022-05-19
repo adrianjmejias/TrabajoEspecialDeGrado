@@ -1,10 +1,48 @@
+\section{tecnologías para el desarrollo}
+
 Actualmente existe un catalogo muy amplio de tecnologías de desarrollo web, por lo que escoger las debidas herramientas y sobre todo analizar las compatibilidades entre estas herramientas pueden ser el punto clave para obtener la mejor eficiencia y experiencia de usuario. 
 
 Para nuestro proyecto haremos uso de un servidor o backend que se va a encargar de obtener la data y transformarla de forma que el frontend la pueda usar directamente sin usar computo excesivo del lado del cliente, esto con el propósito de darle al usuario una mejor experiencia. 
 
 En este capitulo presentaremos las herramientas que nos permitirán realizar este proyecto tanto para backend como para frontend.
 
+\section{Arquitectura}
+
+Para que una aplicación sea descubierta y usada por internautas es fundamental que tenga una buena relación con los motores de búsqueda.
+
+Sin embargo también para asegurar la larga vida y mantenibilidad de la aplicación y la facilidad de desarrollo se debe tomar en cuenta herramientas extensamente empleadas contemporáneamente como Angular, React y Vue.
+
+El problema entonces recae en que estas tecnologías son meramente para SPA. Lo que implica entonces que no existe una noción "real" de seo - En las SPA el enrutamiento ocurre del lado del cliente usando javascript, y en consecuencia los crawlers de los motores de búsqueda no saben interpretar estas paginas.
+
+Como remedio surge un nuevo paradigma, que es el que vamos a usar para esta aplicación, conocido como Server Side Rendering; donde se utiliza estas tecnologías SPA como un motor de plantillas para retornar un HTML que los motores de búsqueda puedan entender, y después por un proceso conocido como hydration, las aplicaciones en el lado del cliente dejan de comportarse como HTML plano y retoman sus funcionalidades de SPA.
+
+Asi entonces llegamos al perfecto balance en el que tenemos herramientas actuales y fáciles de usar, que también cumplen con los requerimientos de los motores de búsqueda para indexar nuestras paginas.
+
 \section{Backend}
+
+\subsection{MongoDB}
+
+MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
+
+\iffalse 
+    \begin{figure}
+        \includegraphics[scale=1.2]{mongodb-structure.jpg}
+        \caption{Comparación de estructura de datos entre MongoDB y los RDBMS (sistema de gestión de bases de datos relacionales)}
+    \end{figure}
+\fi
+
+\subsection{Fastify}
+
+Fastify es un framework web para Node.js de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. \\
+
+Si comparamos la velocidad de fastify con otros frameworks web como express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que fastify es aproximadamente un 20\% más rápido que express. \\
+
+\begin{figure}
+    \includegraphics[scale=0.5]{fastify_vs_express.png}
+    \caption{ Número de peticiones por segundo para distinta cantidad de conexiones}
+    \label{fig:fastify_vs_express}
+\end{figure}
+
 
 \section{Frontend}
 
@@ -33,9 +71,9 @@ En este capitulo presentaremos las herramientas que nos permitirán realizar est
 
             \item \textbf{JSX} \hfill \\
 
-            JSX, tambien llamado Javascript XML, es una extension a la sintaxis del lenguaje javascript. Este provee una forma de estructurar componentes usando una sintexis familiar para muchos desarrolladores. Los componentes de React son usualmente escritos usando JSX, aunque tambien pueden ser escritos usando Javascript puro.
+            JSX, también llamado Javascript XML, es una extension a la sintaxis del lenguaje javascript. Este provee una forma de estructurar componentes usando una sintaxis familiar para muchos desarrolladores. Los componentes de React son usualmente escritos usando JSX, aunque también pueden ser escritos usando Javascript puro.
 
-            Un ejemplo de codigo JSX:
+            Un ejemplo de código JSX:
 
             \begin{lstlisting}
                 class App extends React.Component {
@@ -75,29 +113,7 @@ En este capitulo presentaremos las herramientas que nos permitirán realizar est
             \item Renderizado lado servidor: El HTML es generado en cada petición
         \end{itemize}
 
-    \subsection{MongoDB}
 
-        MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
-
-        \iffalse 
-            \begin{figure}
-                \includegraphics[scale=1.2]{mongodb-structure.jpg}
-                \caption{Comparación de estructura de datos entre MongoDB y los RDBMS (sistema de gestión de bases de datos relacionales)}
-            \end{figure}
-        \fi
-
-    \subsection{Fastify}
-
-        Fastify es un framework web para Node.js de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. \\
-
-        Si comparamos la velocidad de fastify con otros frameworks web como express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que fastify es aproximadamente un 20\% más rápido que express. \\
-
-        \begin{figure}
-            \includegraphics[scale=0.5]{fastify_vs_express.png}
-            \caption{ Número de peticiones por segundo para distinta cantidad de conexiones}
-            \label{fig:fastify_vs_express}
-        \end{figure}
-    
 
 
 \section{Metodologias ágiles}
@@ -106,10 +122,10 @@ En este capitulo presentaremos las herramientas que nos permitirán realizar est
 
     \begin{enumerate}
         \item Kanban: Tiene como objetivo la mejora continua, la flexibilidad en la gestión de tareas y un flujo de trabajo mejorado. Con este enfoque ilustrativo, el progreso de todo el proyecto se puede comprender fácilmente de un vistazo. Para esto hace uso del tablero Kanban, que es una herramienta que visualiza todo el proyecto para rastrear el flujo de su proyecto. A través de este enfoque gráfico de los tableros Kanban, un miembro nuevo o una entidad externa puede comprender lo que está sucediendo en este momento, las tareas completadas y las tareas futuras.
-        \item Scrum: Es un framework para desarrollo, entrega, y mantenimiento de proyectos en un ambiente complejo, con un enfasis inicial en el desarrollo de software, aunque tambien ha sido utilizado en otras areas como la investigación, ventas, mercadeo y tecnologías avanzadas. Esta diseñado para equipos de 10 personas o menos, quienes rompen su trabajo en metas que pueden ser completadas en iteraciones de tiempo fijo, llamadas \emph{sprints}, con duraciones aproximadas de 2 semanas. 
+        \item Scrum: Es un framework para desarrollo, entrega, y mantenimiento de proyectos en un ambiente complejo, con un enfasis inicial en el desarrollo de software, aunque también ha sido utilizado en otras areas como la investigación, ventas, mercadeo y tecnologías avanzadas. Esta diseñado para equipos de 10 personas o menos, quienes rompen su trabajo en metas que pueden ser completadas en iteraciones de tiempo fijo, llamadas \emph{sprints}, con duraciones aproximadas de 2 semanas. 
         \item Lean software development: Es un framework popular basado en optimizar tiempo de desarrollo y recursos, eliminando desperdicios y entregando solamente lo que el producto necesita. El método Lean es usualmente referido como la estrategia del \say{Producto Minimo Viable (PMV)}, 
         estrategia, en la que un equipo lanza una versión mínima de su producto al mercado, aprende de los usuarios lo que les gusta, lo que no les gusta y lo que quieren que se agregue, y luego itera en función de estos comentarios.
-        \item Extreme programming (XP): Es una metodología de desarrollo de software cuyo objetivo es mejorar la calidad del software y la adaptabilidad al cambio de los requerimientos del cliente. Al ser un tipo de metodología agil, se basa en el uso de ciclos de desarrollo cortos con lanzamientos frecuentes, con el proposito de de mejorar la productividad e introducir \say{checkpoints} en los que se puedan adoptar nuevos requisitos de clientes.
+        \item Extreme programming (XP): Es una metodología de desarrollo de software cuyo objetivo es mejorar la calidad del software y la adaptabilidad al cambio de los requerimientos del cliente. Al ser un tipo de metodología ágil, se basa en el uso de ciclos de desarrollo cortos con lanzamientos frecuentes, con el propósito de de mejorar la productividad e introducir \say{checkpoints} en los que se puedan adoptar nuevos requisitos de clientes.
         \item Adaptive Software Development (ASD): Es una consecuencia directa del desarrollo agil. Su objetivo es permitir que los equipos se adapten rápida y eficazmente a los requisitos cambiantes o las necesidades del mercado mediante la evolución de sus productos con una planificación ligera y un aprendizaje continuo. El enfoque ASD alienta a los equipos a desarrollarse de acuerdo con un proceso de tres fases: especular, colaborar, aprender. 
         \item Rapid application development (RAD):  es una forma de metodología de desarrollo de software ágil que prioriza las versiones e iteraciones rápidas de prototipos. A diferencia del método Waterfall, RAD enfatiza el uso de software y los comentarios de los usuarios sobre la planificación estricta y el registro de requisitos.
     \end{enumerate}
