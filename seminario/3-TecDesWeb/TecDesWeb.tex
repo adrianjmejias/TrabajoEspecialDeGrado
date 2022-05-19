@@ -1,12 +1,25 @@
 Actualmente existe un catalogo muy amplio de tecnologías de desarrollo web, por lo que escoger las debidas herramientas y sobre todo analizar las compatibilidades entre estas herramientas pueden ser el punto clave para obtener la mejor eficiencia y experiencia de usuario. 
 
-Para nuestro proyecto haremos uso de un servidor o backend que se va a encargar de obtener la data y transformarla de forma que el frontend la pueda usar directamente sin usar computo excesivo del lado del cliente, esto con el propósito de darle al usuario una mejor experiencia. 
+Para nuestro proyecto haremos uso de un servidor cuyo proposito será obtener los datos y transformarlos de forma que el cliente los pueda usar directamente sin necesidad usar mucho computo, esto con el propósito de proporcionar una mejor experiencia de usuario.
 
-En este capitulo presentaremos las herramientas que nos permitirán realizar este proyecto tanto para backend como para frontend.
+El este capitulo hablaremos de las herramientas de desarrollo web usadas para llevar a cabo el proyecto, y las descompodremos en 2 categorias: Servidor y Cliente.
 
-\section{Backend}
+\section{Servidor}
 
-\section{Frontend}
+    \subsection{Fastify}
+
+    Fastify es un framework web para Node.js de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. \\
+
+    Si comparamos la velocidad de fastify con otros frameworks web como express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que fastify es aproximadamente un 20\% más rápido que express. \\
+
+    \begin{figure}
+        \includegraphics[scale=0.5]{fastify_vs_express.png}
+        \caption{ Número de peticiones por segundo para distinta cantidad de conexiones}
+        \label{fig:fastify_vs_express}
+    \end{figure}
+
+
+\section{Cliente}
 
     Para la realización de este proyecto se usarán las siguientes tecnologías:
 
@@ -59,6 +72,58 @@ En este capitulo presentaremos las herramientas que nos permitirán realizar est
 
 
         \end{itemize}
+
+    \subsection{Material UI}
+        
+        Material UI es un framework de React que sigue los principios de Material Design \ref*{material-design-principes}, el cual fue creado por Google. Su objetivo es facilitar la creacion de interfaces gráficas con el uso de componentes de React que ya fueron probados y aseguran una buena experiencia de usuario. Material UI se destaca ante otros frameworks UI por ser uno de los que posee mayor mantenibilidad (mayor cantidad de contribuyentes) y una gran variedad de componentes.
+
+        Material UI tambien posee la posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la libreria de forma global en caso de necesitarse un diseño más personalizado.
+
+        A continuación se monstrará el uso de algunos componentes que ofrece la libreria:
+        
+        \begin{itemize}
+            \item Botones\\
+            
+            \begin{lstlisting}
+                <Button variant="text">Text</Button>
+                <Button variant="contained">Contained</Button>
+                <Button variant="outlined">Outlined</Button>
+            \end{lstlisting}
+
+            donde el parametro variant representa una variante visual del boton, las cuales son usadas dependiendo del proposito/importancia del botón.
+
+            \item Selectores\\
+
+            \begin{lstlisting}
+                <FormControl fullWidth>
+                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                    <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={age}
+                    label="Age"
+                    onChange={handleChange}
+                    >
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                </FormControl>
+            \end{lstlisting}
+
+            El componente selector debe estar dentro de un componente de FormControl para que sea posible obtener sus datos al momento de enviar el formulario.
+            
+            \item Sliders\\
+            
+            \begin{lstlisting}
+                <Slider aria-label="Volume" value={25} onChange={handleChange} />
+            \end{lstlisting}
+
+            Donde su parametro value es el valor por default del slider y el parametro onChange recibe una funcion que se ejecuta al mover el slider.
+
+        \end{itemize}
+
+        
         
     \subsection{Next.js}
 
@@ -85,19 +150,6 @@ En este capitulo presentaremos las herramientas que nos permitirán realizar est
                 \caption{Comparación de estructura de datos entre MongoDB y los RDBMS (sistema de gestión de bases de datos relacionales)}
             \end{figure}
         \fi
-
-    \subsection{Fastify}
-
-        Fastify es un framework web para Node.js de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. \\
-
-        Si comparamos la velocidad de fastify con otros frameworks web como express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que fastify es aproximadamente un 20\% más rápido que express. \\
-
-        \begin{figure}
-            \includegraphics[scale=0.5]{fastify_vs_express.png}
-            \caption{ Número de peticiones por segundo para distinta cantidad de conexiones}
-            \label{fig:fastify_vs_express}
-        \end{figure}
-    
 
 
 \section{Metodologias ágiles}
