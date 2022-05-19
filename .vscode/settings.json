@@ -9,11 +9,13 @@
     ],
     "cSpell.language": "es",
     "cSpell.words": [
+        "Fastify",
         "mantenibilidad",
         "React",
         "Scalise",
         "watcher",
         "watchers",
+        "wikimetrics",
         "wikipedia"
     ],
     "editor.formatOnSave": false
