@@ -9,7 +9,9 @@
     ],
     "cSpell.language": "es",
     "cSpell.words": [
+        "correctitud",
         "Fastify",
+        "frameworks",
         "mantenibilidad",
         "React",
         "Scalise",
@@ -18,5 +20,6 @@
         "wikimetrics",
         "wikipedia"
     ],
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true,
+    "latex-workshop.latex.autoBuild.run": "onSave"
 }

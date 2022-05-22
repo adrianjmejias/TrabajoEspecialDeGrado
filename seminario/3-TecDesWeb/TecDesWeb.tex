@@ -1,37 +1,24 @@
-El propósito de todo sitio web es ser utilizada y aprovechada por la mayor cantidad de personas posibles, y es por eso que el punto clave de desarrollo web se encuentra en cómo los desarrolladores proporcionan un sitio web que cumpla con ese propósito. Para conseguir dicho propósito se deben tener múltiples consideraciones que abarca desde la experiencia de usuario hasta la calidad de la infraestructura y el código realizado. Cuando hablamos de experiencia de usuario nos referimos al resultado de la interacción del usuario con los distintos elementos que posee el sitio web, de tal forma que el usuario pueda tener una experiencia positiva al hacer uso de dichos elementos. Petter Morville \cite{UXFactors} propone que para lograr una buena experiencia de usuario se debe tener en cuenta el correcto uso de los siguientes factores: 
+El propósito de todo sitio web es ser utilizada y aprovechada por la mayor cantidad de personas posibles, y es por eso que el punto clave de desarrollo web se encuentra en cómo los desarrolladores proporcionan un sitio web que cumpla con ese propósito. Para conseguir dicho propósito se deben tener múltiples consideraciones que abarca desde la experiencia de usuario hasta la calidad de la infraestructura y el código realizado. Cuando hablamos de experiencia de usuario nos referimos al resultado de la interacción del usuario con los distintos elementos que posee el sitio web, de tal forma que el usuario pueda tener una experiencia positiva al hacer uso de dichos elementos. Petter Morville \cite{UXFactors} propone que para lograr una buena experiencia de usuario se debe tener en cuenta el correcto uso de los siguientes factores:
 
 \begin{itemize}
     \item Utilidad: el producto realizado debe ser de utilidad para el público objetivo.
     \item Usabilidad: debe ser un sistema que sea simple y fácil de usar para el usuario.
-    \item Deseabilidad: cuando un producto es deseable, los usuarios se sienten atraidos a el.
-    \item Encontrable: se debe construir un sistema que sea navegable y facil de encontrar, de tal forma que los usuarios puedan encontrar lo que necesiten facilmente.
+    \item Deseabilidad: cuando un producto es deseable, los usuarios se sienten atraídos a el.
+    \item Encontrable: se debe construir un sistema que sea navegable y fácil de encontrar, de tal forma que los usuarios puedan encontrar lo que necesiten fácilmente.
     \item Accesibilidad: el sistema debe poder ser usado por la mayor cantidad de personas posibles.
     \item Credibilidad: el sistema debe proporcionar seguridad al usuario acerca de la credibilidad de su contenido
     \item Valor: una experiencia de usuario valiosa implica un buen uso de los demás factores.
 \end{itemize}
 
-Sin embargo, para que sea posible cumplir con todos los factores que permiten una buena experiencia de usuario, es indispensable realizar un codigo de calidad que proporcione al sitio web un buen rendimiento, permitiendo al sitio web desempeñar su función correctamente.
+Sin embargo, para que sea posible cumplir con todos los factores que permiten una buena experiencia de usuario,
+es indispensable realizar un código de calidad que proporcione al sitio web un buen rendimiento, permitiendo al sitio web
+desempeñar su función correctamente.
 
-En este captulo presentaremos las herramientas que nos facilitaran el trabajo para lidiar con las problematicas mencionadas.
+En este capítulo presentaremos las herramientas que nos facilitaran el trabajo para lidiar con las problemáticas mencionadas.
+Brindar una buena experiencia de usuario en una aplicación puede llegar a ser un gran desafío donde existen varios elementos que afectan directamente, como el diseño, ya que es importante jugar un buen estilo, de carácter agradable, y con animaciones amigables. El rendimiento, donde la aplicación debe desempeñar una buena fluidez de respuesta y correctitud, que se contemple una interfaz que tenga sentido con la funcionalidad de la misma.
 
-\begin{lstlisting}
-    Brindar una buena experiencia de usuario en una aplicacion puede llegar a ser un
-    gran desafo donde existen varios elementos que afectan directamente, como el
-    diseno, ya que es importante jugar un buen estilo, de caracter agradable, y con
-    animaciones amigables. El rendimiento, donde la aplicacion debe desempenar
-    una buena fluidez de respuesta y correctitud, que se contemple una interfaz
-    que tenga sentido con la funcionalidad de la misma.
-    Cuando entramos en el area web, nuestro caso una aplicacion web, llegan algunos
-    desafos adicionales como aplicar soporte de diseno para variedad de densidades de pantallas y versiones de navegadores web, esto se debe a que nuestra
-    aplicacion estara expuesta en la web, donde puede ser accedida desde tabletas, moviles, computadores de escritorio, televisores, y cualquier dispositivo que
-    tenga conexion a internet y un navegador. Tambien el peso de la aplicacion,
-    incluyendo codigos, fuentes e imagenes impacta considerablemente al tiempo de
-    espera para conexiones lentas a internet.
-    En este captulo presentaremos herramientas que nos facilitaran el trabajo para
-    lidiar las problematicas mencionadas segmentando la aplicacion por: arquitectura, diseno y utilidades extras a emplear. Cabe acotar que para el manejo de
-    estas herramientas es necesario tener conocimiento sobre JavaScript, TypeScript10 (subconjunto de JavaScript con un sistema de tipos mas robusto), CSS
-    y HTML.
-\end{lstlisting}
+Cuando entramos en el área web, nuestro caso una aplicación web, llegan algunos desafíos adicionales como aplicar soporte de diseño para variedad de densidades de pantallas y versiones de navegadores web, esto se debe a que nuestra aplicación estará expuesta en la web, donde puede ser accedida desde tabletas, móviles, computadores de escritorio, televisores, y cualquier dispositivo que tenga conexión a internet y un navegador. También el peso de la aplicación, incluyendo códigos, fuentes e imágenes impacta considerablemente en el tiempo de espera para conexiones lentas a internet. En este capítulo presentaremos herramientas que nos facilitaran el trabajo para lidiar las problemáticas mencionadas segmentando la aplicación por: arquitectura, diseño y utilidades extras a emplear. Cabe acotar que para el manejo de estas herramientas es necesario tener conocimiento sobre JavaScript, TypeScript10 (subconjunto de JavaScript con un sistema de tipos más robusto), CSS y HTML.
+
 
 \section{Arquitectura}
 
@@ -48,7 +35,7 @@ Asi entonces llegamos al perfecto balance en el que tenemos herramientas actuale
 
 \section{Tecnologías para el desarrollo}
 
-Actualmente existe un catalogo muy amplio de tecnologías de desarrollo web, por lo que escoger las debidas herramientas y sobre todo analizar las compatibilidades entre estas herramientas pueden ser el punto clave para obtener la mejor eficiencia y experiencia de usuario. 
+Actualmente existe un catalogo muy amplio de tecnologías de desarrollo web, por lo que escoger las debidas herramientas y sobre todo analizar las compatibilidades entre estas herramientas pueden ser el punto clave para obtener la mejor eficiencia y experiencia de usuario.
 
 Para nuestro proyecto haremos uso de un servidor cuyo propósito será obtener los datos y transformarlos de forma que el cliente los pueda usar directamente sin necesidad usar mucho computo, esto con el propósito de proporcionar una mejor experiencia de usuario.
 
@@ -60,7 +47,7 @@ El este capitulo hablaremos de las herramientas de desarrollo web usadas para ll
 
 MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
 
-\iffalse 
+\iffalse
     \begin{figure}
         \includegraphics[scale=1.2]{mongodb-structure.jpg}
         \caption{Comparación de estructura de datos entre MongoDB y los RDBMS (sistema de gestión de bases de datos relacionales)}
@@ -71,7 +58,7 @@ MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de códig
 
 Fastify es un framework web para Node.js de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. \\
 
-Si comparamos la velocidad de fastify con otros frameworks web como express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que fastify es aproximadamente un 20\% más rápido que express. \\
+Si comparamos la velocidad de Fastify con otros frameworks web como Express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express. \\
 
 \begin{figure}
     \includegraphics[scale=0.5]{fastify_vs_express.png}
@@ -82,36 +69,36 @@ Si comparamos la velocidad de fastify con otros frameworks web como express, tal
 
 \section{Cliente}
 
-    Para la realización de este proyecto se usarán las siguientes tecnologías:
+Para la realización de este proyecto se usarán las siguientes tecnologías:
 
-    \subsection{ReactJS}
+\subsection{ReactJS}
 
-        ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos, reutilizables, para desarrollos de interfaces de usuario, especialmente aplicaciones de una sola página.\\
+ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos, reutilizables, para desarrollos de interfaces de usuario, especialmente aplicaciones de una sola página.\\
 
-        React maneja el concepto de \say{programación reactiva} haciendo uso de un DOM Virtual, lo le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada den el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, los datos \say {reaccionan} ejecutando una serie de eventos.\\
+React maneja el concepto de \say{programación reactiva} haciendo uso de un DOM Virtual, lo le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada den el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, los datos \say {reaccionan} ejecutando una serie de eventos.\\
 
-        Este concepto de reactividad es lo que hace a la librería altamente eficiente, ya que limita la actualización del DOM solamente a los elementos que han cambiado.\\
+Este concepto de reactividad es lo que hace a la librería altamente eficiente, ya que limita la actualización del DOM solamente a los elementos que han cambiado.\\
 
-        Otras características que destacan en React son:\\
+Otras características que destacan en React son:\\
 
-        \begin{itemize}
-            \item \textbf{Componentes} \hfill \\
+\begin{itemize}
+    \item \textbf{Componentes} \hfill \\
 
-            El código de React es hecho con entidades llamadas componentes. Los componentes pueden ser renderizados en elementos particulares del DOM usando la libreria de React DOM. Estos componentes son capaces de recibir parametros conocidos como "propiedades del componente" de la siguiente forma: \hfill \\
+          El código de React es hecho con entidades llamadas componentes. Los componentes pueden ser renderizados en elementos particulares del DOM usando la librería de React DOM. Estos componentes son capaces de recibir parámetros conocidos como "propiedades del componente" de la siguiente forma: \hfill \\
 
-            \begin{lstlisting}
+          \begin{lstlisting}
                 ReactDOM.render(<Greeter greeting="Hello World!" />, document.getElementById('myReactApp'));
             \end{lstlisting}
 
-            Las 2 formas de declarar componentes en react es mediante el uso de funciones o clases, y generalmente se usa una de las dos opciones de forma situacional.
+          Las 2 formas de declarar componentes en react es mediante el uso de funciones o clases, y generalmente se usa una de las dos opciones de forma situacional.
 
-            \item \textbf{JSX} \hfill \\
+    \item \textbf{JSX} \hfill \\
 
-            JSX, también llamado Javascript XML, es una extension a la sintaxis del lenguaje javascript. Este provee una forma de estructurar componentes usando una sintaxis familiar para muchos desarrolladores. Los componentes de React son usualmente escritos usando JSX, aunque también pueden ser escritos usando Javascript puro.
+          JSX, también llamado Javascript XML, es una extension a la sintaxis del lenguaje javascript. Este provee una forma de estructurar componentes usando una sintaxis familiar para muchos desarrolladores. Los componentes de React son usualmente escritos usando JSX, aunque también pueden ser escritos usando Javascript puro.
 
-            Un ejemplo de código JSX:
+          Un ejemplo de código JSX:
 
-            \begin{lstlisting}
+          \begin{lstlisting}
                 class App extends React.Component {
                     render() {
                         return (
@@ -125,52 +112,52 @@ Si comparamos la velocidad de fastify con otros frameworks web como express, tal
                 }
             \end{lstlisting}
 
-            \item \textbf{Hooks} \hfill \\
+    \item \textbf{Hooks} \hfill \\
 
-            Los hooks son funciones que permiten a los desarrolladores \say{engancharse} a los estados de React y a ciertos puntos dentro del ciclo de vida de los componentes.
+          Los hooks son funciones que permiten a los desarrolladores \say{engancharse} a los estados de React y a ciertos puntos dentro del ciclo de vida de los componentes.
 
-            React proporciona algunos hooks integrados tales como: useState, useContext, useReducer, useMemo y useEffect, los cuales son los mas usados y permiten controlar los estados y eventos respectivamente.
+          React proporciona algunos hooks integrados tales como: useState, useContext, useReducer, useMemo y useEffect, los cuales son los mas usados y permiten controlar los estados y eventos respectivamente.
 
 
-        \end{itemize}
-        
-    \subsection{Next.js}
+\end{itemize}
 
-        Next.js es un framework desarrollado encima de Node.js que permite a las aplicaciones de React usar funcionalidades como el renderizado del lado servidor y la generación de paginas web estáticas.\\
+\subsection{Next.js}
 
-        Por defecto, Next.js pre-renderiza cada pagina. Esto significa que Next.js genera HTML para cada pagina en adelanto, en vez de hacerse con Javascript del lado del cliente. Pre-renderizado puede resultar en mejor rendimiento y SEO.\\
+Next.js es un framework desarrollado encima de Node.js que permite a las aplicaciones de React usar funcionalidades como el renderizado del lado servidor y la generación de paginas web estáticas.\\
 
-        Cada HTML generado es asociado con el mínimo código Javascript necesario para que funcione la pagina. Cuando una página es cargada en el explorador, su código javascript se ejecuta y hace la página totalmente interactiva. A este proceso de le conoce como \say{hydration}
+Por defecto, Next.js pre-renderiza cada pagina. Esto significa que Next.js genera HTML para cada pagina en adelanto, en vez de hacerse con Javascript del lado del cliente. Pre-renderizado puede resultar en mejor rendimiento y SEO.\\
 
-        Next.js ofrece 2 formas de pre-renderizado: 
+Cada HTML generado es asociado con el mínimo código Javascript necesario para que funcione la pagina. Cuando una página es cargada en el explorador, su código javascript se ejecuta y hace la página totalmente interactiva. A este proceso de le conoce como \say{hydration}
 
-        \begin{itemize}
-            \item Generación estática: El HTML es generado a tiempo de ejecución y será reutilizado en cada petición.
-            \item Renderizado lado servidor: El HTML es generado en cada petición
-        \end{itemize}
+Next.js ofrece 2 formas de pre-renderizado:
 
-    \subsection{Material UI}
+\begin{itemize}
+    \item Generación estática: El HTML es generado a tiempo de ejecución y será reutilizado en cada petición.
+    \item Renderizado lado servidor: El HTML es generado en cada petición
+\end{itemize}
 
-        Material UI es un framework de React que sigue los principios de Material Design \ref*{material-design-principes}, el cual fue creado por Google. Su objetivo es facilitar la creacion de interfaces gráficas con el uso de componentes de React que ya fueron probados y aseguran una buena experiencia de usuario. Material UI se destaca ante otros frameworks UI por ser uno de los que posee mayor mantenibilidad (mayor cantidad de contribuyentes) y una gran variedad de componentes.
+\subsection{Material UI}
 
-        Material UI también posee la posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la libreria de forma global en caso de necesitarse un diseño más personalizado.
+Material UI es un framework de React que sigue los principios de Material Design \ref*{material-design-principes}, el cual fue creado por Google. Su objetivo es facilitar la creación de interfaces gráficas con el uso de componentes de React que ya fueron probados y aseguran una buena experiencia de usuario. Material UI se destaca ante otros frameworks UI por ser uno de los que posee mayor mantenibilidad (mayor cantidad de contribuyentes) y una gran variedad de componentes.
 
-        A continuación se monstrará el uso de algunos componentes que ofrece la libreria:
+Material UI también posee la posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la librería de forma global en caso de necesitarse un diseño más personalizado.
 
-        \begin{itemize}
-            \item Botones\\
+A continuación se monstrará el uso de algunos componentes que ofrece la libreria:
 
-            \begin{lstlisting}
+\begin{itemize}
+    \item Botones\\
+
+          \begin{lstlisting}
                 <Button variant="text">Text</Button>
                 <Button variant="contained">Contained</Button>
                 <Button variant="outlined">Outlined</Button>
             \end{lstlisting}
 
-            donde el parametro variant representa una variante visual del boton, las cuales son usadas dependiendo del proposito/importancia del botón.
+          donde el parametro variant representa una variante visual del boton, las cuales son usadas dependiendo del proposito/importancia del botón.
 
-            \item Selectores\\
+    \item Selectores\\
 
-            \begin{lstlisting}
+          \begin{lstlisting}
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
@@ -187,15 +174,15 @@ Si comparamos la velocidad de fastify con otros frameworks web como express, tal
                 </FormControl>
             \end{lstlisting}
 
-            El componente selector debe estar dentro de un componente de FormControl para que sea posible obtener sus datos al momento de enviar el formulario.
+          El componente selector debe estar dentro de un componente de FormControl para que sea posible obtener sus datos al momento de enviar el formulario.
 
-            \item Sliders\\
+    \item Sliders\\
 
-            \begin{lstlisting}
+          \begin{lstlisting}
                 <Slider aria-label="Volume" value={25} onChange={handleChange} />
             \end{lstlisting}
 
-            Donde su parametro value es el valor por default del slider y el parametro onChange recibe una funcion que se ejecuta al mover el slider.
+          Donde su parametro value es el valor por default del slider y el parámetro onChange recibe una funcion que se ejecuta al mover el slider.
 
-        \end{itemize}
+\end{itemize}
 
