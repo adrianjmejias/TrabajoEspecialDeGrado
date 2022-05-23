@@ -21,5 +21,8 @@
         "wikipedia"
     ],
     "editor.formatOnSave": true,
-    "latex-workshop.latex.autoBuild.run": "onSave"
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.preferredDarkColorTheme": "Red"
 }
