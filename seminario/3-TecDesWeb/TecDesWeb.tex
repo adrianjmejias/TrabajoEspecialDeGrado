@@ -1,4 +1,4 @@
-El propósito de todo sitio web es ser utilizada y aprovechada por la mayor cantidad de personas posibles, y es por eso que el punto clave de desarrollo web se encuentra en cómo los desarrolladores proporcionan un sitio web que cumpla con ese propósito. Para conseguir dicho propósito se deben tener múltiples consideraciones que abarca desde la experiencia de usuario hasta la calidad de la infraestructura y el código realizado. Cuando hablamos de experiencia de usuario nos referimos al resultado de la interacción del usuario con los distintos elementos que posee el sitio web, de tal forma que el usuario pueda tener una experiencia positiva al hacer uso de dichos elementos. Petter Morville \cite{UXFactors} propone que para lograr una buena experiencia de usuario se debe tener en cuenta el correcto uso de los siguientes factores:
+El propósito de todo sitio web es ser utilizado y aprovechado por la mayor cantidad de personas posibles, y es por eso que el punto clave del desarrollo web se encuentra en cómo los desarrolladores proporcionan un sitio web que cumpla con ese propósito. Para conseguir dicho propósito se deben tener múltiples consideraciones que abarca desde la experiencia de usuario hasta la calidad de la infraestructura y el código realizado. Cuando hablamos de experiencia de usuario nos referimos al resultado de la interacción del usuario con los distintos elementos que posee el sitio web, de tal forma que el usuario pueda tener una experiencia positiva al hacer uso de dichos elementos. Petter Morville \cite{UXFactors} propone que para lograr una buena experiencia de usuario se debe tener en cuenta el correcto uso de los siguientes factores: 
 
 \begin{itemize}
     \item Utilidad: el producto realizado debe ser de utilidad para el público objetivo.
@@ -15,10 +15,6 @@ es indispensable realizar un código de calidad que proporcione al sitio web un 
 desempeñar su función correctamente.
 
 En este capítulo presentaremos las herramientas que nos facilitaran el trabajo para lidiar con las problemáticas mencionadas.
-Brindar una buena experiencia de usuario en una aplicación puede llegar a ser un gran desafío donde existen varios elementos que afectan directamente, como el diseño, ya que es importante jugar un buen estilo, de carácter agradable, y con animaciones amigables. El rendimiento, donde la aplicación debe desempeñar una buena fluidez de respuesta y correctitud, que se contemple una interfaz que tenga sentido con la funcionalidad de la misma.
-
-Cuando entramos en el área web, nuestro caso una aplicación web, llegan algunos desafíos adicionales como aplicar soporte de diseño para variedad de densidades de pantallas y versiones de navegadores web, esto se debe a que nuestra aplicación estará expuesta en la web, donde puede ser accedida desde tabletas, móviles, computadores de escritorio, televisores, y cualquier dispositivo que tenga conexión a internet y un navegador. También el peso de la aplicación, incluyendo códigos, fuentes e imágenes impacta considerablemente en el tiempo de espera para conexiones lentas a internet. En este capítulo presentaremos herramientas que nos facilitaran el trabajo para lidiar las problemáticas mencionadas segmentando la aplicación por: arquitectura, diseño y utilidades extras a emplear. Cabe acotar que para el manejo de estas herramientas es necesario tener conocimiento sobre JavaScript, TypeScript10 (subconjunto de JavaScript con un sistema de tipos más robusto), CSS y HTML.
-
 
 \section{Arquitectura}
 
@@ -138,9 +134,15 @@ Next.js ofrece 2 formas de pre-renderizado:
 
 \subsection{Material UI}
 
-Material UI es un framework de React que sigue los principios de Material Design \ref*{material-design-principes}, el cual fue creado por Google. Su objetivo es facilitar la creación de interfaces gráficas con el uso de componentes de React que ya fueron probados y aseguran una buena experiencia de usuario. Material UI se destaca ante otros frameworks UI por ser uno de los que posee mayor mantenibilidad (mayor cantidad de contribuyentes) y una gran variedad de componentes.
+Material UI es un framework de React creado con el objetivo de proporcionar una forma sencilla a los desarrolladores de aplicar los principios de Material Design \ref*{MaterialDesignPrinciples} usando componentes de React. Este framework se destaca por la gran variedad de componentes disponibles, que van desde elementos visuales sencillos como botones o selectores, hasta complejos como modales o drawers. Además de su variedad de componentes, Material UI tambien destaca por su gran cantidad de contribuyentes, lo que asegura la longevidad y mantenibilidad del framework.
 
-Material UI también posee la posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la librería de forma global en caso de necesitarse un diseño más personalizado.
+Entre las principales caracteristicas que posee Material UI se encuentran:
+
+\begin{itemize}
+    \item Posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la librería de forma global en caso de necesitarse un diseño más personalizado.
+    \item Construido usando la estrategia móvil primero, en la cual se crea el código primero para los dispotivos móviles, y despues se escalan usando las reglas de CSS necesarias.
+    \item Los componentes de Material UI se consideran autosuficientes, por lo que solo utilizan los estilos CSS necesarios para mostrar el componente en pantalla, es decir, no dependen de hojas de estilos globales como en el caso de normalize.css o bootstrap
+\end{itemize}
 
 A continuación se monstrará el uso de algunos componentes que ofrece la libreria:
 
@@ -151,9 +153,14 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 <Button variant="text">Text</Button>
                 <Button variant="contained">Contained</Button>
                 <Button variant="outlined">Outlined</Button>
+                <Button color="secondary">Secondary</Button>
+                <Button size="small">Small</Button>
+                <IconButton aria-label="delete">
+                    <DeleteIcon />
+                </IconButton>
             \end{lstlisting}
 
-          donde el parametro variant representa una variante visual del boton, las cuales son usadas dependiendo del proposito/importancia del botón.
+          Material UI viene incluido con 3 variantes visuales de botones, los cuales son usados dependiendo de la importancia o enfasis que se le quiera dar al botón. Además, tambien posee variaciones de color y tamaño predeterminados y la posibilidad de usar íconos que funcionan como botones.
 
     \item Selectores\\
 
@@ -161,11 +168,11 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={age}
-                    label="Age"
-                    onChange={handleChange}
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={age}
+                        label="Age"
+                        onChange={handleChange}
                     >
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
@@ -174,15 +181,42 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 </FormControl>
             \end{lstlisting}
 
-          El componente selector debe estar dentro de un componente de FormControl para que sea posible obtener sus datos al momento de enviar el formulario.
+          El selector comunmente se encuentra envuelto en un compontente de FormControl, el cual provee contexto para hacer uso de campos requeridos, manejo de errores y uso de propiedades como seleccionado o campo lleno.
 
     \item Sliders\\
 
-          \begin{lstlisting}
+            \begin{lstlisting}
+                const marks = [
+                    {
+                        value: 0,
+                        label: "0km"
+                    },
+                    {
+                        value: 20,
+                        label: "20km"
+                    },
+                    {
+                        value: 37,
+                        label: "37km"
+                    },
+                    {
+                        value: 100,
+                        label: "100km"
+                    },
+                ];
                 <Slider aria-label="Volume" value={25} onChange={handleChange} />
+                <Slider defaultValue={30} step={10} marks min={10} max={110} disabled />
+                <Slider
+                    aria-label="Custom marks"
+                    defaultValue={20}
+                    getAriaValueText={valuetext}
+                    step={10}
+                    valueLabelDisplay="auto"
+                    marks={marks}
+                />
             \end{lstlisting}
 
-          Donde su parametro value es el valor por default del slider y el parámetro onChange recibe una funcion que se ejecuta al mover el slider.
+          Material UI permite customizar los sliders de mútiples formas, tales como usar valores discretos, cambiar el tamaño del slider, o utilizar marcas personalizadas para el slider, lo que permite dar contexto al usuario sobre los valores mostrados en el slider.
 
 \end{itemize}
 
