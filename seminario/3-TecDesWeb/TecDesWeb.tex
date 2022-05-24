@@ -134,9 +134,15 @@ Next.js ofrece 2 formas de pre-renderizado:
 
 \subsection{Material UI}
 
-Material UI es un framework de React que sigue los principios de Material Design \ref*{MaterialDesignPrinciples}, el cual fue creado por Google. Su objetivo es facilitar la creación de interfaces gráficas con el uso de componentes de React que ya fueron probados y aseguran una buena experiencia de usuario. Material UI se destaca ante otros frameworks UI por ser uno de los que posee mayor mantenibilidad (mayor cantidad de contribuyentes) y una gran variedad de componentes.
+Material UI es un framework de React creado con el objetivo de proporcionar una forma sencilla a los desarrolladores de aplicar los principios de Material Design \ref*{MaterialDesignPrinciples} usando componentes de React. Este framework se destaca por la gran variedad de componentes disponibles, que van desde elementos visuales sencillos como botones o selectores, hasta complejos como modales o drawers. Además de su variedad de componentes, Material UI tambien destaca por su gran cantidad de contribuyentes, lo que asegura la longebidad y mantenibilidad del framework.
 
-Material UI también posee la posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la librería de forma global en caso de necesitarse un diseño más personalizado.
+Entre las principales caracteristicas que posee Material UI se encuentran:
+
+\begin{itemize}
+    \item Posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la librería de forma global en caso de necesitarse un diseño más personalizado.
+    \item Construido usando la estrategia móvil primero, en la cual se crea el código primero para los dispotivos móviles, y despues se escalan usando las reglas de CSS necesarias.
+    \item Los componentes de Material UI se consideran autosuficientes, por lo que solo utilizan los estilos CSS necesarios para mostrar el componente en pantalla, es decir, no dependen de hojas de estilos globales como en el caso de normalize.css o bootstrap
+\end{itemize}
 
 A continuación se monstrará el uso de algunos componentes que ofrece la libreria:
 
