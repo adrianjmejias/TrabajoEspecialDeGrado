@@ -147,9 +147,14 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 <Button variant="text">Text</Button>
                 <Button variant="contained">Contained</Button>
                 <Button variant="outlined">Outlined</Button>
+                <Button color="secondary">Secondary</Button>
+                <Button size="small">Small</Button>
+                <IconButton aria-label="delete">
+                    <DeleteIcon />
+                </IconButton>
             \end{lstlisting}
 
-          donde el parametro variant representa una variante visual del boton, las cuales son usadas dependiendo del proposito/importancia del botón.
+          Material UI viene incluido con 3 variantes visuales de botones, los cuales son usados dependiendo de la importancia o enfasis que se le quiera dar al botón. Además, tambien posee variaciones de color y tamaño predeterminados y la posibilidad de usar íconos que funcionan como botones.
 
     \item Selectores\\
 
@@ -157,11 +162,11 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={age}
-                    label="Age"
-                    onChange={handleChange}
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={age}
+                        label="Age"
+                        onChange={handleChange}
                     >
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
@@ -170,15 +175,42 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 </FormControl>
             \end{lstlisting}
 
-          El componente selector debe estar dentro de un componente de FormControl para que sea posible obtener sus datos al momento de enviar el formulario.
+          El selector comunmente se encuentra envuelto en un compontente de FormControl, el cual provee contexto para hacer uso de campos requeridos, manejo de errores y uso de propiedades como seleccionado o campo lleno.
 
     \item Sliders\\
 
-          \begin{lstlisting}
+            \begin{lstlisting}
+                const marks = [
+                    {
+                        value: 0,
+                        label: "0km"
+                    },
+                    {
+                        value: 20,
+                        label: "20km"
+                    },
+                    {
+                        value: 37,
+                        label: "37km"
+                    },
+                    {
+                        value: 100,
+                        label: "100km"
+                    },
+                ];
                 <Slider aria-label="Volume" value={25} onChange={handleChange} />
+                <Slider defaultValue={30} step={10} marks min={10} max={110} disabled />
+                <Slider
+                    aria-label="Custom marks"
+                    defaultValue={20}
+                    getAriaValueText={valuetext}
+                    step={10}
+                    valueLabelDisplay="auto"
+                    marks={marks}
+                />
             \end{lstlisting}
 
-          Donde su parametro value es el valor por default del slider y el parámetro onChange recibe una funcion que se ejecuta al mover el slider.
+          Material UI permite customizar los sliders de mútiples formas, tales como usar valores discretos, cambiar el tamaño del slider, o utilizar marcas personalizadas para el slider, lo que permite dar contexto al usuario sobre los valores mostrados en el slider.
 
 \end{itemize}
 
