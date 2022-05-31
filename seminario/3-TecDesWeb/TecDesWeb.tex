@@ -41,14 +41,13 @@ El este capitulo hablaremos de las herramientas de desarrollo web usadas para ll
 
 \subsection{MongoDB}
 
-MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida.
+MongoDB es un sistema de base de datos NoSQL, orientado a documentos y de código abierto. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, haciendo que la integración de los datos en ciertas aplicaciones sea más fácil y rápida
 
-\iffalse
-    \begin{figure}
-        \includegraphics[scale=1.2]{mongodb-structure.jpg}
-        \caption{Comparación de estructura de datos entre MongoDB y los RDBMS (sistema de gestión de bases de datos relacionales)}
-    \end{figure}
-\fi
+\begin{figure}[H]
+    \includegraphics[scale=1.2]{mongodb-structure.jpg}
+    \caption{Comparación de estructura de datos entre MongoDB y los RDBMS (sistema de gestión de bases de datos relacionales)}
+\end{figure}
+
 
 \subsection{Fastify}
 
@@ -56,7 +55,7 @@ Fastify es un framework web para Node.js de código abierto concentrado en propo
 
 Si comparamos la velocidad de Fastify con otros frameworks web como Express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express. \\
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[scale=0.5]{fastify_vs_express.png}
     \caption{ Número de peticiones por segundo para distinta cantidad de conexiones}
     \label{fig:fastify_vs_express}
