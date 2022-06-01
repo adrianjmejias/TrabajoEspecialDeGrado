@@ -35,6 +35,7 @@ TODO: ELABORAR Y PONER DIBUJITOS ILUSTRATIVOS
 
 
 \section{Trabajos similares, diferencias y ventajas de la solución a desarrollar}
+
 Siendo wikimedia y wikipedia las mas grandes comunidades y organizaciones
 dedicadas a recopilar datos,
 es lógico pensar que tiene consigo una abundante cantidad de seguidores capacitados y
@@ -50,13 +51,33 @@ Estas herramientas cumplen diferentes objetivos,
 \end{enumerate}
 
 
-\url{https://wikitech.wikimedia.org/wiki/Portal:Toolforge}
+\subsection{Toolforge}
+
+\begin{itemize}
+    \item URL del proyecto \url{https://wikitech.wikimedia.org/wiki/Portal:Toolforge}
+\end{itemize}
+
 Comenzando con el proyecto madre de wikimedia, este gigante sirve de plataforma para que colaboradores técnicos puedan usar servidores de wikipedia para desarrollo y para poder levantar aplicaciones que mejoren la experiencia de todos los colaboradores de wikipedia.
 \\
 Este proyecto es particularmente interesante porque podría ser un medio por el cual la aplicación WikiMetaView y sus dependencias podrían ser servidas al público.
 
 
 \url{https://www.wikidata.org/wiki/Wikidata:Tools/Visualize_data}
+
+\subsection{Histropedia Timeline}
+
+\begin{itemize}
+    \item URL del proyecto \url{http://histropedia.com/timeline/}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{proyectos relacionados/histropedia_timeline.png}
+    \caption{Histropedia Timeline}
+    \label{histropedia_timeline}
+\end{figure}
+
+
 \url{https://en.wikipedia.org/wiki/Wikipedia:Tools}
 
 \url{apersonbot.toolforge.org}
@@ -66,19 +87,32 @@ Este set de herramientas esta enfocado en supervisar usuarios y sus contribucion
 - Aadminscore
 - Articles for Creation Review History
 
-\section{xtools}
+\subsection{xtools}
 \begin{itemize}
     \item URL del proyecto \url{https://xtools.wmflabs.org/}
 \end{itemize}
 
 
-\url{https://sigma.toolforge.org/}
+\subsection{Sigma - ArticleInfo}
+\begin{itemize}
+    \item URL del proyecto \url{https://sigma.toolforge.org/articleinfo.py}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{proyectos relacionados/sigma_article-info.png}
+    \caption{Sigma Article Info}
+    \label{sigma_articleInfo}
+\end{figure}
 
 
-\url{https://interaction-timeline.toolforge.org/}
 
 
-\subsection{wikireplay}
+% This isn't really useful lol
+% \url{https://interaction-timeline.toolforge.org/}
+
+
+\subsubsection{wikireplay}
 \begin{itemize}
     \item URL del proyecto \url{https://cosmiclattes.github.io/wikireplay/player}
 \end{itemize}
@@ -87,7 +121,7 @@ Se encarga de mostrar una linea de tiempo con los cambios en un articulo. Esta l
 tiene el comportamiento de un reproductor de video y permite que el usuario presione un botón de
 reproducir y así ser guiado por como el contenido de un artículo ha ido evolucionando en el tiempo.
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{proyectos relacionados/wikireplay.png}
     \caption{Interfaz de wikireplay}
@@ -145,7 +179,7 @@ Este proyecto genera una gráfica de history flow dado el url de un articulo
 Para cualquier usuario muestra el perfil de un watcher, en él puedes ver todas las contribuciones de este junto con la lista de visualizaciones que ha creado.
 Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de wikipedia
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{prototipos/Watcher Profile.png}
     \caption{Prototipo de página de perfil de watcher}
@@ -155,7 +189,7 @@ Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de w
 \subsection{Página principal \textbackslash home}
 Para usuarios autenticados, les permite ver diferentes secciones relevantes para ellos
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{prototipos/Index Auth.png}
     \caption{Prototipo de vista principal de un usuario autenticado}
@@ -183,7 +217,7 @@ Acá el usuario puede bla bla
 \url{/article?title=<title>&url=<url>}
 Muestra un articulo junto con su metadata y las visualizaciones creadas por los usuarios.d
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{prototipos/Article Page.png}
     \caption{Prototipo de página de artículos}
@@ -194,14 +228,21 @@ Muestra un articulo junto con su metadata y las visualizaciones creadas por los 
 Breve resumen del proyecto, incluye el documento de tesis y documento de seminario asi como datos de contacto y repositorios de github para futuros contribuyentes.
 
 \section{Modales}
+Las modales pueden sobreponerse a cualquier página en la aplicación y permiten al usuario efectuar una acción.
 
-Query Params Globales
-
-?auth
+Estas modales serán controladas por parámetros de consulta agregados al URL de cada página web
+CleanArquitecture
+\subsection{Modal de autenticación}
 
 Si este parámetro esta en el url. Presenta la modal de autenticación
 
-?
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{prototipos/Modal-Auth.png}
+    \caption{Modal de autenticación}
+    \label{ModalAuth}
+\end{figure}
+?auth=true
 
 \section{Planificación de las actividades}
 
