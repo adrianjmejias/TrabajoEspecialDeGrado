@@ -2,17 +2,21 @@
 
 \section{Motivación e identificación del problema}
 
+% TODO : Hacer motivacion
+Cada segundo ocurren
+
+
+
+
 \section{Objetivos del trabajo}
 
-\subsection{Objetivo General}
 
-% TODO: refinar
+\subsection{Objetivo General}
+% TODO : Hacer Objetivo General
 Crear una nueva version del front-end de wikimetrics y extender con funcionalidades pertinentes para fomentar discusión sobre los artículos
 
 \subsection{Objetivos Específicos}
-
-% TUTORIAL: Objetivos mas peque;os que conforman el todo
-% También incluye peque;os estudios, decisiones y aprendizajes 
+% TODO: Objectivos Específicos
 
 \begin{itemize}
     \item Implementar una aplicación web responsive que ofrezca las funcionalidades requeridas por un watcher de un wiki y que pueda ser reconocida por los motores de búsqueda.
@@ -23,22 +27,46 @@ Crear una nueva version del front-end de wikimetrics y extender con funcionalida
 \end{itemize}
 
 \section{Estrategia de solución y método de desarrollo ágil a utilizar}
-TODO: DECIDIR ENTRE
+
+\subsection{Desarrollo Rápido de Aplicaciones (RAD)}
+
+El desarrollo rápido de aplicaciones es una metodología de desarrollo que prioriza la creación rápida y prototipos y la retroalimentación rápida sobre ciclos prolongados de desarrollo y prueba. Con el uso de RAD, los desarrolladores pueden realizar multiples iteraciones y actualizaciones al software rápidamente sin la necesidad de iniciar un cronograma de desarrollo desde cero cada vez.
+
+Esta metodología de desarrollo fue creada por James Martin en el año 1980 en IBM y fue formalizada con la publicación del libro \emph{Rapid Application Development} en 1991.
+
+\begin{figure}[H]
+    \includegraphics[scale=0.45]{Rapid-application-development.png}
+    \caption{Fases del Desarrollo Rápido de Aplicaciones (enfoque de James Martin)}
+    \label{fig:Rapid-application-development}
+\end{figure}
+
+\subsubsection{Fases del Desarrolo Rápido de Aplicaciones}
+
+Según el enfoque de James Martin \cite{RADJamesMartin} el Desarrollo Rápido de Aplicaciones se divide en las siguientes fases:
 
 \begin{itemize}
-    \item Kanban: Tiene como objetivo la mejora continua, la flexibilidad en la gestión de tareas y un flujo de trabajo mejorado. Con este enfoque ilustrativo, el progreso de todo el proyecto se puede comprender fácilmente de un vistazo. Para esto hace uso del tablero Kanban, que es una herramienta que visualiza todo el proyecto para rastrear el flujo de su proyecto. A través de este enfoque gráfico de los tableros Kanban, un miembro nuevo o una entidad externa puede comprender lo que está sucediendo en este momento, las tareas completadas y las tareas futuras.
-    \item Rapid application development (RAD):  es una forma de metodología de desarrollo de software ágil que prioriza las versiones e iteraciones rápidas de prototipos. A diferencia del método Waterfall, RAD enfatiza el uso de software y los comentarios de los usuarios sobre la planificación estricta y el registro de requisitos.
-\end{itemize}
+    \item \textbf{Fase de planificación:} Esta fase es equivalente a una reunión de alcance del proyecto. Aunque la fase de planificación se condensa en comparación con otras metodologías de gestión de proyectos.
 
-ELABORAR Y PONER DIBUJITOS ILUSTRATIVOS
+          Durante esta etapa, los desarrolladores, los clientes (usuarios de software) y los miembros del equipo se comunican para determinar los objetivos y las expectativas del proyecto, así como los problemas actuales y potenciales que deben abordarse durante la construcción.
+
+    \item \textbf{Fase de diseño:} Durante esta fase, los usuarios interactúan con analistas de sistemas y desarrollan modelos y prototipos que representan todos los procesos, entradas y salidas del sistema.
+
+          Todos los errores y problemas se resuelven en un proceso iterativo. El desarrollador diseña un prototipo, el cliente (usuario) lo prueba y luego se reúnen para comunicar qué funcionó y qué no.
+
+    \item \textbf{Fase de construcción:} Esta etapa toma los prototipos y el sistema en su fase beta resultado de la etapa de diseño y lo convierte en un modelo funcional.
+
+          Debido a que la mayoría de los problemas y cambios se abordaron durante la minuciosa fase de diseño iterativo, los desarrolladores pueden construir el modelo de trabajo final más rápidamente que siguiendo un enfoque tradicional de gestión de proyectos.
+
+    \item \textbf{Fase de transición:} Esta es la fase de implementación donde el producto terminado va al lanzamiento. Incluye conversión de datos, pruebas y cambio al nuevo sistema, así como capacitación de usuarios.
+
+          Todos los cambios finales se realizan mientras los programadores y los clientes continúan buscando errores en el sistema.
+
+\end{itemize}
 
 
 \section{Trabajos similares, diferencias y ventajas de la solución a desarrollar}
-Siendo wikimedia y wikipedia las mas grandes comunidades y organizaciones
-dedicadas a recopilar datos,
-es lógico pensar que tiene consigo una abundante cantidad de seguidores capacitados y
-apasionados por aportar lo que puedan. A continuación se detallara el estado actual de las
-herramientas existentes para explorar la wikipedia.
+
+Siendo Wikimedia y Wikipedia las mas grandes comunidades y organizaciones dedicadas a recopilar datos, es lógico pensar que tiene consigo una abundante cantidad de seguidores capacitados y apasionados por aportar lo que puedan. A continuación se detallará el estado actual de las herramientas existentes para explorar la Wikipedia.
 
 Estas herramientas cumplen diferentes objetivos,
 
@@ -49,35 +77,66 @@ Estas herramientas cumplen diferentes objetivos,
 \end{enumerate}
 
 
-\url{https://wikitech.wikimedia.org/wiki/Portal:Toolforge}
-Comenzando con el proyecto madre de wikimedia, este gigante sirve de plataforma para que colaboradores técnicos puedan usar servidores de wikipedia para desarrollo y para poder levantar aplicaciones que mejoren la experiencia de todos los colaboradores de wikipedia.
+\subsection{Toolforge}
+
+\begin{itemize}
+    \item URL del proyecto \url{https://wikitech.wikimedia.org/wiki/Portal:Toolforge}
+\end{itemize}
+
+Comenzando con el proyecto madre de Wikimedia, este gigante sirve de plataforma para que colaboradores técnicos puedan usar servidores de Wikipedia para desarrollo y para poder levantar aplicaciones que mejoren la experiencia de todos los colaboradores de Wikipedia.
 \\
 Este proyecto es particularmente interesante porque podría ser un medio por el cual la aplicación WikiMetaView y sus dependencias podrían ser servidas al público.
 
 
 \url{https://www.wikidata.org/wiki/Wikidata:Tools/Visualize_data}
+
+\subsection{Histropedia Timeline}
+
+\begin{itemize}
+    \item URL del proyecto \url{http://histropedia.com/timeline/}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{proyectos relacionados/histropedia_timeline.png}
+    \caption{Histropedia Timeline}
+    \label{histropedia_timeline}
+\end{figure}
+
+
 \url{https://en.wikipedia.org/wiki/Wikipedia:Tools}
 
 \url{apersonbot.toolforge.org}
-Este set de herramientas esta enfocado en supervisar usuarios y sus contribuciones a la wikipedia
+Este set de herramientas esta enfocado en supervisar usuarios y sus contribuciones a la Wikipedia
 
 - Candidate Search
 - Aadminscore
 - Articles for Creation Review History
 
-\section{xtools}
+\subsection{xtools}
 \begin{itemize}
     \item URL del proyecto \url{https://xtools.wmflabs.org/}
 \end{itemize}
 
 
-\url{https://sigma.toolforge.org/}
+\subsection{Sigma - ArticleInfo}
+\begin{itemize}
+    \item URL del proyecto \url{https://sigma.toolforge.org/articleinfo.py}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{proyectos relacionados/sigma_article-info.png}
+    \caption{Sigma Article Info}
+    \label{sigma_articleInfo}
+\end{figure}
 
 
-\url{https://interaction-timeline.toolforge.org/}
+% This isn't really useful lol
+% \url{https://interaction-timeline.toolforge.org/}
 
 
-\subsection{wikireplay}
+\subsubsection{wikireplay}
 \begin{itemize}
     \item URL del proyecto \url{https://cosmiclattes.github.io/wikireplay/player}
 \end{itemize}
@@ -86,7 +145,7 @@ Se encarga de mostrar una linea de tiempo con los cambios en un articulo. Esta l
 tiene el comportamiento de un reproductor de video y permite que el usuario presione un botón de
 reproducir y así ser guiado por como el contenido de un artículo ha ido evolucionando en el tiempo.
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{proyectos relacionados/wikireplay.png}
     \caption{Interfaz de wikireplay}
@@ -113,8 +172,8 @@ Este proyecto genera una gráfica de history flow dado el url de un articulo
     \item Visual Studio Code.
     \item Git, como control de versiones.
     \item Navegadores web (Google Chrome, Firefox, etc)
-    \item MongoDB
-    \item
+    \item Base de Datos (MongoDB)
+    \item Servidor (Nodejs)
 \end{itemize}
 
 \subsection{Tecnologías o librerías web a utilizar}
@@ -144,7 +203,7 @@ Este proyecto genera una gráfica de history flow dado el url de un articulo
 Para cualquier usuario muestra el perfil de un watcher, en él puedes ver todas las contribuciones de este junto con la lista de visualizaciones que ha creado.
 Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de wikipedia
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{prototipos/Watcher Profile.png}
     \caption{Prototipo de página de perfil de watcher}
@@ -154,7 +213,7 @@ Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de w
 \subsection{Página principal \textbackslash home}
 Para usuarios autenticados, les permite ver diferentes secciones relevantes para ellos
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{prototipos/Index Auth.png}
     \caption{Prototipo de vista principal de un usuario autenticado}
@@ -182,7 +241,7 @@ Acá el usuario puede bla bla
 \url{/article?title=<title>&url=<url>}
 Muestra un articulo junto con su metadata y las visualizaciones creadas por los usuarios.d
 
-\begin{figure}[]
+\begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{prototipos/Article Page.png}
     \caption{Prototipo de página de artículos}
@@ -193,14 +252,21 @@ Muestra un articulo junto con su metadata y las visualizaciones creadas por los 
 Breve resumen del proyecto, incluye el documento de tesis y documento de seminario asi como datos de contacto y repositorios de github para futuros contribuyentes.
 
 \section{Modales}
+Las modales pueden sobreponerse a cualquier página en la aplicación y permiten al usuario efectuar una acción.
 
-Query Params Globales
-
-?auth
+Estas modales serán controladas por parámetros de consulta agregados al URL de cada página web
+CleanArquitecture
+\subsection{Modal de autenticación}
 
 Si este parámetro esta en el url. Presenta la modal de autenticación
 
-?
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{prototipos/Modal-Auth.png}
+    \caption{Modal de autenticación}
+    \label{ModalAuth}
+\end{figure}
+?auth=true
 
 \section{Planificación de las actividades}
 

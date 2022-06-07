@@ -21,12 +21,13 @@
 \usepackage{listingsutf8}
 \usepackage{dirtytalk}
 \usepackage{mwe}
-\usepackage{biblatex}
+\usepackage[backend=bibtex]{biblatex}
 
-\addbibresource{references.bib}
-\bibliography{references.bib}
+\addbibresource{bibliography.bib}
+% \bibdata{bibliography.bib}
+% \bibliography{bibliography.bib}
+
 \makeatletter
-
 \lstdefinelanguage{JavaScript}{
   keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
   keywordstyle=\color{blue}\bfseries,
@@ -81,7 +82,6 @@
 	{\large Universidad Central de Venezuela}\\
 }
 \author{Adrian J. Mejias O. y Jose E. Tirado S.}
-
 
 
 \addto\captionsspanish{
