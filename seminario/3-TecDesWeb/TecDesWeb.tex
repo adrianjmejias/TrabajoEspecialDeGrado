@@ -1,39 +1,35 @@
-El propósito de todo sitio web es ser utilizado y aprovechado por la mayor cantidad de personas posibles, y es por eso que el punto clave del desarrollo web se encuentra en cómo los desarrolladores proporcionan un sitio web que cumpla con ese propósito. Para conseguir dicho propósito se deben tener múltiples consideraciones que abarca desde la experiencia de usuario hasta la calidad de la infraestructura y el código realizado. Cuando hablamos de experiencia de usuario nos referimos al resultado de la interacción del usuario con los distintos elementos que posee el sitio web, de tal forma que el usuario pueda tener una experiencia positiva al hacer uso de dichos elementos. Petter Morville \cite{UXFactors} propone que para lograr una buena experiencia de usuario se debe tener en cuenta el correcto uso de los siguientes factores:
+Así como el propósito de un libro es ser leído y su éxito se mide en la cantidad de personas que lo lean. 
+El éxito de un sitio web informativo se mide en su crecimiento; vive para tener una relación simbiótica con sus usuarios, donde ellos proveen el contenido y con él atraen lectores que se convierten en editores y en nuevos creadores. El sitio web por su parte, aporta todas las herramientas necesarias para que todos puedan participar.
+
+Con el tiempo, y si los usuarios tienen una experiencia positiva este "libro" web, se puede esperar que esté convertido en ecosistema de datos. Para garantizar una buena experiencia de usuario Petter Morville \cite{UXFactors} propone tener en cuenta siguientes factores:
 
 \begin{itemize}
   \item Utilidad: el producto realizado debe ser de utilidad para el público objetivo.
   \item Usabilidad: debe ser un sistema que sea simple y fácil de usar para el usuario.
   \item Deseabilidad: cuando un producto es deseable, los usuarios se sienten atraídos a el.
-  \item Encontrable: se debe construir un sistema que sea navegable y fácil de encontrar, de tal forma que los usuarios puedan encontrar lo que necesiten fácilmente.
+  \item Encontrable: se debe construir un sistema que sea navegable e instintivo al recorrer, de tal forma que los usuarios puedan encontrar lo que necesiten fácilmente.
   \item Accesibilidad: el sistema debe poder ser usado por la mayor cantidad de personas posibles.
   \item Credibilidad: el sistema debe proporcionar seguridad al usuario acerca de la credibilidad de su contenido
   \item Valor: una experiencia de usuario valiosa implica un buen uso de los demás factores.
 \end{itemize}
 
-Sin embargo, para que sea posible cumplir con todos los factores que permiten una buena experiencia de usuario,
-es indispensable realizar un código de calidad que proporcione al sitio web un buen rendimiento, permitiendo al sitio web
-desempeñar su función correctamente.
-
-En este capítulo presentaremos las herramientas que nos facilitaran el trabajo para lidiar con las problemáticas mencionadas.
+En este capitulo presentaremos todas las herramientas que nos facilitaran lograr la mejor experiencia de usuario.
 
 \section{Arquitectura}
 
-Para que una aplicación sea descubierta y usada por internautas es fundamental que tenga una buena relación con los motores de búsqueda.
+Para que una aplicación sea encontrable — y así usada — por internautas es fundamental que tenga una buena relación con los motores de búsqueda.
 
 Sin embargo también para asegurar la larga vida y mantenibilidad de la aplicación y la facilidad de desarrollo se debe tomar en cuenta herramientas extensamente empleadas contemporáneamente como Angular, React y Vue.
 
-El problema entonces recae en que estas tecnologías son meramente para SPA. Lo que implica entonces que no existe una noción "real" de seo - En las SPA el enrutamiento ocurre del lado del cliente usando javascript, y en consecuencia los crawlers de los motores de búsqueda no saben interpretar estas paginas.
+El problema entonces recae en que estas tecnologías por si solas son meramente para Aplicaciones de una sola página. Los motores de búsqueda hacen lo que pueden pero el HTML estático manejado por las SPA es mínimo, resultando en que los motores de búsqueda no puedan inferir de qué trata la página, afectando su habilidad de ser encontrada e indexada.
 
-Como remedio surge un nuevo paradigma, que es el que vamos a usar para esta aplicación, conocido como Server Side Rendering; donde se utiliza estas tecnologías SPA como un motor de plantillas para retornar un HTML que los motores de búsqueda puedan entender, y después por un proceso conocido como hydration, las aplicaciones en el lado del cliente dejan de comportarse como HTML plano y retoman sus funcionalidades de SPA.
+Como remedio surge un nuevo paradigma con el nombre de Server Side Rendering o simplemente SSR; donde se utilizan  tecnologías SPA como motor de plantillas, para así generar HTML digerible por los motores de búsqueda. Una vez el HTML estático llega al cliente, este atraviesa un proceso conocido como hydration, donde retoma sus funcionalidades dinámicas características de SPA.
 
-Asi entonces llegamos al perfecto balance en el que tenemos herramientas actuales y fáciles de usar, que también cumplen con los requerimientos de los motores de búsqueda para indexar nuestras paginas.
-
+Asi entonces se logra al perfecto balance de herramientas actuales y fáciles de usar, que también cumplen con los requerimientos de los motores de búsqueda para indexar paginas web.
 
 \section{Tecnologías para el desarrollo}
 
-Actualmente existe un catalogo muy amplio de tecnologías de desarrollo web, por lo que escoger las debidas herramientas y sobre todo analizar las compatibilidades entre estas herramientas pueden ser el punto clave para obtener la mejor eficiencia y experiencia de usuario.
-
-Para nuestro proyecto haremos uso de un servidor cuyo propósito será obtener los datos y transformarlos de forma que el cliente los pueda usar directamente sin necesidad usar mucho computo, esto con el propósito de proporcionar una mejor experiencia de usuario.
+Actualmente existe un catalogo muy amplio de tecnologías de desarrollo web, por lo que escoger las debidas herramientas y analizar sus compatibilidades es clave para obtener el mejor conjunto de herramientas.
 
 El este capitulo hablaremos de las herramientas de desarrollo web usadas para llevar a cabo el proyecto, y las descompondremos en 2 categorías: Servidor y Cliente.
 
@@ -41,19 +37,17 @@ El este capitulo hablaremos de las herramientas de desarrollo web usadas para ll
 
 \subsection{Fastify}
 
-Fastify es un framework web para Node.js de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. \\
+Fastify es un framework web para NodeJS de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. 
 
-Las principales caracteristicas con las que fastify fue creado son:
+Las principales características de Fastify son:
 
 \begin{itemize}
-
-    \item Alto rendimiento: Si comparamos la velocidad de Fastify con otros frameworks web como Express, tal como podemos ver en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express.
-    \item Extensible: Fastify es completablemente extensible mediante el uso de hooks, puglins o decoradores
-    \item Basado en esquemas: incluso si no es obligatorio, recomendamos usar JSON Schema para validar sus rutas y serializar sus salidas, internamente Fastify compila el esquema en una función de alto rendimiento.
-    \item Registro: 
-    \item Amigable para los desarrolladores:
-    \item Listo para usar con Typescript:
-  
+    \item Alto rendimiento: Si se compara la velocidad de Fastify con otros frameworks web como Express, tal como se aprecia en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express.
+    \item Extensible: Fastify es completamente extensible mediante el uso de hooks, plugins o decoradores
+    \item Basado en esquemas: A pesar de no ser obligatorio, es recomendado usar el esquema JSON para validar las rutas y serializar las salidas, internamente Fastify compila el esquema en una función de alto rendimiento.
+    \item Registro: Usualmente el guardar un registro puede ser costoso, por esa razón Fastify hace uso de un logger eficiente que casi remueve ese costo.
+    \item Amigable para los desarrolladores: Este framework esta desarrollado para ser bastante expresivo y ayudar a los desarrolladores en su uso, sin sacrificar rendimiento o seguridad.
+    \item Listo para usar con Typescript: La instalación inicial del framework provee compatibilidad predeterminada con Typescript
 \end{itemize}
 
 
@@ -65,11 +59,11 @@ Las principales caracteristicas con las que fastify fue creado son:
 
 \subsection{MongoDB}
 
-MongoDB es una sistema de base de datos de documentos NoSQL escalable y flexible diseñado para lidiar con los conflictos que poseen las bases de datos relacionales y las limitaciones de otras soluciones NoSQL. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, lo que facilita la integración de los datos.
+MongoDB es una sistema manejador de base de datos de documentos NoSQL escalable y flexible diseñado para lidiar con los conflictos que poseen las bases de datos relacionales y las limitaciones de otras soluciones NoSQL. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, lo que facilita la integración de los datos.
 
-Uno de los principales beneficios del uso de base de datos NoSQL antes que SQL es la facilidad de manejo de los datos, ya que solo se consultan documentos sin necesidad de realizar operaciones SQL complejas que requieren conocimiento previo de la estructura de la base de datos. Ademas, debido a la similitud entre la especificación BSON y JSON, las consultas a la base de datos resultan transparentes en comparación a su contraparte SQL, el cual necesita de un algoritmo para convertir los datos tabulares en algo que pueda ser comprendido por el lenguaje de programación usado en el servidor backend.
+No tener restricciones al estructurar data facilita el desarrollo, siempre y cuando el desarrollador sea consciente de la redundancia que puede causar en la base de datos. Los documentos BSON almacenados en Colecciones dentro de MongoDB, estos son similares al conocidísimo estándar JSON. Las consultas y mutaciones en MongoDB no son hechas en un lenguaje de consulta como SQL sino serializadas en JSON.   
 
-Como se puede observar en la imagen \ref{fig:db-ranking}, mongoDB es actualmente la opción mas usada entre la categoria de bases de datos NoSQL, ocupando el puesto numero 5 en el ranking de bases de datos. Esto nos proporciona suficiente seguridad de que existirá soporte para las aplicaciones que hagan uso de MongoDB por los proximos años.
+Como se puede observar en la imagen \ref{fig:db-ranking}, mongoDB es actualmente la opción mas usada entre las bases de datos NoSQL, ocupando el puesto numero 5 en el ranking de bases de datos. Esto proporciona suficiente certeza de que MongoDB será mantenido por años en el futuro.
 
 \begin{figure}[H]
   \includegraphics[scale=.355]{db-ranking.jpg}
@@ -80,16 +74,14 @@ Como se puede observar en la imagen \ref{fig:db-ranking}, mongoDB es actualmente
 Algunas de las características más importantes de MongoDB son:
 
 \begin{itemize}
-
   \item Consultas ad-hoc optimizadas para análisis en tiempo real
-  \item Indexación adecuada para mejores ejecuciones de consultas
+  \item Indexación adecuada para mejores tiempos de ejecución de consultas
   \item Replicación para una mejor disponibilidad y estabilidad de los datos
-  \item Fragmentación
+  \item Sharding
   \item Balanceo de carga
-
 \end{itemize}
 
-Para realizar operaciones en la base de datos MongoDB es necesario de instalar un MongoDB Driver compatible con NodeJS, el cual permite establecer una conexión con la base de datos, y provee una API que facilita la interacción con la misma. A continuación se mostrará un código básico de conexión y consulta de datos usando el NodeJs MongoDB Driver.
+Para realizar operaciones sobre la base de datos datos MongoDB usando un servidor NodeJS es necesario usar un MongoDB Driver compatible con NodeJS, el cual permite establecer una conexión con la base de datos, y provee una API que facilita la interacción con la misma. A continuación se mostrará un código básico de conexión y consulta de datos usando el NodeJS MongoDB Driver.
 
 \begin{lstlisting}
     import { MongoClient } from "mongodb";
@@ -119,89 +111,85 @@ En el código se puede observar como se usa el cliente de MongoDB para conectars
 
 \section{Cliente}
 
-Para la realización de este proyecto se usarán las siguientes tecnologías:
+Para este proyecto se usarán las siguientes tecnologías:
 
 \subsection{ReactJS}
 
-ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos, reutilizables, para desarrollos de interfaces de usuario, especialmente aplicaciones de una sola página.\\
+ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos y reutilizables, para desarrollo de interfaces de usuario, especialmente aplicaciones de una sola página.
 
-React maneja el concepto de \say{programación reactiva} haciendo uso de un DOM Virtual, lo le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada den el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, los datos \say {reaccionan} ejecutando una serie de eventos.\\
+React maneja el concepto de \say{programación reactiva} haciendo uso de un DOM Virtual, lo que le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada en el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, la aplicación \say {reacciona} a cambios en los datos ejecutando una serie de eventos y re-renderizando solo aquellos componentes que lo ameriten. Esto es el secreto de porqué React es altamente eficiente.
 
-Este concepto de reactividad es lo que hace a la librería altamente eficiente, ya que limita la actualización del DOM solamente a los elementos que han cambiado.\\
-
-Otras características que destacan en React son:\\
+Otras características que destacan en React son:
 
 \begin{itemize}
-  \item \textbf{Componentes} \hfill \\
+  \item \textbf{Componentes} \hfill
 
-        El código de React es hecho con entidades llamadas componentes. Los componentes pueden ser renderizados en elementos particulares del DOM usando la librería de React DOM. Estos componentes son capaces de recibir parámetros conocidos como "propiedades del componente" de la siguiente forma: \hfill \\
+        El código de React es hecho con entidades llamadas componentes. Los componentes pueden ser renderizados en elementos particulares del DOM usando la librería de React DOM. Estos componentes son capaces de recibir parámetros conocidos como "propiedades del componente" de la siguiente forma: \hfill 
 
         \begin{lstlisting}
-                ReactDOM.render(<Greeter greeting="Hello World!" />, document.getElementById('myReactApp'));
-            \end{lstlisting}
+            ReactDOM.render(<Greeter greeting="Hello World!" />, document.getElementById('myReactApp'));
+        \end{lstlisting}
 
-        Las 2 formas de declarar componentes en react es mediante el uso de funciones o clases, y generalmente se usa una de las dos opciones de forma situacional.
+        Las 2 formas de declarar componentes en React es mediante el uso de funciones o clases, y generalmente se usa una de las dos opciones de forma situacional.
 
-  \item \textbf{JSX} \hfill \\
+  \item \textbf{JSX} \hfill
 
-        JSX, también llamado Javascript XML, es una extension a la sintaxis del lenguaje javascript. Este provee una forma de estructurar componentes usando una sintaxis familiar para muchos desarrolladores. Los componentes de React son usualmente escritos usando JSX, aunque también pueden ser escritos usando Javascript puro.
+        JSX, también llamado Javascript XML, es una extension a la sintaxis del lenguaje javascript. Este provee una forma de estructurar componentes usando una sintaxis familiar para muchos desarrolladores. Los componentes de React son usualmente escritos en JSX, aunque también pueden ser escritos usando Javascript puro.
 
         Un ejemplo de código JSX:
 
         \begin{lstlisting}
-                class App extends React.Component {
-                    render() {
-                        return (
-                        <div>
-                            <p>Header</p>
-                            <p>Content</p>
-                            <p>Footer</p>
-                        </div>
-                        );
-                    }
+            class App extends React.Component {
+                render() {
+                    return (
+                    <div>
+                        <p>Header</p>
+                        <p>Content</p>
+                        <p>Footer</p>
+                    </div>
+                    );
                 }
-            \end{lstlisting}
+            }
+        \end{lstlisting}
 
-  \item \textbf{Hooks} \hfill \\
+  \item \textbf{Hooks} \hfill 
 
         Los hooks son funciones que permiten a los desarrolladores \say{engancharse} a los estados de React y a ciertos puntos dentro del ciclo de vida de los componentes.
 
-        React proporciona algunos hooks integrados tales como: useState, useContext, useReducer, useMemo y useEffect, los cuales son los mas usados y permiten controlar los estados y eventos respectivamente.
-
-
+        React proporciona algunos hooks integrados tales como: useState, useContext, useReducer, useMemo y useEffect son los más usados y permiten controlar los estados y manejar eventos.
 \end{itemize}
 
 \subsection{Next.js}
 
-Next.js es un framework desarrollado encima de Node.js que permite a las aplicaciones de React usar funcionalidades como el renderizado del lado servidor y la generación de paginas web estáticas.\\
+Next.js es un framework desarrollado sobre NodeJS que permite a las aplicaciones de React usar funcionalidades como el renderizado del lado servidor y la generación de paginas web estáticas.
 
-Por defecto, Next.js pre-renderiza cada pagina. Esto significa que Next.js genera HTML para cada pagina en adelanto, en vez de hacerse con Javascript del lado del cliente. Pre-renderizado puede resultar en mejor rendimiento y SEO.\\
+Por defecto, Next.js pre-renderiza cada página. Esto significa que Next.js genera HTML para cada página en adelanto, en vez de hacerse con Javascript del lado del cliente. Pre-renderizado puede resultar en mejor rendimiento y SEO.
 
-Cada HTML generado es asociado con el mínimo código Javascript necesario para que funcione la pagina. Cuando una página es cargada en el explorador, su código javascript se ejecuta y hace la página totalmente interactiva. A este proceso de le conoce como \say{hydration}
+Cada HTML generado es asociado con el mínimo código Javascript necesario para que funcione la página. Cuando una página es cargada en el explorador, su código javascript se ejecuta y hace la página totalmente interactiva. A este proceso de le conoce como \say{hydration}
 
 Next.js ofrece 2 formas de pre-renderizado:
 
 \begin{itemize}
-  \item Generación estática: El HTML es generado a tiempo de ejecución y será reutilizado en cada petición.
-  \item Renderizado lado servidor: El HTML es generado en cada petición
+  \item Generación estática: El HTML es pre-generado y puede ser servido estáticamente.
+  \item Renderizado del lado servidor: El HTML es generado al recibir una petición del cliente, necesita un servidor que procese las peticiones.
 \end{itemize}
 
 \subsection{Material UI}
 
 Material UI es un framework de React creado con el objetivo de proporcionar una forma sencilla a los desarrolladores de aplicar los principios de Material Design \cite{MaterialDesignPrinciples} usando componentes de React. Este framework se destaca por la gran variedad de componentes disponibles, que van desde elementos visuales sencillos como botones o selectores, hasta complejos como modales o drawers. Además de su variedad de componentes, Material UI tambien destaca por su gran cantidad de contribuyentes, lo que asegura la longevidad y mantenibilidad del framework.
 
-Entre las principales caracteristicas que posee Material UI se encuentran:
+Entre las principales características que posee Material UI se encuentran:
 
 \begin{itemize}
-  \item Posibilidad de crear temas, lo que permite modificar los estilos de los componentes predeterminados de la librería de forma global en caso de necesitarse un diseño más personalizado.
-  \item Construido usando la estrategia móvil primero, en la cual se crea el código primero para los dispotivos móviles, y despues se escalan usando las reglas de CSS necesarias.
-  \item Los componentes de Material UI se consideran autosuficientes, por lo que solo utilizan los estilos CSS necesarios para mostrar el componente en pantalla, es decir, no dependen de hojas de estilos globales como en el caso de normalize.css o bootstrap
+  \item Posibilidad de crear temas, lo que permite personalizar los estilos predeterminados de los componentes de la librería de forma global, o acotada.
+  \item Construido usando la estrategia Mobile First \cite{MobileFirst}, en la cual se crea el código primero para dispositivos móviles, y después se escalan usando las reglas de CSS pertinentes.
+  \item Los componentes de Material UI se consideran autosuficientes, por lo que solo utilizan los estilos CSS necesarios para mostrar el componente en pantalla, es decir, no dependen de hojas de estilos globales como en el caso de normalize.css o bootstrap.
 \end{itemize}
 
-A continuación se monstrará el uso de algunos componentes que ofrece la libreria:
+A continuación se mostrará el uso de algunos componentes que ofrece la librería:
 
 \begin{itemize}
-  \item Botones\\
+  \item Botones
 
         \begin{lstlisting}
                 <Button variant="text">Text</Button>
@@ -214,9 +202,9 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 </IconButton>
             \end{lstlisting}
 
-        Material UI viene incluido con 3 variantes visuales de botones, los cuales son usados dependiendo de la importancia o enfasis que se le quiera dar al botón. Además, tambien posee variaciones de color y tamaño predeterminados y la posibilidad de usar íconos que funcionan como botones.
+        Material UI viene incluido con 3 variantes visuales de botones, los cuales son usados dependiendo de la importancia o énfasis que se le quiera dar al botón. Además, también posee variaciones de color y tamaño predeterminados y la posibilidad de usar íconos que funcionan como botones.
 
-  \item Selectores\\
+  \item Selectores
 
         \begin{lstlisting}
                 <FormControl fullWidth>
@@ -235,9 +223,9 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 </FormControl>
             \end{lstlisting}
 
-        El selector comunmente se encuentra envuelto en un compontente de FormControl, el cual provee contexto para hacer uso de campos requeridos, manejo de errores y uso de propiedades como seleccionado o campo lleno.
+        El selector comunmente se encuentra envuelto en un compontente de FormControl, el cual provee contexto para hacer uso de campos requeridos, manejo de errores y uso de propiedades como "seleccionado" o "campo lleno".
 
-  \item Sliders\\
+  \item Sliders
 
         \begin{lstlisting}
                 const marks = [
@@ -270,7 +258,7 @@ A continuación se monstrará el uso de algunos componentes que ofrece la librer
                 />
             \end{lstlisting}
 
-        Material UI permite customizar los sliders de mútiples formas, tales como usar valores discretos, cambiar el tamaño del slider, o utilizar marcas personalizadas para el slider, lo que permite dar contexto al usuario sobre los valores mostrados en el slider.
+        Material UI permite personalizar los Sliders de múltiples maneras, tales como usar valores discretos, cambiar el tamaño del Slider, o utilizar íconos personalizados en los extremos o en la perilla de este, lo que contextualiza al usuario sobre lo que representa el valor del Slider.
 
 \end{itemize}
 
