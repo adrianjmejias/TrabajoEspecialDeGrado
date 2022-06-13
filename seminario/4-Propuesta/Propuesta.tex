@@ -158,14 +158,21 @@ reproducir y así ser guiado por como el contenido de un artículo ha ido evoluc
     \item URL del proyecto \url{http://alumni.media.mit.edu/~fviegas/papers/history_flow.pdf}
 \end{itemize}
 
-Es una herramienta de análisis de datos exploratorio, la cual es util revelando patrones dentro del contexto de wiki. diseñado para mostrar relaciones entre múltiples versiones de documentos.
+Es una herramienta de análisis de datos exploratorio, la cual utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El proposito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
 
-La mayoría de las wikis poseen un sistema de archivos que registra todas las ediciones anteriores de una página, lo que facilita el proceso de revertir a una versión anterior. Este sistema de archivo garantiza que no se produzcan daños permanentes debido a una mala edición. Las versiones archivadas de una página están disponibles para los usuarios a través de un enlace de "historial de la página”.
+Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra vertical representa una version del documento, siendo el largo de la barra proporcional a la cantidad de palabras que posea el documento. El color de la barra vertical permite asociar cada palabra a un usuario en especifico, identificando el autor de cada palabra en esa respectiva version. Por último se utiliza la distancia entre barras verticales (versiones) para separarlas de acuerdo a su fecha de versión y así obtener información extra sobre la frecuencia de edición de cada palabra. Al realizar el procedimiento en la página \say{Brazil} \ref*{fig:brazil-history-flow} se puede observar un evidente incremento en la longitud de las barras verticales, lo que implica un crecimiento drastico del contenido de la pagina.
 
-La información histórica sobre cómo se crean y editan los documentos comunales es fundamental para comprender la dinámica colaborativa dentro de las comunidades. Wikipedia hace que su base de datos completa de historiales de versiones esté disponible para descargar. Sin embargo, dar sentido a la historia incluso para una sola entrada no es sencillo. La gran cantidad de versiones puede resultar abrumadora: en agosto de 2003, la entrada de Microsoft tenía 198 versiones que comprendían 6,2 MB de texto; para tener una idea de cuanta información es, imagina una tabla como la de la Fig. 1 pero 22 veces más grande. Además, la información significativa a menudo no está contenida en versiones individuales, sino en las diferencias en el texto de una entrada de una versión a la siguiente. Tales diferencias resaltan las opciones de edición, enfatizando lo que sobrevive y lo que no sobrevive con el tiempo.
+\begin{figure}[H]
+    \includegraphics[scale=0.5]{history-flow-mechanism.png}
+    \caption{Explicación del mecanismo de visualización de History Flow}
+    \label{fig:history-flow-mechanism}
+\end{figure}
 
-Wikipedia proporciona un método para ver las diferencias entre documentos, similar al que se encuentra en los sistemas de control de código fuente como github. Esta interfaz tiene dos inconvenientes: primero, solo muestra diferencias entre dos versiones a la vez. En segundo lugar, registra las diferencias solo a nivel de párrafo (un cambio en una coma puede hacer que un párrafo de dos páginas se marque como eliminado). Ambos problemas hicieron que el examen de los historiales de versiones fuera extremadamente engorroso. Dado que no había herramientas comerciales disponibles que resolvieran ambos problemas, creamos una nueva técnica, una herramienta de visualización simple pero efectiva, denominada flujo de historial.
-
+\begin{figure}[H]
+    \includegraphics[scale=0.5]{brazil-history-flow.png}
+    \caption{La pagina "Brazil" mostrando un crecimiento abrupto y pocas contribuciones anónimas}
+    \label{fig:brazil-history-flow}
+\end{figure}
 
 \subsection{Wiki History Flow}
 
