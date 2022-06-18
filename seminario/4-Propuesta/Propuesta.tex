@@ -87,8 +87,23 @@ Comenzando con el proyecto madre de Wikimedia, este gigante sirve de plataforma 
 \\
 Este proyecto es particularmente interesante porque podría ser un medio por el cual la aplicación WikiMetaView y sus dependencias podrían ser servidas al público.
 
-
 \url{https://www.wikidata.org/wiki/Wikidata:Tools/Visualize_data}
+
+\subsection{Sigma - ArticleInfo}
+\begin{itemize}
+    \item URL del proyecto \url{https://sigma.toolforge.org/articleinfo.py}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{proyectos relacionados/sigma_article-info.png}
+    \caption{Sigma Article Info}
+    \label{sigma_articleInfo}
+\end{figure}
+
+
+% This isn't really useful lol
+% \url{https://interaction-timeline.toolforge.org/}
 
 \subsection{Histropedia Timeline}
 
@@ -113,30 +128,12 @@ Este set de herramientas esta enfocado en supervisar usuarios y sus contribucion
 - Aadminscore
 - Articles for Creation Review History
 
-\subsection{xtools}
+\subsection{Xtools}
 \begin{itemize}
     \item URL del proyecto \url{https://xtools.wmflabs.org/}
 \end{itemize}
 
-
-\subsection{Sigma - ArticleInfo}
-\begin{itemize}
-    \item URL del proyecto \url{https://sigma.toolforge.org/articleinfo.py}
-\end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{proyectos relacionados/sigma_article-info.png}
-    \caption{Sigma Article Info}
-    \label{sigma_articleInfo}
-\end{figure}
-
-
-% This isn't really useful lol
-% \url{https://interaction-timeline.toolforge.org/}
-
-
-\subsubsection{wikireplay}
+\subsection{Wiki Replay}
 \begin{itemize}
     \item URL del proyecto \url{https://cosmiclattes.github.io/wikireplay/player}
 \end{itemize}
@@ -155,8 +152,29 @@ reproducir y así ser guiado por como el contenido de un artículo ha ido evoluc
 
 \url{https://de.wikipedia.org/wiki/Benutzer:Atlasowa/edit_history_visualization}
 
+\subsection{IBM History Flow tool}
 
-\subsection{wikihistoryflow}
+\begin{itemize}
+    \item URL del proyecto \url{http://alumni.media.mit.edu/~fviegas/papers/history_flow.pdf}
+\end{itemize}
+
+Es una herramienta de análisis de datos exploratorio, la cual utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El proposito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
+
+Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra vertical representa una version del documento, siendo el largo proporcional a la cantidad de palabras que posea el documento. El color de cada versión permite asociar cada palabra a un usuario en especifico, identificando a que autor pertenece en dicha versión. Por último se utiliza la distancia entre versiones para separarlas de acuerdo a su fecha y así obtener información extra sobre la frecuencia de edición de cada palabra. Al realizar el procedimiento en la página \say{Brazil} \ref*{fig:brazil-history-flow} se puede observar un evidente incremento en la longitud de las barras verticales, lo que implica un crecimiento drastico del contenido de la pagina.
+
+\begin{figure}[H]
+    \includegraphics[scale=0.5]{history-flow-mechanism.png}
+    \caption{Explicación del mecanismo de visualización de History Flow}
+    \label{fig:history-flow-mechanism}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[scale=0.5]{brazil-history-flow.png}
+    \caption{La pagina "Brazil" mostrando un crecimiento abrupto y pocas contribuciones anónimas}
+    \label{fig:brazil-history-flow}
+\end{figure}
+
+\subsection{Wiki History Flow}
 
 \begin{itemize}
     \item URL del proyecto \url{https://github.com/rdmpage/wikihistoryflow}
