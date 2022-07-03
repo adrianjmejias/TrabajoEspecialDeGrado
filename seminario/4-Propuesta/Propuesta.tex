@@ -4,14 +4,14 @@
 
 El orgullo de Wikipedia como la mayor fuente información (en forma de artículos sobre eventos, personajes, definiciones, conceptos, locaciones y entre otros...) se debe a su extensa red de colaboradores.
 
-Cada vez que estos ejecutan una acción en la wikipedia -ya sea si aportan artículo complejo o corrigen una tilde- dejan una huella llamada metadata. Estos "rastros", conformados por fechas, numero de lineas editadas, direcciones IP y demás, son de suma importancia para analistas de datos; 
+Cada vez que estos ejecutan una acción en la wikipedia -ya sea si aportan artículo complejo o corrigen una tilde- dejan una huella llamada metadata. Estos "rastros", conformados por fechas, numero de lineas editadas, direcciones IP y demás, son de suma importancia para analistas de datos.
 
+Estos, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de wikipedia; pueden tomar la metadata, procesarla y generar gráficos para buscar patrones de interés. 
 
-% TODO: Porque este trabajo es un trabajo util
-% Aprovechar la data que genera wikipedia
-% wikipedia tiene apis
-% sacarle provecho
-% apoyar a los watchers en su labor de vigilancia de sus artículos
+El proceso es largo, y su complejidad limita quien puede formar parte. Si se tuviera una solución donde aquellos interesados "no técnicos" puedan ayudar y donde los interesados experimentados no tengan que dedicarle exhaustivas cantidades de tiempo para poder aportar.
+
+Este trabajo final de grado propone entonces una herramienta que facilita esta laboriosa tarea para todo tipo de usuarios. 
+Dándoles una interfaz fácil de usar y flexible para generar gráficos 
 
 
 \section{Objetivos del trabajo}
@@ -35,6 +35,8 @@ Crear una nueva version del front-end de wikimetrics y extender con funcionalida
 \section{Estrategia de solución y método de desarrollo ágil a utilizar}
 
 \subsection{Desarrollo Rápido de Aplicaciones (RAD)}
+
+% TODO: revisar e iterar
 
 El desarrollo rápido de aplicaciones es una metodología de desarrollo que prioriza la creación rápida y prototipos y la retroalimentación rápida sobre ciclos prolongados de desarrollo y prueba. Con el uso de RAD, los desarrolladores pueden realizar multiples iteraciones y actualizaciones al software rápidamente sin la necesidad de iniciar un cronograma de desarrollo desde cero cada vez.
 
@@ -85,6 +87,8 @@ Estas herramientas cumplen diferentes objetivos,
 
 \subsection{Toolforge}
 
+Es una suite de herramientas estadísticas para las páginas, usuarios, wikis de Wikimedia. Entre las herramientas hosteadas más populares de toolforge se encuentra 
+
 \begin{itemize}
     \item URL del proyecto \url{https://wikitech.wikimedia.org/wiki/Portal:Toolforge}
 \end{itemize}
@@ -95,21 +99,20 @@ Este proyecto es particularmente interesante porque podría ser un medio por el 
 
 \url{https://www.wikidata.org/wiki/Wikidata:Tools/Visualize_data}
 
-\subsection{Sigma - ArticleInfo}
+\subsection{Sigma - Summary}
+
+Esta herramienta creada por el usuario Sigma\(\Sigma\) permite obtener el historial de contribuciones de un usuario y filtrar las ediciones por una palabra clave. Tal como se puede observar en la imagen \ref{fig:sigma_summary}, el resultado de buscar el usuario \say{Clarityfiend} y filtrar por la palabra \say{space} es similar al que se puede encontrar en la lista de contribuciones por usuario de wikipedia \cite{UserClarityfiend}, con el beneficio de poder filtrar por palabras claves.
+
 \begin{itemize}
-    \item URL del proyecto \url{https://sigma.toolforge.org/articleinfo.py}
+    \item URL del proyecto \url{https://sigma.toolforge.org/summary.py}
 \end{itemize}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{proyectos relacionados/sigma_article-info.png}
-    \caption{Sigma Article Info}
-    \label{sigma_articleInfo}
+    \includegraphics[width=1.0\textwidth]{proyectos relacionados/sigma-summary2.png}
+    \caption{Sigma Summary}
+    \label{sigma_summary}
 \end{figure}
-
-
-% This isn't really useful lol
-% \url{https://interaction-timeline.toolforge.org/}
 
 \subsection{Histropedia Timeline}
 
@@ -117,7 +120,7 @@ Este proyecto es particularmente interesante porque podría ser un medio por el 
     \item URL del proyecto \url{http://histropedia.com/timeline/}
 \end{itemize}
 
-Es una herramienta que permite visualizar diferentes eventos en forma de linea de tiempo interactiva, usando el servicio de Wikidata para consultas Sparql \cite{WikidataSparql}. Es usada como herramienta educativa por distintas entidades como el Museo del Prado para que los usuarios puedan visualizar de forma sencilla el arte que se expone, tal como se puede observar en la imagen \ref{fig:museo-de-prado-timeline}. Ademas la linea te tiempo permite asociar cada elemento de la colleción con un evento historico importante, de tal forma que se facilite el aprendizaje y se haga más dinámico.
+Es una herramienta que permite visualizar diferentes eventos en forma de linea de tiempo interactiva, usando el servicio de Wikidata para consultas Sparql \cite{WikidataSparql}. Es usada como herramienta educativa por distintas entidades como el Museo del Prado para que los usuarios puedan visualizar de forma sencilla el arte que se expone, tal como se puede observar en la imagen \ref{fig:museo-de-prado-timeline}. Además la linea te tiempo permite asociar cada elemento de la colección con un evento histórico importante, de tal forma que se facilite el aprendizaje y se haga más dinámico.
 
 \begin{figure}[H]
     \centering
@@ -198,7 +201,14 @@ Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra
     \item
 \end{itemize}
 
-Este proyecto genera una gráfica de history flow dado el url de un articulo
+Es un repositorio que posee varios archivos de PHP que permiten crear el history flow de una página en formato SVG. Este proyecto obtiene las revisiones directamente de Wikipedia haciendo uso de web scrapping y calculando la diferencia entre textos con el paquete de Pear Text_Diff \cite{pear_text_diff}, para después graficar las diferencias en forma de history flow.
+
+\begin{figure}[H]
+    \includegraphics[scale=0.5]{proyectos relacionados/rdm-historyflow.png}
+    \caption{History Flow creado por el proyecto}
+    \label{fig:brazil-history-flow}
+\end{figure}
+
 
 \section{Herramientas}
 
@@ -209,6 +219,7 @@ Este proyecto genera una gráfica de history flow dado el url de un articulo
     \item Navegadores web (Google Chrome, Firefox, etc)
     \item Base de Datos (MongoDB)
     \item Servidor (Nodejs)
+    \item Manejador de paquetes de NPM (pnpm)
 \end{itemize}
 
 \subsection{Tecnologías o librerías web a utilizar}
