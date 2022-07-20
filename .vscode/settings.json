@@ -35,6 +35,6 @@
     "editor.formatOnSave": false,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-    "workbench.colorTheme": "Kimbie Dark",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.preferredDarkColorTheme": "Red"
 }
