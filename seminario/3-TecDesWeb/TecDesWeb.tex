@@ -23,7 +23,7 @@ Sin embargo también para asegurar la larga vida y mantenibilidad de la aplicaci
 
 El problema entonces recae en que estas tecnologías por si solas son meramente para Aplicaciones de una sola página. Los motores de búsqueda hacen lo que pueden pero el HTML estático manejado por las SPA es mínimo, resultando en que los motores de búsqueda no puedan inferir de qué trata la página, afectando su habilidad de ser encontrada e indexada.
 
-Como remedio surge un nuevo paradigma con el nombre de Server Side Rendering o simplemente SSR; donde se utilizan  tecnologías SPA como motor de plantillas, para así generar HTML digerible por los motores de búsqueda. Una vez el HTML estático llega al cliente, este atraviesa un proceso conocido como hydration, donde retoma sus funcionalidades dinámicas características de SPA.
+Como remedio surge un nuevo paradigma con el nombre de Server Side Rendering o simplemente SSR \cite{ServerSideRendering}; donde se utilizan  tecnologías SPA como motor de plantillas, para así generar HTML digerible por los motores de búsqueda. Una vez el HTML estático llega al cliente, este atraviesa un proceso conocido como hydration, donde retoma sus funcionalidades dinámicas características de SPA.
 
 Asi entonces se logra al perfecto balance de herramientas actuales y fáciles de usar, que también cumplen con los requerimientos de los motores de búsqueda para indexar paginas web.
 
@@ -39,7 +39,7 @@ El este capitulo hablaremos de las herramientas de desarrollo web usadas para ll
 
 Fastify es un framework web para NodeJS de código abierto concentrado en proporcionar el mejor rendimiento, y una arquitectura flexible. 
 
-Las principales características de Fastify son:
+Las principales características de Fastify son \cite{FastifyCoreFeatures}:
 
 \begin{itemize}
     \item Alto rendimiento: Si se compara la velocidad de Fastify con otros frameworks web como Express, tal como se aprecia en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express.
@@ -117,7 +117,7 @@ Para este proyecto se usarán las siguientes tecnologías:
 
 ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos y reutilizables, para desarrollo de interfaces de usuario, especialmente aplicaciones de una sola página.
 
-React maneja el concepto de \say{programación reactiva} haciendo uso de un DOM Virtual, lo que le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada en el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, la aplicación \say {reacciona} a cambios en los datos ejecutando una serie de eventos y re-renderizando solo aquellos componentes que lo ameriten. Esto es el secreto de porqué React es altamente eficiente.
+React maneja el concepto de \say{programación reactiva} \cite{ReactiveProgramming} haciendo uso de un DOM Virtual, lo que le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada en el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, la aplicación \say {reacciona} a cambios en los datos ejecutando una serie de eventos y re-renderizando solo aquellos componentes que lo ameriten. Esto es el secreto de porqué React es altamente eficiente.
 
 Otras características que destacan en React son:
 
@@ -176,7 +176,7 @@ Next.js ofrece 2 formas de pre-renderizado:
 
 \subsection{Material UI}
 
-Material UI es un framework de React creado con el objetivo de proporcionar una forma sencilla a los desarrolladores de aplicar los principios de Material Design \cite{MaterialDesignPrinciples} usando componentes de React. Este framework se destaca por la gran variedad de componentes disponibles, que van desde elementos visuales sencillos como botones o selectores, hasta complejos como modales o drawers. Además de su variedad de componentes, Material UI tambien destaca por su gran cantidad de contribuyentes, lo que asegura la longevidad y mantenibilidad del framework.
+Material UI es un framework de React creado con el objetivo de proporcionar una forma sencilla a los desarrolladores de aplicar los principios de Material Design \cite{MaterialDesignPrinciples} usando componentes de React. Este framework se destaca por la gran variedad de componentes disponibles, que van desde elementos visuales sencillos como botones o selectores, hasta complejos como modales o drawers. Además de su variedad de componentes, Material UI también destaca por su gran cantidad de contribuyentes, lo que asegura la longevidad y mantenibilidad del framework.
 
 Entre las principales características que posee Material UI se encuentran:
 

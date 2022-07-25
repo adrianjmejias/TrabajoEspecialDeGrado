@@ -1,13 +1,21 @@
+Para el análisis de datos, el paso fundamental es la visualización de datos, sin este paso los analistas de datos simplemente no podrían comparar grupos de datos 
+eficientemente. 
+Esta tarea además de importante es compleja y necesita de agrupaciones que se encarguen de trabajar en ella constantemente. Afortunadamente estas agrupaciones publican sus esfuerzos en plataformas 
+como github para así poder aportar a la investigación, discutir soluciones, revisar problemas y atraer nuevos colaboradores.
+
 \section{Librerías o frameworks para aplicaciones intensivas de frontend}
 
 \section{Librerías para la visualización de datos}
-Para la selección de librería se consideran los siguiente factores
+Pero no cualquier librería 
+Para la selección de librería se consideran los siguiente factores:
 
 \begin{enumerate}
     \item {Debe ser un proyecto open source.}
     \item {De ser posible, debe tener bindings para ReactJS para facilidad en el desarrollo.}
     \item {Debe ser extensible para poder implementar aquellas visualizaciones que sean muy específicas.}
-    \item {Deben ser longevas y tener cierta garantía de que sera mantenida en el tiempo, asegurando así.}
+    \item {Deben ser longevas y tener cierta garantía de que sera mantenida en el tiempo,
+    asegurando así que para futuras mejoras de este TEG sigan disponibles.}
+    \item {Debe ser fácil de utilizar}
 \end{enumerate}
 
 \subsection{ Data Driven Documents (D3) }
@@ -24,13 +32,32 @@ Para la selección de librería se consideran los siguiente factores
     \item Mantenida por Apache
 \end{itemize}
 
-\section{ Proyectos alternos }
-Estos dos gigantes en el mundo de la visualización de datos por si solos son opciones excelentes,
-pero son opciones que trabajan sobre javascript vainilla y no están adaptadas para trabajar directamente sobre tecnologías como ReactJS.
-Para facilidad del desarrollo se utilizará una librería que se encargue de hacer esta adaptación por nosotros.
+\subsection{ Comparación de bibliotecas }
 
-\subsection{ recharts }
+Después de comparar estas librerías, sus APIs y leer otras investigaciones la decisión final es utilizar echarts
+
+La base de esta conclusión es la simplicidad \cite{EchartsDecision}, mientras que d3 permite una gran flexibilidad, la curva de aprendizaje tiene una inclinación pronunciada. 
+En comparación, echarts se ve como una herramienta plug and play que requiere mínima configuración y ahorra al desarrollador días de esfuerzo.
+
+El tipo de gráficas a utilizar son las siguientes
+\begin{itemize}    
+    \item Número
+    \item Linea
+    \item Barra
+    \item Área
+    \item Torta
+    \item Dispersión
+    \item History flow
+\end{itemize}
+
+Para estas gráficas echarts provee soluciones pre-hechas y si es el caso de gráficos de interés en nichos específicos, como es el caso del History Flow, permite que fácilmente crees gráficas completamente nuevas. 
+También provee gráficos de Sankey y Stacked Area Chart que son bastante parecidos y podrían ser personalizados para parecerse al History Flow. 
+
+\section{ Proyectos alternos }
+Estos dos gigantes en el mundo de la visualización de datos por si solos son opciones excelentes, pero trabajan sobre javascript vainilla y no están adaptadas para trabajar directamente sobre tecnologías como ReactJS. 
+Para facilidad del desarrollo de la aplicación se utilizará una librería que se encargue de adaptar echarts a ReactJS.
+
+\subsection{ echarts for react }
 \begin{itemize}
-    \item URL de repositorio \href{https://github.com/recharts/recharts}{https://github.com/recharts/recharts}
-    \item Fecha de última versión: 1 de Abril de 2022
+    \item URL del repositorio \href{https://github.com/hustcc/echarts-for-react}{https://github.com/hustcc/echarts-for-react}
 \end{itemize}
