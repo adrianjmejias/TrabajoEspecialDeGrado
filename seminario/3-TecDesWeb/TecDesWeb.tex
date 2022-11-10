@@ -21,11 +21,11 @@ Para que una aplicación sea encontrable — y así usada — por internautas es
 
 Sin embargo también para asegurar la larga vida y mantenibilidad de la aplicación y la facilidad de desarrollo se debe tomar en cuenta herramientas extensamente empleadas contemporáneamente como Angular, React y Vue.
 
-El problema entonces recae en que estas tecnologías por si solas son meramente para Aplicaciones de una sola página. Los motores de búsqueda hacen lo que pueden pero el HTML estático manejado por las SPA es mínimo, resultando en que los motores de búsqueda no puedan inferir de qué trata la página, afectando su habilidad de ser encontrada e indexada.
+El problema entonces recae en que estas tecnologías por si solas son meramente para aplicaciones de una sola página. Los motores de búsqueda hacen lo que pueden pero el HTML estático manejado por las SPA es mínimo, resultando en que los motores de búsqueda no puedan inferir de qué trata la página, afectando su habilidad de ser encontrada e indexada.
 
-Como remedio surge un nuevo paradigma con el nombre de Server Side Rendering o simplemente SSR \cite{ServerSideRendering}; donde se utilizan  tecnologías SPA como motor de plantillas, para así generar HTML digerible por los motores de búsqueda. Una vez el HTML estático llega al cliente, este atraviesa un proceso conocido como hydration, donde retoma sus funcionalidades dinámicas características de SPA.
+Como remedio surge un nuevo paradigma con el nombre de Server Side Rendering o simplemente SSR \cite{ServerSideRendering}; donde se utilizan  tecnologías SPA como motor de plantillas, para así generar HTML digerible por los motores de búsqueda. Una vez el HTML estático llega al cliente, este atraviesa un proceso conocido como \textit{hydration}, donde retoma sus funcionalidades dinámicas características de SPA.
 
-Así entonces se logra al perfecto balance de herramientas actuales y fáciles de usar, que también cumplen con los requerimientos de los motores de búsqueda para indexar páginas web.
+Así se logra el perfecto balance de herramientas actuales y fáciles de usar, que también cumplen con los requerimientos de los motores de búsqueda para indexar páginas web.
 
 \section{Tecnologías para el desarrollo}
 
@@ -42,12 +42,12 @@ Fastify es un framework web para NodeJS de código abierto concentrado en propor
 Las principales características de Fastify son \cite{FastifyCoreFeatures}:
 
 \begin{itemize}
-    \item Alto rendimiento: Si se compara la velocidad de Fastify con otros frameworks web como Express, tal como se aprecia en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express.
-    \item Extensible: Fastify es completamente extensible mediante el uso de hooks, plugins o decoradores
-    \item Basado en esquemas: A pesar de no ser obligatorio, es recomendado usar el esquema JSON para validar las rutas y serializar las salidas, internamente Fastify compila el esquema en una función de alto rendimiento.
+    \item Alto rendimiento: si se compara la velocidad de Fastify con otros frameworks web como Express, tal como se aprecia en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express.
+    \item Extensible: Fastify es completamente extensible mediante el uso de \textit{hooks}, plugins o decoradores.
+    \item Basado en esquemas: a pesar de no ser obligatorio, es recomendado usar el esquema JSON para validar las rutas y serializar las salidas, internamente Fastify compila el esquema en una función de alto rendimiento.
     \item Registro: Usualmente el guardar un registro puede ser costoso, por esa razón Fastify hace uso de un logger eficiente que casi remueve ese costo.
-    \item Amigable para los desarrolladores: Este framework está desarrollado para ser bastante expresivo y ayudar a los desarrolladores en su uso, sin sacrificar rendimiento o seguridad.
-    \item Listo para usar con Typescript: La instalación inicial del framework provee compatibilidad predeterminada con Typescript
+    \item Amigable para los desarrolladores: este framework está desarrollado para ser bastante expresivo y ayudar a los desarrolladores en su uso, sin sacrificar rendimiento o seguridad.
+    \item Listo para usar con Typescript: la instalación inicial del framework provee compatibilidad predeterminada con Typescript
 \end{itemize}
 
 
@@ -61,9 +61,9 @@ Las principales características de Fastify son \cite{FastifyCoreFeatures}:
 
 MongoDB es un sistema manejador de base de datos de documentos NoSQL escalable y flexible diseñado para lidiar con los conflictos que poseen las bases de datos relacionales y las limitaciones de otras soluciones NoSQL. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, lo que facilita la integración de los datos.
 
-No tener restricciones al estructurar data facilita el desarrollo, siempre y cuando el desarrollador sea consciente de la redundancia que puede causar en la base de datos. Los documentos BSON almacenados en Colecciones dentro de MongoDB, estos son similares al conocidísimo estándar JSON. Las consultas y mutaciones en MongoDB no son hechas en un lenguaje de consulta como SQL sino serializadas en JSON.   
+No tener restricciones al estructurar los datos facilita el desarrollo, siempre y cuando el desarrollador sea consciente de la redundancia que puede causar en la base de datos. Los documentos BSON almacenados en Colecciones dentro de MongoDB, estos son similares al conocidísimo estándar JSON. Las consultas y mutaciones en MongoDB no son hechas en un lenguaje de consulta como SQL sino serializadas en JSON.   
 
-Como se puede observar en la imagen \ref{fig:db-ranking}, mongoDB es actualmente la opción más usada entre las bases de datos NoSQL, ocupando el puesto número 5 en el ranking de bases de datos. Esto proporciona suficiente certeza de que MongoDB será mantenido por años en el futuro.
+Como se puede observar en la imagen \ref{fig:db-ranking}, mongoDB es actualmente la opción más usada entre las bases de datos NoSQL, ocupando el puesto número 5 en el ranking de bases de datos propuesto por Stack Overflow \cite{StackOverflowSurvey}. Esto proporciona suficiente certeza de que MongoDB será mantenido por años en el futuro.
 
 \begin{figure}[H]
   \includegraphics[scale=.355]{db-ranking.jpg}
@@ -77,11 +77,11 @@ Algunas de las características más importantes de MongoDB son:
   \item Consultas ad-hoc optimizadas para análisis en tiempo real
   \item Indexación adecuada para mejores tiempos de ejecución de consultas
   \item Replicación para una mejor disponibilidad y estabilidad de los datos
-  \item Sharding
+  \item \textit{Sharding}\footnote{\textit{Sharding}: proceso de distribuir un conjunto de datos en múltiples bases de datos, que después pueden ser almacenados en múltiples ordenadores.}
   \item Balanceo de carga
 \end{itemize}
 
-Para realizar operaciones sobre la base de datos MongoDB usando un servidor NodeJS es necesario usar un MongoDB Driver compatible con NodeJS, el cual permite establecer una conexión con la base de datos, y provee una API que facilita la interacción con la misma. A continuación se mostrará un código básico de conexión y consulta de datos usando el NodeJS MongoDB Driver.
+Para realizar operaciones sobre la base de datos MongoDB usando un servidor NodeJS es necesario usar un MongoDB Driver compatible con NodeJS, el cual permite establecer una conexión con la base de datos, y que provee una API que facilita la interacción con la misma. A continuación se mostrará un código básico de conexión y consulta de datos usando el NodeJS MongoDB Driver.
 
 \begin{lstlisting}
     import { MongoClient } from "mongodb";
