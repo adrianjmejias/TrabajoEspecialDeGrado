@@ -1,5 +1,4 @@
-Así como el propósito de un libro es ser leído y su éxito se mide en la cantidad de personas que lo lean. 
-El éxito de un sitio web informativo se mide en su crecimiento; vive para tener una relación simbiótica con sus usuarios, donde ellos proveen el contenido y con él atraen lectores que se convierten en editores y en nuevos creadores. El sitio web por su parte, aporta todas las herramientas necesarias para que todos puedan participar.
+Así como el propósito de un libro es ser leído y su éxito se mide en la cantidad de personas que lo lean, el éxito de un sitio web informativo se mide en su crecimiento; vive para tener una relación simbiótica con sus usuarios, donde ellos proveen el contenido y con él atraen lectores que se convierten en editores y en nuevos creadores. El sitio web por su parte, aporta todas las herramientas necesarias para que todos puedan participar.
 
 Con el tiempo, y si los usuarios tienen una experiencia positiva este "libro" web, se puede esperar que esté convertido en ecosistema de datos. Para garantizar una buena experiencia de usuario Petter Morville \cite{UXFactors} propone tener en cuenta siguientes factores:
 
@@ -52,7 +51,8 @@ Las principales características de Fastify son \cite{FastifyCoreFeatures}:
 
 
 \begin{figure}[H]
-    \includegraphics[scale=0.5]{fastify_vs_express.png}
+    \centering
+    \includegraphics[width=\textwidth]{fastify_vs_express.png}
     \caption{ Número de peticiones por segundo para distinta cantidad de conexiones}
     \label{fig:fastify_vs_express}
 \end{figure}
@@ -61,14 +61,15 @@ Las principales características de Fastify son \cite{FastifyCoreFeatures}:
 
 MongoDB es un sistema manejador de base de datos de documentos NoSQL escalable y flexible diseñado para lidiar con los conflictos que poseen las bases de datos relacionales y las limitaciones de otras soluciones NoSQL. En lugar de guardar los datos en tablas, tal y como se hace en las bases de datos relacionales, MongoDB guarda estructuras de datos BSON (una especificación similar a JSON) con un esquema dinámico, lo que facilita la integración de los datos.
 
-No tener restricciones al estructurar los datos facilita el desarrollo, siempre y cuando el desarrollador sea consciente de la redundancia que puede causar en la base de datos. Los documentos BSON almacenados en Colecciones dentro de MongoDB, estos son similares al conocidísimo estándar JSON. Las consultas y mutaciones en MongoDB no son hechas en un lenguaje de consulta como SQL sino serializadas en JSON.   
+No tener restricciones al estructurar los datos facilita el desarrollo, siempre y cuando el desarrollador sea consciente de la redundancia que puede causar en la base de datos. Los documentos BSON almacenados en colecciones dentro de MongoDB, estos son similares al conocidísimo estándar JSON. Las consultas y mutaciones en MongoDB no son hechas en un lenguaje de consulta como SQL sino serializadas en JSON.
 
-Como se puede observar en la imagen \ref{fig:db-ranking}, mongoDB es actualmente la opción más usada entre las bases de datos NoSQL, ocupando el puesto número 5 en el ranking de bases de datos propuesto por Stack Overflow \cite{StackOverflowSurvey}. Esto proporciona suficiente certeza de que MongoDB será mantenido por años en el futuro.
+Como se puede observar en la imagen \ref{fig:ranking-db}, mongoDB es actualmente la opción más usada entre las bases de datos NoSQL, ocupando el puesto número 5 en el ranking de bases de datos propuesto por Stack Overflow \cite{StackOverflowSurvey}. Esto proporciona suficiente certeza de que MongoDB será mantenido por años en el futuro.
 
 \begin{figure}[H]
-  \includegraphics[scale=.355]{db-ranking.jpg}
-  \caption{Ranking de bases de datos más populares de 2022}
-  \label{fig:db-ranking}
+    \centering
+    \includegraphics[width=\textwidth]{ranking-db.png}
+    \caption{Ranking de bases de datos más populares de 2022}
+    \label{fig:ranking-db}
 \end{figure}
 
 Algunas de las características más importantes de MongoDB son:
