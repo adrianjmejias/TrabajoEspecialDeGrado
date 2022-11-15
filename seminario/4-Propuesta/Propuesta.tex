@@ -73,7 +73,7 @@ Según el enfoque de James Martin \cite{RADJamesMartin} el Desarrollo Rápido de
 \end{itemize}
 
 
-\section{Trabajos similares, diferencias y ventajas de la solución a desarrollar}
+\section{Trabajos relacionados}
 
 Siendo Wikimedia y Wikipedia las más grandes comunidades y organizaciones dedicadas a recopilar datos, es lógico pensar que tiene consigo una abundante cantidad de seguidores capacitados y apasionados por aportar lo que puedan. A continuación se detallará el estado actual de las herramientas existentes para explorar la Wikipedia.
 
@@ -122,7 +122,7 @@ Esta herramienta creada por el usuario Sigma\(\Sigma\) permite obtener el histor
     \item URL del proyecto \url{http://histropedia.com/timeline/}
 \end{itemize}
 
-Es una herramienta que permite visualizar diferentes eventos en forma de línea de tiempo interactiva, usando el servicio de Wikidata para consultas Sparql \cite{WikidataSparql}. Es usada como herramienta educativa por distintas entidades como el Museo del Prado para que los usuarios puedan visualizar de forma sencilla el arte que se expone, tal como se puede observar en la imagen \ref{fig:museo-de-prado-timeline}. Además, la línea de tiempo permite asociar cada elemento de la colección con un evento histórico importante, de tal forma que se facilite el aprendizaje y se haga más dinámico.
+Histropedia Timeline permite visualizar diferentes eventos en forma de línea de tiempo interactiva, usando el servicio de Wikidata para consultas Sparql \cite{WikidataSparql}. Es usada como herramienta educativa por distintas entidades como el Museo del Prado para que los usuarios puedan visualizar de forma sencilla el arte que se expone, tal como se puede observar en la imagen \ref{fig:museo-de-prado-timeline}. Además, la línea de tiempo permite asociar cada elemento de la colección con un evento histórico importante, de tal forma que se facilite el aprendizaje y se haga más dinámico.
 
 \begin{figure}[H]
     \centering
@@ -177,17 +177,17 @@ reproducir y así ser guiado por como el contenido de un artículo ha ido evoluc
 \subsection{IBM History Flow tool}
 
 \begin{itemize}
-    \item URL del proyecto \url{http://alumni.media.mit.edu/~fviegas/papers/history_flow.pdf}
+    \item URL del proyecto \url{http://alumni.media.mit.edu/~fviegas/papers/history_flow.pdf} \cite{HistoryFlowVisualizations}
 \end{itemize}
 
-Es una herramienta de análisis de datos exploratorio, la cual utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El propósito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
+Es una herramienta de análisis de datos exploratorio, que utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El propósito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
 
 Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra vertical representa una versión del documento, siendo el largo proporcional a la cantidad de palabras que posee el documento. El color de la versión en toda su extensión permite asociar cada palabra con un usuario, identificando el autor de dicha versión. Por último, se utiliza la distancia entre versiones para separarlas de acuerdo a su fecha y así obtener información extra sobre la frecuencia de edición de cada palabra. Al realizar el procedimiento en la página \say{Brazil} \ref*{fig:brazil-history-flow} se puede observar un evidente incremento en la longitud de las barras verticales, lo que implica un crecimiento drástico del contenido de la página.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{proyectos-relacionados/history-flow-mechanism.png}
-    \caption{Explicación del mecanismo de visualización de History Flow}
+    \caption{Explicación del mecanismo de visualización de History Flow \cite{HistoryFlowVisualizations}}
     \label{fig:history-flow-mechanism}
 \end{figure}
 
@@ -238,20 +238,23 @@ En esta sección se enumerará
 \end{itemize}
 
 \section{Requerimientos}
+
+    TODO pequeña descripcion
+
 \begin{enumerate}
+    \item{La herramienta tiene que ser una aplicación web.}
+    \item{La aplicación tiene que contar con una vista principal que incluya gráfica e información general de cada uno de los wikis del watchlist.}
     \item{Una herramienta capaz de visualizar gráficas sobre propiedades de edición de un wiki.}
     \item{Los wikis a visualizar son extraídas del watchlist del usuario autenticado a través de Wikipedia (usando API de MediaWiki).}
     \item{Permitir editar las visualizaciones (alternar tipo de gráfica, cambiar los tipos de datos a visualizar).}
     \item{Los datos a representar en las visualizaciones son proporcionados a través del API Wikimetrics 2.0.}
-    \item{La herramienta tiene que ser una aplicación web.}
-    \item{La aplicacion tiene que contar con una vista principal que incluya gráfica e información general de cada uno de los wikis del watchlist.}
-    \item{Permitir al usuario crear una visualización nueva y guardarla de forma permanente, para este caso es necesario el uso de una base de datos (preferiblemente MongoDB)}
+    \item{Permitir al usuario crear una visualización nueva y guardarla de forma permanente, para este caso es necesario el uso de una base de datos (preferiblemente MongoDB).}
     \item{La aplicación tiene que estar alojada en un servidor, para poder ser accedida de manera remota.}
 \end{enumerate}
 
 \section{Prototipo de interfaz}
 
-\subsection{Perfil de Watcher \textbackslash watcher\textbackslash:watcherId}
+\subsection{Perfil de Watcher /watcher/:watcherId}
 Para cualquier usuario muestra el perfil de un watcher, en él puedes ver todas las contribuciones de este junto con la lista de visualizaciones que ha creado.
 Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de Wikipedia
 
@@ -262,7 +265,7 @@ Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de W
     \label{PrototipoWatchersProfile}
 \end{figure}
 
-\subsection{Página principal \textbackslash home}
+\subsection{Página principal /home}
 Para usuarios autenticados, les permite ver diferentes secciones relevantes para ellos
 
 \begin{figure}[H]
@@ -273,23 +276,23 @@ Para usuarios autenticados, les permite ver diferentes secciones relevantes para
 \end{figure}
 
 
-Secciones del home
+Secciones del home:
 \begin{enumerate}
-    \item Watched \\ Muestra una lista y un pequeño abstracto de los artículos que el usuario hace watching y tienen una visualización actualizada
-    \item Queue \\ Muestra una lista de los artículos que el usuario solicito para hacer una visualización pero que el server no ha podido solicitar
-    \item Controversial \\ Muestra una lista de aquellas visualizaciones que provocan discusión en la comunidad, caracterizado por muchos comentarios
+    \item Watched: Muestra una lista y un pequeño abstracto de los artículos que el usuario hace watching y tienen una visualización actualizada
+    \item Queue:  Muestra una lista de los artículos que el usuario solicito para hacer una visualización pero que el server no ha podido solicitar
+    \item Controversial:  Muestra una lista de aquellas visualizaciones que provocan discusión en la comunidad, caracterizado por muchos comentarios
 \end{enumerate}
 
-\subsection{Landing page \textbackslash}
+\subsection{Landing page /}
 TODO: poner imagen
 Esta página se encarga de explicar las motivaciones de la App y dar una noción básica del funcionamiento para los watchers.
 Tiene el objetivo de cap
 
-\subsection{Página de configuración \textbackslash settings}
+\subsection{Página de configuración /settings}
 TODO: Terminar seccion de settings
 Acá el usuario puede bla bla
 
-\subsection{Página de artículo \textbackslash article}
+\subsection{Página de artículo /article}
 \url{/article?title=<title>&url=<url>}
 Muestra un artículo junto con su metadata y las visualizaciones creadas por los usuarios.
 
@@ -300,14 +303,14 @@ Muestra un artículo junto con su metadata y las visualizaciones creadas por los
     \label{PrototipoSettingsPage}
 \end{figure}
 
-\subsection{Sobre nosotros \textbackslash about}
+\subsection{Sobre nosotros /about}
 Breve resumen del proyecto, incluye el documento de tesis y documento de seminario así como datos de contacto y repositorios de github para futuros contribuyentes.
 
-\section{Modales}
-Las modales pueden sobreponerse a cualquier página en la aplicación y permiten al usuario efectuar una acción.
+\section{Ventanas Modales}
+Las modales pueden sobreponerse a cualquier página en la aplicación y permiten al usuario efectuar una acción. Al cerrarse porque la acción fue ejecutada o el usuario decidió no hacer nada, se devuelve el foco del usuario mostrando a la página donde estaba.
 
-Estas modales serán controladas por parámetros de consulta agregados al URL de cada página web
-CleanArquitecture
+Estas modales serán controladas por parámetros de consulta agregados al URL de cada página web. eg. si estamos en la página con la ruta \textbf{/watcher/adrian} y efectuamos alguna acción que requiera autenticación, la ruta cambiará a \textbf{/watcher/adrian?auth=true} para sugerir al usuario que debe ingresar con sus credenciales para poder ejecutar esa acción.
+
 \subsection{Modal de autenticación}
 
 Si este parámetro está en el URL. Presenta la modal de autenticación
@@ -318,7 +321,6 @@ Si este parámetro está en el URL. Presenta la modal de autenticación
     \caption{Modal de autenticación}
     \label{ModalAuth}
 \end{figure}
-?auth=true
 
 \section{Planificación de las actividades}
 
