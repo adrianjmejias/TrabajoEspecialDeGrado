@@ -4,9 +4,9 @@
 
 El orgullo de Wikipedia como la mayor fuente información (en forma de artículos sobre eventos, personajes, definiciones, conceptos, locaciones y entre otros...) se debe a su extensa red de colaboradores.
 
-Cada vez que estos ejecutan una acción en la wikipedia -ya sea si aportan artículo complejo o corrigen una tilde- dejan una huella llamada metadata. Estos "rastros", conformados por fechas, numero de lineas editadas, direcciones IP y demás, son de suma importancia para analistas de datos.
+Cada vez que estos ejecutan una acción en la Wikipedia -ya sea si aportan artículo complejo o corrigen una tilde- dejan una huella llamada metadata. Estos "rastros", conformados por fechas, número de líneas editadas, direcciones IP y demás, son de suma importancia para analistas de datos.
 
-Estos, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de wikipedia; pueden tomar la metadata, procesarla y generar gráficos para buscar patrones de interés. 
+Estos, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de Wikipedia; pueden tomar la metadata, procesarla y generar gráficos para buscar patrones de interés. 
 
 El proceso es largo, y su complejidad limita quien puede formar parte. Si se tuviera una solución donde aquellos interesados "no técnicos" puedan ayudar y donde los interesados experimentados no tengan que dedicarle exhaustivas cantidades de tiempo para poder aportar.
 
@@ -19,7 +19,7 @@ Dándoles una interfaz fácil de usar y flexible para generar gráficos
 
 \subsection{Objetivo General}
 % TODO : Hacer Objetivo General
-Crear una nueva version del front-end de wikimetrics y extender con funcionalidades pertinentes para fomentar discusión sobre los artículos
+Crear una nueva versión del front-end de wikimetrics y extender con funcionalidades pertinentes para fomentar discusión sobre los artículos
 
 \subsection{Objetivos Específicos}
 % TODO: Objectivos Específicos
@@ -38,17 +38,18 @@ Crear una nueva version del front-end de wikimetrics y extender con funcionalida
 
 % TODO: revisar e iterar
 
-El desarrollo rápido de aplicaciones es una metodología de desarrollo que prioriza la creación rápida y prototipos y la retroalimentación rápida sobre ciclos prolongados de desarrollo y prueba. Con el uso de RAD, los desarrolladores pueden realizar multiples iteraciones y actualizaciones al software rápidamente sin la necesidad de iniciar un cronograma de desarrollo desde cero cada vez.
+El desarrollo rápido de aplicaciones es una metodología de desarrollo que prioriza la creación rápida y prototipos y la retroalimentación rápida sobre ciclos prolongados de desarrollo y prueba. Con el uso de RAD, los desarrolladores pueden realizar múltiples iteraciones y actualizaciones al software rápidamente sin la necesidad de iniciar un cronograma de desarrollo desde cero cada vez.
 
 Esta metodología de desarrollo fue creada por James Martin en el año 1980 en IBM y fue formalizada con la publicación del libro \emph{Rapid Application Development} en 1991.
 
 \begin{figure}[H]
-    \includegraphics[scale=0.45]{Rapid-application-development.png}
+    \centering
+    \includegraphics[width=\textwidth]{Rapid-application-development.png}
     \caption{Fases del Desarrollo Rápido de Aplicaciones (enfoque de James Martin)}
     \label{fig:Rapid-application-development}
 \end{figure}
 
-\subsubsection{Fases del Desarrolo Rápido de Aplicaciones}
+\subsubsection{Fases del Desarrollo Rápido de Aplicaciones}
 
 Según el enfoque de James Martin \cite{RADJamesMartin} el Desarrollo Rápido de Aplicaciones se divide en las siguientes fases:
 
@@ -74,14 +75,14 @@ Según el enfoque de James Martin \cite{RADJamesMartin} el Desarrollo Rápido de
 
 \section{Trabajos similares, diferencias y ventajas de la solución a desarrollar}
 
-Siendo Wikimedia y Wikipedia las mas grandes comunidades y organizaciones dedicadas a recopilar datos, es lógico pensar que tiene consigo una abundante cantidad de seguidores capacitados y apasionados por aportar lo que puedan. A continuación se detallará el estado actual de las herramientas existentes para explorar la Wikipedia.
+Siendo Wikimedia y Wikipedia las más grandes comunidades y organizaciones dedicadas a recopilar datos, es lógico pensar que tiene consigo una abundante cantidad de seguidores capacitados y apasionados por aportar lo que puedan. A continuación se detallará el estado actual de las herramientas existentes para explorar la Wikipedia.
 
 Estas herramientas cumplen diferentes objetivos:
 
 \begin{enumerate}
     \item Identificar posibles candidatos para ser administrador.
     \item Identificar peleas de edición.
-    \item Proveer una forma visual de ver el desarrollo general de los artículos (crecimiento de articulo, detection de actividad maliciosa, entre otras cosas).
+    \item Proveer una forma visual de ver el desarrollo general de los artículos (crecimiento de artículo, detection de actividad maliciosa, entre otras cosas).
     \item Hacer uso de la información para proveer interfaces educativas tales como cronologías.
 \end{enumerate}
 
@@ -102,7 +103,7 @@ Este proyecto es particularmente interesante porque podría ser un medio por el 
 
 \subsection{Sigma - Summary}
 
-Esta herramienta creada por el usuario Sigma\(\Sigma\) permite obtener el historial de contribuciones de un usuario y filtrar las ediciones por una palabra clave. Tal como se puede observar en la imagen \ref{fig:sigma_summary}, el resultado de buscar el usuario \say{Clarityfiend} y filtrar por la palabra \say{space} es similar al que se puede encontrar en la lista de contribuciones por usuario de wikipedia \cite{UserClarityfiend}, con el beneficio de poder filtrar por palabras claves.
+Esta herramienta creada por el usuario Sigma\(\Sigma\) permite obtener el historial de contribuciones de un usuario y filtrar las ediciones por una palabra clave. Tal como se puede observar en la imagen \ref{fig:sigma_summary}, el resultado de buscar el usuario \say{Clarityfiend} y filtrar por la palabra \say{space} es similar al que se puede encontrar en la lista de contribuciones por usuario de Wikipedia \cite{UserClarityfiend}, con el beneficio de poder filtrar por palabras claves.
 
 \begin{itemize}
     \item URL del proyecto \url{https://sigma.toolforge.org/summary.py}
@@ -110,7 +111,7 @@ Esta herramienta creada por el usuario Sigma\(\Sigma\) permite obtener el histor
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{proyectos-relacionados/sigma-summary.png}
+    \includegraphics[width=\textwidth]{proyectos-relacionados/sigma-summary.png}
     \caption{Sigma Summary}
     \label{fig:sigma_summary}
 \end{figure}
@@ -121,12 +122,12 @@ Esta herramienta creada por el usuario Sigma\(\Sigma\) permite obtener el histor
     \item URL del proyecto \url{http://histropedia.com/timeline/}
 \end{itemize}
 
-Es una herramienta que permite visualizar diferentes eventos en forma de linea de tiempo interactiva, usando el servicio de Wikidata para consultas Sparql \cite{WikidataSparql}. Es usada como herramienta educativa por distintas entidades como el Museo del Prado para que los usuarios puedan visualizar de forma sencilla el arte que se expone, tal como se puede observar en la imagen \ref{fig:museo-de-prado-timeline}. Además la linea te tiempo permite asociar cada elemento de la colección con un evento histórico importante, de tal forma que se facilite el aprendizaje y se haga más dinámico.
+Es una herramienta que permite visualizar diferentes eventos en forma de línea de tiempo interactiva, usando el servicio de Wikidata para consultas Sparql \cite{WikidataSparql}. Es usada como herramienta educativa por distintas entidades como el Museo del Prado para que los usuarios puedan visualizar de forma sencilla el arte que se expone, tal como se puede observar en la imagen \ref{fig:museo-de-prado-timeline}. Además, la línea de tiempo permite asociar cada elemento de la colección con un evento histórico importante, de tal forma que se facilite el aprendizaje y se haga más dinámico.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{proyectos-relacionados/museo-del-prado-timeline.png}
-    \caption{Linea de tiempo que muestra la colección de arte del Museo del Prado}
+    \caption{Línea de tiempo que muestra la colección de arte del Museo del Prado}
     \label{fig:museo-de-prado-timeline}
 \end{figure}
 
@@ -143,7 +144,7 @@ Es una herramienta que permite visualizar diferentes eventos en forma de linea d
 \url{https://en.wikipedia.org/wiki/Wikipedia:Tools}
 
 \url{apersonbot.toolforge.org}
-Este set de herramientas esta enfocado en supervisar usuarios y sus contribuciones a la Wikipedia
+Este set de herramientas está enfocado en supervisar usuarios y sus contribuciones a la Wikipedia
 
 - Candidate Search
 - Aadminscore
@@ -159,7 +160,7 @@ Este set de herramientas esta enfocado en supervisar usuarios y sus contribucion
     \item URL del proyecto \url{https://cosmiclattes.github.io/wikireplay/player}
 \end{itemize}
 
-Se encarga de mostrar una linea de tiempo con los cambios en un articulo. Esta linea de tiempo
+Se encarga de mostrar una línea de tiempo con los cambios en un artículo. Esta línea de tiempo
 tiene el comportamiento de un reproductor de video y permite que el usuario presione un botón de
 reproducir y así ser guiado por como el contenido de un artículo ha ido evolucionando en el tiempo.
 
@@ -181,17 +182,19 @@ reproducir y así ser guiado por como el contenido de un artículo ha ido evoluc
 
 Es una herramienta de análisis de datos exploratorio, la cual utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El propósito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
 
-Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra vertical representa una versión del documento, siendo el largo proporcional a la cantidad de palabras que posee el documento. El color de la versión en toda su extensión permite asociar cada palabra con un usuario, identificando el autor de dicha versión. Por último se utiliza la distancia entre versiones para separarlas de acuerdo a su fecha y así obtener información extra sobre la frecuencia de edición de cada palabra. Al realizar el procedimiento en la página \say{Brazil} \ref*{fig:brazil-history-flow} se puede observar un evidente incremento en la longitud de las barras verticales, lo que implica un crecimiento drástico del contenido de la pagina.
+Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra vertical representa una versión del documento, siendo el largo proporcional a la cantidad de palabras que posee el documento. El color de la versión en toda su extensión permite asociar cada palabra con un usuario, identificando el autor de dicha versión. Por último, se utiliza la distancia entre versiones para separarlas de acuerdo a su fecha y así obtener información extra sobre la frecuencia de edición de cada palabra. Al realizar el procedimiento en la página \say{Brazil} \ref*{fig:brazil-history-flow} se puede observar un evidente incremento en la longitud de las barras verticales, lo que implica un crecimiento drástico del contenido de la página.
 
 \begin{figure}[H]
-    \includegraphics[scale=0.5]{proyectos-relacionados/history-flow-mechanism.png}
+    \centering
+    \includegraphics[width=\textwidth]{proyectos-relacionados/history-flow-mechanism.png}
     \caption{Explicación del mecanismo de visualización de History Flow}
     \label{fig:history-flow-mechanism}
 \end{figure}
 
 \begin{figure}[H]
-    \includegraphics[scale=0.5]{proyectos-relacionados/brazil-history-flow.png}
-    \caption{La pagina "Brazil" mostrando un crecimiento abrupto y pocas contribuciones anónimas}
+    \centering
+    \includegraphics[width=\textwidth]{proyectos-relacionados/brazil-history-flow.png}
+    \caption{La página "Brazil" mostrando un crecimiento abrupto y pocas contribuciones anónimas}
     \label{fig:brazil-history-flow}
 \end{figure}
 
@@ -205,7 +208,8 @@ Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra
 Es un repositorio que posee varios archivos de PHP que permiten crear el history flow de una página en formato SVG. Este proyecto obtiene las revisiones directamente de Wikipedia haciendo uso de web scrapping y calculando la diferencia entre textos con el paquete de Pear Text\_Diff \cite{pear_text_diff}, para después graficar las diferencias en forma de history flow.
 
 \begin{figure}[H]
-    \includegraphics[scale=0.5]{proyectos-relacionados/rdm-historyflow.png}
+    \centering
+    \includegraphics[width=\textwidth]{proyectos-relacionados/rdm-historyflow.png}
     \caption{History Flow creado por el proyecto}
     \label{fig:rdm-historyflow}
 \end{figure}
@@ -234,13 +238,13 @@ Es un repositorio que posee varios archivos de PHP que permiten crear el history
 
 \section{Requerimientos}
 \begin{enumerate}
-    \item{Una herramienta capaz de visualizar graficas sobre propiedades de edicion de un wiki.}
-    \item{Los wikis a visualizar son extraídas del watchlist del usuario autenticado a traves de Wikipedia (usando API de MediaWiki).}
-    \item{Permitir editar las visualizaciones (alternar tipo de grafica, cambiar los tipos de datos a visualizar).}
-    \item{Los datos a representar en las visualizaciones son proporcionados a traves del API Wikimetrics 2.0.}
-    \item{La herramienta tiene que ser una aplicacion web.}
-    \item{La aplicacion tiene que contar con una vista principal que incluya grafica e informacion general de cada uno de los wiki del watchlist.}
-    \item{Permitir al usuario crear una visualizacion nueva y guardarla de forma permanente, para este caso es necesario el uso de una base de datos (preferiblemente MongoDB)}
+    \item{Una herramienta capaz de visualizar gráficas sobre propiedades de edición de un wiki.}
+    \item{Los wikis a visualizar son extraídas del watchlist del usuario autenticado a través de Wikipedia (usando API de MediaWiki).}
+    \item{Permitir editar las visualizaciones (alternar tipo de gráfica, cambiar los tipos de datos a visualizar).}
+    \item{Los datos a representar en las visualizaciones son proporcionados a través del API Wikimetrics 2.0.}
+    \item{La herramienta tiene que ser una aplicación web.}
+    \item{La aplicacion tiene que contar con una vista principal que incluya gráfica e información general de cada uno de los wikis del watchlist.}
+    \item{Permitir al usuario crear una visualización nueva y guardarla de forma permanente, para este caso es necesario el uso de una base de datos (preferiblemente MongoDB)}
     \item{La aplicación tiene que estar alojada en un servidor, para poder ser accedida de manera remota.}
 \end{enumerate}
 
@@ -248,7 +252,7 @@ Es un repositorio que posee varios archivos de PHP que permiten crear el history
 
 \subsection{Perfil de Watcher \textbackslash watcher\textbackslash:watcherId}
 Para cualquier usuario muestra el perfil de un watcher, en él puedes ver todas las contribuciones de este junto con la lista de visualizaciones que ha creado.
-Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de wikipedia
+Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de Wikipedia
 
 \begin{figure}[H]
     \centering
@@ -271,13 +275,13 @@ Para usuarios autenticados, les permite ver diferentes secciones relevantes para
 Secciones del home
 \begin{enumerate}
     \item Watched \\ Muestra una lista y un pequeño abstracto de los artículos que el usuario hace watching y tienen una visualización actualizada
-    \item Queue \\ Muestra una lista de los artículos que le usuario solicito para hacer una visualización pero que el server no ha podido solicitar
+    \item Queue \\ Muestra una lista de los artículos que el usuario solicito para hacer una visualización pero que el server no ha podido solicitar
     \item Controversial \\ Muestra una lista de aquellas visualizaciones que provocan discusión en la comunidad, caracterizado por muchos comentarios
 \end{enumerate}
 
 \subsection{Landing page \textbackslash}
 TODO: poner imagen
-Esta pagina se encarga de explicar las motivaciones de la App y dar una noción básica del funcionamiento para los watchers.
+Esta página se encarga de explicar las motivaciones de la App y dar una noción básica del funcionamiento para los watchers.
 Tiene el objetivo de cap
 
 \subsection{Página de configuración \textbackslash settings}
@@ -286,7 +290,7 @@ Acá el usuario puede bla bla
 
 \subsection{Página de artículo \textbackslash article}
 \url{/article?title=<title>&url=<url>}
-Muestra un articulo junto con su metadata y las visualizaciones creadas por los usuarios.d
+Muestra un artículo junto con su metadata y las visualizaciones creadas por los usuarios.
 
 \begin{figure}[H]
     \centering
@@ -296,7 +300,7 @@ Muestra un articulo junto con su metadata y las visualizaciones creadas por los 
 \end{figure}
 
 \subsection{Sobre nosotros \textbackslash about}
-Breve resumen del proyecto, incluye el documento de tesis y documento de seminario asi como datos de contacto y repositorios de github para futuros contribuyentes.
+Breve resumen del proyecto, incluye el documento de tesis y documento de seminario así como datos de contacto y repositorios de github para futuros contribuyentes.
 
 \section{Modales}
 Las modales pueden sobreponerse a cualquier página en la aplicación y permiten al usuario efectuar una acción.
@@ -305,7 +309,7 @@ Estas modales serán controladas por parámetros de consulta agregados al URL de
 CleanArquitecture
 \subsection{Modal de autenticación}
 
-Si este parámetro esta en el url. Presenta la modal de autenticación
+Si este parámetro está en el URL. Presenta la modal de autenticación
 
 \begin{figure}[H]
     \centering
