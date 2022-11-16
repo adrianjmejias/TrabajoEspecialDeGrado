@@ -17,6 +17,8 @@ Dándoles una interfaz fácil de usar y flexible para generar gráficos
 \section{Objetivos del trabajo}
 
 
+
+
 \subsection{Objetivo General}
 % TODO : Hacer Objetivo General
 Crear una nueva versión del front-end de wikimetrics y extender con funcionalidades pertinentes para fomentar discusión sobre los artículos
@@ -160,7 +162,7 @@ Este set de herramientas está enfocado en supervisar usuarios y sus contribucio
     \item URL del proyecto \url{https://cosmiclattes.github.io/wikireplay/player}
 \end{itemize}
 
-Se encarga de mostrar una línea de tiempo con los cambios en un artículo. Esta línea de tiempo
+Wiki Replay se encarga de mostrar una línea de tiempo con los cambios en un artículo. Esta línea de tiempo
 tiene el comportamiento de un reproductor de video y permite que el usuario presione un botón de
 reproducir y así ser guiado por como el contenido de un artículo ha ido evolucionando en el tiempo.
 
@@ -180,7 +182,7 @@ reproducir y así ser guiado por como el contenido de un artículo ha ido evoluc
     \item URL del proyecto \url{http://alumni.media.mit.edu/~fviegas/papers/history_flow.pdf} \cite{HistoryFlowVisualizations}
 \end{itemize}
 
-Es una herramienta de análisis de datos exploratorio, que utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El propósito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
+History Flow es una herramienta de análisis de datos exploratorio, que utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El propósito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
 
 Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra vertical representa una versión del documento, siendo el largo proporcional a la cantidad de palabras que posee el documento. El color de la versión en toda su extensión permite asociar cada palabra con un usuario, identificando el autor de dicha versión. Por último, se utiliza la distancia entre versiones para separarlas de acuerdo a su fecha y así obtener información extra sobre la frecuencia de edición de cada palabra. Al realizar el procedimiento en la página \say{Brazil} \ref*{fig:brazil-history-flow} se puede observar un evidente incremento en la longitud de las barras verticales, lo que implica un crecimiento drástico del contenido de la página.
 
@@ -202,10 +204,9 @@ Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra
 
 \begin{itemize}
     \item URL del proyecto \url{https://github.com/rdmpage/wikihistoryflow}
-    \item
 \end{itemize}
 
-Es un repositorio que posee varios archivos de PHP que permiten crear el history flow de una página en formato SVG. Este proyecto obtiene las revisiones directamente de Wikipedia haciendo uso de web scrapping y calculando la diferencia entre textos con el paquete de Pear Text\_Diff \cite{pear_text_diff}, para después graficar las diferencias en forma de history flow.
+Wiki History Flow es un repositorio que posee varios archivos de PHP que permiten crear el history flow de una página en formato SVG. Este proyecto obtiene las revisiones directamente de Wikipedia haciendo uso de web scrapping y calculando la diferencia entre textos con el paquete de Pear Text\_Diff \cite{pear_text_diff}, para después graficar las diferencias en forma de history flow.
 
 \begin{figure}[H]
     \centering
@@ -265,6 +266,11 @@ Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de W
     \label{PrototipoWatchersProfile}
 \end{figure}
 
+\subsection{Landing page /}
+TODO: poner imagen
+Esta página se encarga de explicar las motivaciones de la App y dar una noción básica del funcionamiento para los watchers.
+Tiene el objetivo de cap
+
 \subsection{Página principal /home}
 Para usuarios autenticados, les permite ver diferentes secciones relevantes para ellos
 
@@ -278,15 +284,10 @@ Para usuarios autenticados, les permite ver diferentes secciones relevantes para
 
 Secciones del home:
 \begin{enumerate}
-    \item Watched: Muestra una lista y un pequeño abstracto de los artículos que el usuario hace watching y tienen una visualización actualizada
+    \item Watched: Muestra una lista y un pequeño abstracto de los artículos que el usuario hace watching y tienen una visualización actualizada.
     \item Queue:  Muestra una lista de los artículos que el usuario solicito para hacer una visualización pero que el server no ha podido solicitar
-    \item Controversial:  Muestra una lista de aquellas visualizaciones que provocan discusión en la comunidad, caracterizado por muchos comentarios
+.    \item Controversial:  Muestra una lista de aquellas visualizaciones que provocan discusión en la comunidad, caracterizado por muchos comentarios
 \end{enumerate}
-
-\subsection{Landing page /}
-TODO: poner imagen
-Esta página se encarga de explicar las motivaciones de la App y dar una noción básica del funcionamiento para los watchers.
-Tiene el objetivo de cap
 
 \subsection{Página de configuración /settings}
 TODO: Terminar seccion de settings
@@ -328,10 +329,18 @@ TODO: UNA TABLA DE DOS COLUMNAS
 
 ACTIVIDAD, TIEMPO ESTIMADO.
 
-\begin{lstlisting}
-    Preparar el entorno de desarrollo 1/2 semana
-    Estudiar API Wikimetrics 2.0 (Back-end) 1/2 semana
-    Estudiar API MediaWiki 1/2 semana
-    Integracion del API Wikimetrics 2.0 (Back-end) 1/2 semana
-    Integracion del API MediaWiki 1/2 semana
-\end{lstlisting}
+\begin{center}
+\begin{tabular}{ | m{8cm} | m{5cm} | } 
+ \hline
+ Preparar el entorno de desarrollo & 1/2 semana \\ 
+ \hline
+ Estudiar API Wikimetrics 2.0 (Back-end) & 1/2 semana \\ 
+ \hline
+ Estudiar API MediaWiki & 1/2 semana \\ 
+ \hline
+ Integracion del API Wikimetrics 2.0 (Back-end) & 1/2 semana \\
+ \hline
+ Integracion del API MediaWiki & 1/2 semana \\
+ \hline
+\end{tabular}
+\end{center}

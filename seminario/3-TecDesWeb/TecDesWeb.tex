@@ -114,18 +114,19 @@ En el código se puede observar como se utiliza el cliente de MongoDB para conec
 
 \section{Tecnologías del lado del Cliente}
 
-Para este proyecto se usarán las siguientes tecnologías:
+Se entienden como tecnologás del lado del cliente la programación con la que interactuará el usuario (Pero por qué escogieron esas quiere saber su profe, así que TODO)
 
 \subsection{ReactJS}
 
 ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos y reutilizables, para desarrollo de interfaces de usuario, especialmente aplicaciones de una sola página.
 
-React maneja el concepto de \say{programación reactiva} \cite{ReactiveProgramming} haciendo uso de un DOM Virtual, lo que le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada en el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, la aplicación \say {reacciona} a cambios en los datos ejecutando una serie de eventos y re-renderizando solo aquellos componentes que lo ameriten. Esto es el secreto de porqué React es altamente eficiente.
+React maneja el concepto de \say{programación reactiva} \cite{ReactiveProgramming} haciendo uso de un DOM Virtual, lo que le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada en el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, la aplicación \say {reacciona} a cambios en los datos ejecutando una serie de eventos y re-renderizando solo aquellos componentes que lo ameriten. Se entiende pues por qué React es altamente eficiente.
 
-Otras características que destacan en React son:
+Otras características que destacan en React se explican a continuación.
 
 \begin{itemize}
   \item \textbf{Componentes} \hfill
+\item Quitar bullet que a eugenio no le gusta no lo hago yo para no cagarla chiks TODO
 
         El código de React es hecho con entidades llamadas componentes. Los componentes pueden ser renderizados en elementos particulares del DOM usando la librería de React DOM. Estos componentes son capaces de recibir parámetros conocidos como "propiedades del componente" de la siguiente forma: \hfill 
 
@@ -162,13 +163,14 @@ Otras características que destacan en React son:
         React proporciona algunos hooks integrados tales como: useState, useContext, useReducer, useMemo y useEffect son los más usados y permiten controlar los estados y manejar eventos.
 \end{itemize}
 
+
 \subsection{Next.js}
 
 Next.js es un framework desarrollado sobre NodeJS que permite a las aplicaciones de React usar funcionalidades como el renderizado del lado servidor y la generación de páginas web estáticas.
 
-Por defecto, Next.js pre-renderiza cada página. Esto significa que Next.js genera HTML para cada página en adelanto, en vez de hacerse con Javascript del lado del cliente. Pre-renderizado puede resultar en mejor rendimiento y SEO.
+Por defecto, Next.js pre-renderiza cada página. Esto significa que Next.js genera HTML para cada página en adelanto, en vez de hacerse con Javascript del lado del cliente.  El Pre-renderizado puede resultar en mejor rendimiento y SEO.
 
-Cada HTML generado es asociado con el mínimo código Javascript necesario para que funcione la página. Cuando una página es cargada en el explorador, su código javascript se ejecuta y hace la página totalmente interactiva. A este proceso de le conoce como \say{hydration}
+Cada HTML generado es asociado con el mínimo código Javascript necesario para que funcione la página. Cuando una página es cargada en el explorador, su código javascript se ejecuta y hace la página totalmente interactiva. A este proceso de le conoce como \textit{hydration}
 
 Next.js ofrece 2 formas de pre-renderizado:
 
@@ -185,14 +187,14 @@ Entre las principales características que posee Material UI se encuentran:
 
 \begin{itemize}
   \item Posibilidad de crear temas, lo que permite personalizar los estilos predeterminados de los componentes de la librería de forma global, o acotada.
-  \item Construido usando la estrategia Mobile First \cite{MobileFirst}, en la cual se crea el código primero para dispositivos móviles, y después se escalan usando las reglas de CSS pertinentes.
+  \item Fue construido usando la estrategia Mobile First \cite{MobileFirst}, en la cual se crea el código primero para dispositivos móviles, y después se escalan usando las reglas de CSS pertinentes.
   \item Los componentes de Material UI se consideran autosuficientes, por lo que solo utilizan los estilos CSS necesarios para mostrar el componente en pantalla, es decir, no dependen de hojas de estilos globales como en el caso de normalize.css o bootstrap.
 \end{itemize}
 
 A continuación se mostrará el uso de algunos componentes que ofrece la librería:
 
 \begin{itemize}
-  \item Botones
+  \item \textbf{Botones} TODO
 
         \begin{lstlisting}
                 <Button variant="text">Text</Button>
@@ -226,7 +228,7 @@ A continuación se mostrará el uso de algunos componentes que ofrece la librer�
                 </FormControl>
             \end{lstlisting}
 
-        El selector comúnmente se encuentra envuelto en un componente de FormControl, el cual provee contexto para hacer uso de campos requeridos, manejo de errores y uso de propiedades como "seleccionado" o "campo lleno".
+        El selector comúnmente se encuentra envuelto en un componente de FormControl, el cual provee contexto para hacer uso de campos requeridos, manejo de errores y uso de propiedades como ``seleccionado" o ``campo lleno". TODO 
 
   \item Sliders
 
