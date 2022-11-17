@@ -2,16 +2,15 @@
 
 \section{Motivación e identificación del problema}
 
-La utilidad de Wikipedia como la mayor fuente información (en forma de artículos sobre eventos, personajes, definiciones, conceptos, locaciones y entre otros...) se debe a su extensa red de colaboradores.
+El éxito de Wikipedia como la mayor fuente información (en forma de artículos sobre eventos, personajes, definiciones, conceptos, locaciones y entre otros...) se debe a su extensa red de colaboradores.
 
-Cada vez que estos ejecutan una acción en la Wikipedia -ya sea si aportan artículo complejo o corrigen una tilde- dejan una huella llamada metadatos. Estos "rastros", conformados por fechas, número de líneas editadas, direcciones IP y demás, son de suma importancia para analistas de datos.
+Cada vez que los usuarios ejecutan una acción en la Wikipedia -ya sea si aportan artículo complejo o corrigen una tilde- dejan una huella llamada metadatos. Estos "rastros", conformados por fechas, número de líneas editadas, direcciones IP y demás, son de suma importancia para analistas de datos.
 
-Estos, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de Wikipedia; pueden tomar la metadata, procesarla y generar gráficos para buscar patrones de interés. 
+Los colaboradores, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de Wikipedia; pueden tomar la metadata, que ya wikipedia cumple con almacenar, procesarla y generar gráficos para buscar patrones de interés y sacárle el máximo rendimiento a esta función de la enciclopedia.
 
-El proceso es largo, y su complejidad limita quien puede formar parte. Si se tuviera una solución donde aquellos interesados "no técnicos" puedan ayudar y donde los interesados experimentados no tengan que dedicarle exhaustivas cantidades de tiempo para poder aportar.
+Puede tratarse de un proceso largo, y su complejidad limita quien puede formar parte. Si se tuviera una solución a esa dificultad, donde aquellos interesados "no técnicos" puedan aportar y donde los expertos (bien pueden ser los WikiWatcher que supervisan la calidad de la información) no tengan que dedicarle exhaustivas cantidades de tiempo para poder ayudar, podrían notarse cambios significativamente positivos en el crecimiento de la información, desarollo de la página y consiguiente alcance de la información.
 
-Este trabajo final de grado propone entonces una herramienta que facilita esta laboriosa tarea para todo tipo de usuarios. 
-Dándoles una interfaz fácil de usar y flexible para generar gráficos 
+Es entendiendo estas razones que el presente trabajo final de grado propone una herramienta que facilite esta laboriosa tarea para todo tipo de usuarios dándoles una interfaz fácil de usar y flexible para generar gráficos y métricas.
 
 
 \section{Objetivos del trabajo}
@@ -27,9 +26,8 @@ Crear una nueva versión del front-end de wikimetrics y extender con funcionalid
 % TODO: Objectivos Específicos
 
 \begin{itemize}
-    \item Implementar una aplicación web responsive que ofrezca las funcionalidades requeridas por un watcher de un wiki y que pueda ser reconocida por los motores de búsqueda.
+    \item Implementar una aplicación web adaptable que ofrezca las funcionalidades requeridas por el watcher respectivo de un wiki y que, además, pueda ser fácilmente reconocida por los motores de búsqueda a servicio de los usuarios.
     \item Consumir y extender la API de wikimetrics para desarrollar una aplicación web que habilite a sus usuarios construir y visualizar gráficas
-    \item Definir los requerimientos de la aplicación
     \item Utilizar un método ágil para el desarrollo de la aplicación.
     \item Realizar el despliegue y puesta en producción de la aplicación
 \end{itemize}
@@ -40,7 +38,7 @@ Crear una nueva versión del front-end de wikimetrics y extender con funcionalid
 
 % TODO: revisar e iterar
 
-El desarrollo rápido de aplicaciones es una metodología de desarrollo que prioriza la creación rápida y prototipos y la retroalimentación rápida sobre ciclos prolongados de desarrollo y prueba. Con el uso de RAD, los desarrolladores pueden realizar múltiples iteraciones y actualizaciones al software rápidamente sin la necesidad de iniciar un cronograma de desarrollo desde cero cada vez.
+El desarrollo rápido de aplicaciones es una metodología de desarrollo que prioriza la creación rápida, prototipos y la ágil retroalimentación sobre ciclos prolongados de desarrollo y prueba. Con el uso de RAD, los desarrolladores pueden realizar múltiples iteraciones y actualizaciones al software rápidamente sin la necesidad de iniciar un cronograma de desarrollo desde cero cada vez.
 
 Esta metodología de desarrollo fue creada por James Martin en el año 1980 en IBM y fue formalizada con la publicación del libro \emph{Rapid Application Development} en 1991.
 
@@ -56,21 +54,21 @@ Esta metodología de desarrollo fue creada por James Martin en el año 1980 en I
 Según el enfoque de James Martin \cite{RADJamesMartin} el Desarrollo Rápido de Aplicaciones se divide en las siguientes fases:
 
 \begin{itemize}
-    \item \textbf{Fase de planificación:} Esta fase es equivalente a una reunión de alcance del proyecto. Aunque la fase de planificación se condensa en comparación con otras metodologías de gestión de proyectos.
-
-          Durante esta etapa, los desarrolladores, los clientes (usuarios de software) y los miembros del equipo se comunican para determinar los objetivos y las expectativas del proyecto, así como los problemas actuales y potenciales que deben abordarse durante la construcción.
+    \item \textbf{Fase de planificación:} Durante esta etapa, los desarrolladores, clientes (usuarios de software) y miembros del equipo se comunican para definir, investigar y finalizar el alcance y los requisitos de su proyecto, así como los objetivos, las expectativas, los plazos y el presupuesto. 
+    
+    Uno de los beneficios del método RAD es que a pesar de haberse decidido los requisitos, estos pueden cambiar con facilidad en cualquier momento del ciclo de desarrollo.
 
     \item \textbf{Fase de diseño:} Durante esta fase, los usuarios interactúan con analistas de sistemas y desarrollan modelos y prototipos que representan todos los procesos, entradas y salidas del sistema.
-
-          Todos los errores y problemas se resuelven en un proceso iterativo. El desarrollador diseña un prototipo, el cliente (usuario) lo prueba y luego se reúnen para comunicar qué funcionó y qué no.
+    
+    Todos los errores y problemas se resuelven en un proceso iterativo. El desarrollador diseña un prototipo, el cliente (usuario) lo prueba y luego se reúnen para comunicar qué funcionó y qué no.
 
     \item \textbf{Fase de construcción:} Esta etapa toma los prototipos y el sistema en su fase beta resultado de la etapa de diseño y lo convierte en un modelo funcional.
 
-          Debido a que la mayoría de los problemas y cambios se abordaron durante la minuciosa fase de diseño iterativo, los desarrolladores pueden construir el modelo de trabajo final más rápidamente que siguiendo un enfoque tradicional de gestión de proyectos.
+    Debido a que la mayoría de los problemas y cambios se abordaron durante la minuciosa fase de diseño iterativo, los desarrolladores pueden construir el modelo de trabajo final más rápidamente que siguiendo un enfoque tradicional de gestión de proyectos.
 
     \item \textbf{Fase de transición:} Esta es la fase de implementación donde el producto terminado va al lanzamiento. Incluye conversión de datos, pruebas y cambio al nuevo sistema, así como capacitación de usuarios.
 
-          Todos los cambios finales se realizan mientras los programadores y los clientes continúan buscando errores en el sistema.
+    Todos los cambios finales se realizan mientras los programadores y los clientes continúan buscando errores en el sistema.
 
 \end{itemize}
 
@@ -82,9 +80,9 @@ Siendo Wikimedia y Wikipedia las más grandes comunidades y organizaciones dedic
 Estas herramientas cumplen diferentes objetivos:
 
 \begin{enumerate}
-    \item Identificar posibles candidatos para ser administrador.
-    \item Identificar peleas de edición.
-    \item Proveer una forma visual de ver el desarrollo general de los artículos (crecimiento de artículo, detection de actividad maliciosa, entre otras cosas).
+    \item Identificar posibles candidatos para ser administradores.
+    \item Identificar conflictos de edición.
+    \item Proveer una forma visual de ver el desarrollo general de los artículos (crecimiento de artículo, detección de actividad maliciosa, entre otras cosas).
     \item Hacer uso de la información para proveer interfaces educativas tales como cronologías.
 \end{enumerate}
 
