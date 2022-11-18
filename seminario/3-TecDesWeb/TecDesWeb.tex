@@ -54,7 +54,7 @@ Las principales características de Fastify son \cite{FastifyCoreFeatures}:
 
 \begin{itemize}
     \item Alto rendimiento: si se compara la velocidad de Fastify con otros frameworks web como Express, tal como se aprecia en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express.
-    \item Extensible: Fastify es completamente extensible mediante el uso de \textit{hooks}, plugins o decoradores. TODO definir estos en footnote
+    \item Extensible: Fastify es completamente extensible mediante el uso de \textit{hooks} \footnote{\textit{Hook}: es una técnica que permite interceptar llamados a funciones con el propósito de alterar el comportamiento de la aplicación a eventos específicos.}, plugins \footnote{\textit{Plugin}: en el contexto de Fastify, un plugin permite agregar a funcionalidades extra (rutas, decoradores entre otras cosas) para que puedan ser usadas por el framework.} o decoradores \footnote{\textit{Decoradores}: permite agregar funcionalidades extra al núcleo de Fastify o las peticiones HTTP usadas durante su cíclo de vida.}.
     \item Basado en esquemas: a pesar de no ser obligatorio, es recomendado usar el esquema JSON para validar las rutas y serializar las salidas, internamente Fastify compila el esquema en una función de alto rendimiento.
     \item Registro: usualmente el guardar un registro puede ser costoso, por esa razón Fastify hace uso de un logger eficiente que casi remueve ese costo.
     \item Amigable para los desarrolladores: este framework está desarrollado para ser bastante expresivo y ayudar a los desarrolladores en su uso, sin sacrificar rendimiento o seguridad.
