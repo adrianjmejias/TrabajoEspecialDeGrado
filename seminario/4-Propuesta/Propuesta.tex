@@ -1,22 +1,17 @@
 
 
+
 \section{Motivación e identificación del problema}
 
 El éxito de Wikipedia como la mayor fuente información (en forma de artículos sobre eventos, personajes, definiciones, conceptos, locaciones y entre otros...) se debe a su extensa red de colaboradores.
 
-Cada vez que los usuarios ejecutan una acción en la Wikipedia -ya sea si aportan artículo complejo o corrigen una tilde- dejan una huella llamada metadatos. Estos "rastros", conformados por fechas, número de líneas editadas, direcciones IP y demás, son de suma importancia para analistas de datos.
+Cada vez que estos ejecutan una acción en la Wikipedia -ya sea si aportan un artículo complejo o corrigen una tilde- dejan una huella llamada metadatos. Estos "rastros", conformados por fechas, número de líneas editadas, direcciones IP y demás, son de suma importancia para analistas de datos. Estos analistas, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de Wikipedia, pueden tomar los metadatos, procesarlos y generar gráficos para buscar patrones de interés y sacarle el máximo rendimiento a esta función de la enciclopedia.
 
-Los colaboradores, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de Wikipedia; pueden tomar la metadata, que ya wikipedia cumple con almacenar, procesarla y generar gráficos para buscar patrones de interés y sacárle el máximo rendimiento a esta función de la enciclopedia.
+Puede tratarse de un proceso largo, y su complejidad limita quién puede formar parte. Si se tuviera una solución a esa dificultad, donde aquellos interesados "no técnicos" puedan aportar y donde los expertos (bien pueden ser los WikiWatchers que supervisan la calidad de la información) no tengan que dedicarle exhaustivas cantidades de tiempo para poder ayudar, podrían notarse cambios significativamente positivos en el crecimiento de la información, desarrollo de la página y consiguiente alcance de la información.
 
-Puede tratarse de un proceso largo, y su complejidad limita quien puede formar parte. Si se tuviera una solución a esa dificultad, donde aquellos interesados "no técnicos" puedan aportar y donde los expertos (bien pueden ser los WikiWatcher que supervisan la calidad de la información) no tengan que dedicarle exhaustivas cantidades de tiempo para poder ayudar, podrían notarse cambios significativamente positivos en el crecimiento de la información, desarollo de la página y consiguiente alcance de la información.
-
-Es entendiendo estas razones que el presente trabajo final de grado propone una herramienta que facilite esta laboriosa tarea para todo tipo de usuarios dándoles una interfaz fácil de usar y flexible para generar gráficos y métricas.
-
+Es entendiendo estas razones que el presente trabajo final de grado (seminario?) propone una herramienta que facilite esta tarea para todo tipo de usuarios, dándoles una interfaz fácil de usar y flexible para generar gráficos y métricas.
 
 \section{Objetivos del trabajo}
-
-
-
 
 \subsection{Objetivo General}
 % TODO : Hacer Objetivo General
@@ -27,9 +22,9 @@ Crear una nueva versión del front-end de wikimetrics y extender con funcionalid
 
 \begin{itemize}
     \item Implementar una aplicación web adaptable que ofrezca las funcionalidades requeridas por el watcher respectivo de un wiki y que, además, pueda ser fácilmente reconocida por los motores de búsqueda a servicio de los usuarios.
-    \item Consumir y extender la API de wikimetrics para desarrollar una aplicación web que habilite a sus usuarios construir y visualizar gráficas
+    \item Consumir y extender la API de wikimetrics para desarrollar una aplicación web que habilite a sus usuarios construir y visualizar gráficas.
     \item Utilizar un método ágil para el desarrollo de la aplicación.
-    \item Realizar el despliegue y puesta en producción de la aplicación
+    \item Realizar el despliegue y puesta en producción de la aplicación.
 \end{itemize}
 
 \section{Estrategia de solución y método de desarrollo ágil a utilizar}
@@ -54,19 +49,19 @@ Esta metodología de desarrollo fue creada por James Martin en el año 1980 en I
 Según el enfoque de James Martin \cite{RADJamesMartin} el Desarrollo Rápido de Aplicaciones se divide en las siguientes fases:
 
 \begin{itemize}
-    \item \textbf{Fase de planificación:} Durante esta etapa, los desarrolladores, clientes (usuarios de software) y miembros del equipo se comunican para definir, investigar y finalizar el alcance y los requisitos de su proyecto, así como los objetivos, las expectativas, los plazos y el presupuesto. 
+    \item \textbf{Fase de planificación:} durante esta etapa, los desarrolladores, clientes (usuarios de software) y miembros del equipo se comunican para definir, investigar y finalizar el alcance y los requisitos de su proyecto, así como los objetivos, las expectativas, los plazos y el presupuesto. 
     
     Uno de los beneficios del método RAD es que a pesar de haberse decidido los requisitos, estos pueden cambiar con facilidad en cualquier momento del ciclo de desarrollo.
 
-    \item \textbf{Fase de diseño:} Durante esta fase, los usuarios interactúan con analistas de sistemas y desarrollan modelos y prototipos que representan todos los procesos, entradas y salidas del sistema.
+    \item \textbf{Fase de diseño:} durante esta fase, los usuarios interactúan con analistas de sistemas y desarrollan modelos y prototipos que representan todos los procesos, entradas y salidas del sistema.
     
     Todos los errores y problemas se resuelven en un proceso iterativo. El desarrollador diseña un prototipo, el cliente (usuario) lo prueba y luego se reúnen para comunicar qué funcionó y qué no.
 
-    \item \textbf{Fase de construcción:} Esta etapa toma los prototipos y el sistema en su fase beta resultado de la etapa de diseño y lo convierte en un modelo funcional.
+    \item \textbf{Fase de construcción:} esta etapa toma los prototipos y el sistema en su fase beta resultado de la etapa de diseño y lo convierte en un modelo funcional.
 
     Debido a que la mayoría de los problemas y cambios se abordaron durante la minuciosa fase de diseño iterativo, los desarrolladores pueden construir el modelo de trabajo final más rápidamente que siguiendo un enfoque tradicional de gestión de proyectos.
 
-    \item \textbf{Fase de transición:} Esta es la fase de implementación donde el producto terminado va al lanzamiento. Incluye conversión de datos, pruebas y cambio al nuevo sistema, así como capacitación de usuarios.
+    \item \textbf{Fase de transición:} esta es la fase de implementación donde el producto terminado va al lanzamiento. Incluye conversión de datos, pruebas y cambio al nuevo sistema, así como capacitación de usuarios.
 
     Todos los cambios finales se realizan mientras los programadores y los clientes continúan buscando errores en el sistema.
 
@@ -89,7 +84,7 @@ Estas herramientas cumplen diferentes objetivos:
 
 \subsection{Toolforge}
 
-Es una suite de herramientas estadísticas para las páginas, usuarios, wikis de Wikimedia. Entre las herramientas hosteadas más populares de toolforge se encuentra 
+Es una suite de herramientas estadísticas para las páginas, usuarios, wikis de Wikimedia. Entre las herramientas hosteadas más populares de toolforge se encuentran:
 
 \begin{itemize}
     \item URL del proyecto \url{https://wikitech.wikimedia.org/wiki/Portal:Toolforge}
@@ -160,8 +155,8 @@ Este set de herramientas está enfocado en supervisar usuarios y sus contribucio
     \item URL del proyecto \url{https://cosmiclattes.github.io/wikireplay/player}
 \end{itemize}
 
-Wiki Replay se encarga de mostrar una línea de tiempo con los cambios en un artículo. Esta línea de tiempo
-tiene el comportamiento de un reproductor de video y permite que el usuario presione un botón de
+Wiki Replay permite crear una línea de tiempo con los cambios en un artículo. Esta línea de tiempo
+tiene el comportamiento de un reproductor de vídeo y permite que el usuario presione un botón de
 reproducir y así ser guiado por como el contenido de un artículo ha ido evolucionando en el tiempo.
 
 \begin{figure}[H]
@@ -171,7 +166,6 @@ reproducir y así ser guiado por como el contenido de un artículo ha ido evoluc
     \label{wikireplay}
 \end{figure}
 
-
 \url{https://de.wikipedia.org/wiki/Benutzer:Atlasowa/edit_history_visualization}
 
 \subsection{IBM History Flow tool}
@@ -180,7 +174,7 @@ reproducir y así ser guiado por como el contenido de un artículo ha ido evoluc
     \item URL del proyecto \url{http://alumni.media.mit.edu/~fviegas/papers/history_flow.pdf} \cite{HistoryFlowVisualizations}
 \end{itemize}
 
-History Flow es una herramienta de análisis de datos exploratorio, que utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El propósito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
+History Flow es una herramienta de análisis de datos exploratorio que utiliza el registro de ediciones que posee Wikipedia para mostrar relaciones entre distintas versiones de un documento. El propósito de esta herramienta es mostrar tendencias o patrones generales del documento, pero al mismo tiempo preservar los detalles para una examinación cercana.
 
 Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra vertical representa una versión del documento, siendo el largo proporcional a la cantidad de palabras que posee el documento. El color de la versión en toda su extensión permite asociar cada palabra con un usuario, identificando el autor de dicha versión. Por último, se utiliza la distancia entre versiones para separarlas de acuerdo a su fecha y así obtener información extra sobre la frecuencia de edición de cada palabra. Al realizar el procedimiento en la página \say{Brazil} \ref*{fig:brazil-history-flow} se puede observar un evidente incremento en la longitud de las barras verticales, lo que implica un crecimiento drástico del contenido de la página.
 
@@ -204,7 +198,7 @@ Como se puede observar en la imagen \ref*{fig:history-flow-mechanism} cada barra
     \item URL del proyecto \url{https://github.com/rdmpage/wikihistoryflow}
 \end{itemize}
 
-Wiki History Flow es un repositorio que posee varios archivos de PHP que permiten crear el history flow de una página en formato SVG. Este proyecto obtiene las revisiones directamente de Wikipedia haciendo uso de web scrapping y calculando la diferencia entre textos con el paquete de Pear Text\_Diff \cite{pear_text_diff}, para después graficar las diferencias en forma de history flow.
+Wiki History Flow es un proyecto que posee varios archivos de PHP que crean el history flow de una página en formato SVG. Este proyecto obtiene las revisiones directamente de Wikipedia haciendo uso de web scrapping y calculando la diferencia entre textos con el paquete de Pear Text\_Diff \cite{pear_text_diff}, para después gráficar las diferencias en forma de history flow.
 
 \begin{figure}[H]
     \centering
@@ -239,6 +233,7 @@ En esta sección se enumerará
 \section{Requerimientos}
 
     TODO pequeña descripcion
+    TODO justificar tecnologias
 
 \begin{enumerate}
     \item{La herramienta tiene que ser una aplicación web.}
@@ -253,9 +248,26 @@ En esta sección se enumerará
 
 \section{Prototipo de interfaz}
 
+\subsection{Página principal /home}
+Para usuarios autenticados, les permite ver diferentes secciones relevantes para ellos como: 
+\begin{enumerate}
+    \item Watched: muestra una lista y un pequeño abstracto de los artículos que el usuario hace watching y tienen una visualización actualizada.
+    \item Queue: muestra una lista de los artículos que el usuario solicitó para hacer una visualización pero que el server no ha podido solicitar o que todavía esta siendo procesado.
+    \item Controversial: muestra una lista de aquellas visualizaciones que provocan discusión en la comunidad, estos pueden ser identificados tomando métricas como cantidad de comentarios, cantidad de ediciones en el artículo o cantidad de visualizaciones.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{prototipos/Index Auth.png}
+    \caption{Prototipo de vista principal de un usuario autenticado}
+    \label{PrototipoHomePage}
+\end{figure}
+
+Para usuarios no autenticados, se le redigirá al landing page (ruta /)
+
 \subsection{Perfil de Watcher /watcher/:watcherId}
 Para cualquier usuario muestra el perfil de un watcher, en él puedes ver todas las contribuciones de este junto con la lista de visualizaciones que ha creado.
-Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de Wikipedia
+Se permitirá un mínimo de personalización como una pequeña descripción sobre ellos mismos, un \textit{handle}\footnote{handle: } para poder referirse a ellos y se podrá enlazar el perfil de Wikipedia.
 
 \begin{figure}[H]
     \centering
@@ -267,25 +279,8 @@ Se permitirá un mínimo de personalización. Y se podrá enlazar el perfil de W
 \subsection{Landing page /}
 TODO: poner imagen
 Esta página se encarga de explicar las motivaciones de la App y dar una noción básica del funcionamiento para los watchers.
-Tiene el objetivo de cap
+Tiene el objetivo de captar la atención 
 
-\subsection{Página principal /home}
-Para usuarios autenticados, les permite ver diferentes secciones relevantes para ellos
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{prototipos/Index Auth.png}
-    \caption{Prototipo de vista principal de un usuario autenticado}
-    \label{PrototipoHomePage}
-\end{figure}
-
-
-Secciones del home:
-\begin{enumerate}
-    \item Watched: Muestra una lista y un pequeño abstracto de los artículos que el usuario hace watching y tienen una visualización actualizada.
-    \item Queue:  Muestra una lista de los artículos que el usuario solicito para hacer una visualización pero que el server no ha podido solicitar
-.    \item Controversial:  Muestra una lista de aquellas visualizaciones que provocan discusión en la comunidad, caracterizado por muchos comentarios
-\end{enumerate}
 
 \subsection{Página de configuración /settings}
 TODO: Terminar seccion de settings
@@ -303,16 +298,17 @@ Muestra un artículo junto con su metadata y las visualizaciones creadas por los
 \end{figure}
 
 \subsection{Sobre nosotros /about}
-Breve resumen del proyecto, incluye el documento de tesis y documento de seminario así como datos de contacto y repositorios de github para futuros contribuyentes.
+Breve resumen del proyecto, incluye el documento de tesis y documento de seminario así como datos de contacto y repositorios de GitHub para futuros contribuyentes.
+
 
 \section{Ventanas Modales}
-Las modales pueden sobreponerse a cualquier página en la aplicación y permiten al usuario efectuar una acción. Al cerrarse porque la acción fue ejecutada o el usuario decidió no hacer nada, se devuelve el foco del usuario mostrando a la página donde estaba.
+Las ventanas modales pueden sobreponerse a cualquier página en la aplicación y permiten al usuario efectuar una acción. Al cerrarse porque la acción fue ejecutada o el usuario decidió no hacer nada, se devuelve el foco del usuario mostrando a la página donde estaba.
 
 Estas modales serán controladas por parámetros de consulta agregados al URL de cada página web. eg. si estamos en la página con la ruta \textbf{/watcher/adrian} y efectuamos alguna acción que requiera autenticación, la ruta cambiará a \textbf{/watcher/adrian?auth=true} para sugerir al usuario que debe ingresar con sus credenciales para poder ejecutar esa acción.
 
 \subsection{Modal de autenticación}
 
-Si este parámetro está en el URL. Presenta la modal de autenticación
+Si este parámetro está en el URL. Presenta la modal de autenticación para que inicie sesión o se cree una cuenta de ser necesario.
 
 \begin{figure}[H]
     \centering
@@ -321,10 +317,11 @@ Si este parámetro está en el URL. Presenta la modal de autenticación
     \label{ModalAuth}
 \end{figure}
 
+
 \section{Planificación de las actividades}
 
-TODO: UNA TABLA DE DOS COLUMNAS
-
+TODO: UNA TABLA DE DOS COLUMNAS 
+completar esta lista con candidatos a actividades que coincidan con iteraciones/sprints/... o como quiera que lo llamen dentro de su workflow.
 ACTIVIDAD, TIEMPO ESTIMADO.
 
 \begin{center}
