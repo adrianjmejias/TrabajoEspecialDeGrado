@@ -6,13 +6,18 @@ De esta manera se facilita la identificación, localización de errores, patrone
 
 Esta tarea además de importante es compleja por lo cual necesita de agrupaciones que se encarguen de trabajar en ella constantemente. Estas agrupaciones publican sus esfuerzos en plataformas como Github para así poder aportar a la investigación, discutir soluciones, revisar problemas y atraer nuevos colaboradores que permitan el crecimiento y consiguiente eficacia del trabajo.
 
-En esta sección se busca investigar y comparar esos productos probados, refinados y simplificados para dar con la que mejor se adapte para los requerimientos a cubrir. 
+En esta sección se busca investigar y comparar esos productos probados, refinados y simplificados para dar con el que mejor se adapte a los requerimientos a cubrir. 
 
 \section{Librerías o frameworks para aplicaciones intensivas de frontend}
 
 %LATE_TODO
 
 \section{Librerías para la visualización de datos}
+
+El gran conjunto de librerías web para la visualización de datos puede ser dividido en aquellas que dan soporte a uno de los 2 formatos que predominan en el mundo de las visualizaciones web: SVG y Canvas. Ambas tecnologías poseen sus altibajos, por lo que es importante saber identificar cuándo se debe escoger una tecnología sobre otra para resolver el problema planteado. 
+
+El principal problema que posee SVG es su rendimiento a medida que la gráfica crece en complejidad, es decir, aumenta la cantidad de datos. Esto debido a su estructura basada en elementos DOM, los cuales son constantemente recalculados por el explorador conduciendo a un mal rendimiento. Canvas trabaja a un nivel de pixeles, sin almacenar estructuras extra en memoria, por lo que ofrece un mejor rendimiento a medida que los datos aumentan, como se puede ver en la imagen [1]. Por otro lado, el uso de elementos DOM en SVG proporciona una forma fácil de crear gráficas interactivas, ya que cada elemento DOM provee una interfaz para adjuntar eventos Javascript. Canvas, el cual trabaja a nivel de pixeles, requeriría un sistema de eventos proporcionado por la librería usada.
+
 Pero no cualquier librería 
 Para la selección de librería se consideran los siguientes factores:
 
