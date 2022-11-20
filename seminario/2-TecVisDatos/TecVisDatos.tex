@@ -23,11 +23,11 @@ Para la selección de librería se consideran los siguientes factores:
 
 \begin{enumerate}
     \item {Debe ser un proyecto open source.}
-    \item {De ser posible, debe tener \textit{bindings} \footnote{\textit{Binding}: } para ReactJS para facilidad en el desarrollo.}
+    \item {De ser posible, debe tener \textit{bindings} \footnote{\textit{Binding}: Proceso de conectar la interfaz de usuario con los datos que la populan.} de ReactJS para facilidad en el desarrollo.}
     \item {Debe ser extensible para poder implementar aquellas visualizaciones que sean muy específicas.}
     \item {Deben ser longevas y tener cierta garantía de que será mantenida en el tiempo,
     asegurando así que para futuras mejoras de este TEG sigan disponibles.}
-    \item {Debe ser fácil de utilizar}
+    \item {Debe ser fácil de utilizar.}
 \end{enumerate}
 
 \begin{figure}[H]
@@ -37,30 +37,30 @@ Para la selección de librería se consideran los siguientes factores:
     \label{fig:canvasvssvg}
 \end{figure}
 
-A continuación se mostrará el conjunto de librerías de visualización de datos que se escogieron para su comparación. Debido al gran espectro de librerías que existen, sólo se mostrarán aquellas que posean la mayor relevancia de acuerdo a los parámetros de búsqueda mencionados anteriormente, usando principalmente GitHub como medio de búsqueda.
+A continuación se mostrará el conjunto de librerías de visualización de datos que se escogieron para su comparación. Debido al gran espectro de librerías que existen, solo se mostrarán aquellas que posean la mayor relevancia de acuerdo a los parámetros de búsqueda mencionados anteriormente, usando principalmente GitHub como medio de búsqueda.
 
 \subsection{ Data Driven Documents (D3) }
 \begin{itemize}
-    \item URL de repositorio \href{https://github.com/d3/d3}{https://github.com/d3/d3}
-    \item Mantenida por la organización homónima, d3
+    \item URL de repositorio: \href{https://github.com/d3/d3}{https://github.com/d3/d3}.
+    \item Mantenida por la organización homónima, d3.
 \end{itemize}
 
-D3 es una librería Javascript basada en SVG publicada en 2011, que permite manipular documentos basados en datos. D3 permite vincular datos a documentos DOM que después mediante transformaciones del documento sobre los datos se puede construir tablas o gráficas, esto le otorga mucha versatilidad al momento de crear gráficas muy personalizadas e interactivas, pero también agrega una capa de complejidad, ya que las gráficas son construidas \say{a mano}. Además en el ámbito del proyecto (el cual será creado usando ReactJs), D3 no ofrece ningún binding para ReactJs por defecto, así que es necesario contemplar el uso de librerías como React-D3-Library\cite{ReactD3Library} que permitan una comunicación sencilla entre ambas tecnologías. 
+D3 es una librería Javascript basada en SVG publicada en 2011, que permite manipular documentos basados en datos. D3 permite vincular datos a documentos DOM que después mediante transformaciones del documento sobre los datos se puede construir tablas o gráficas, esto le otorga mucha versatilidad al momento de crear gráficas muy personalizadas e interactivas, pero también agrega una capa de complejidad, ya que las gráficas son construidas \say{a mano}. Además en el ámbito del proyecto (el cual será creado usando ReactJs), D3 no ofrece ningún \textit{binding} para ReactJs por defecto, así que es necesario contemplar el uso de librerías como React-D3-Library\cite{ReactD3Library} que permitan una comunicación sencilla entre ambas tecnologías. 
 
 \subsection{ ECharts }
 \begin{itemize}
-    \item URL de repositorio \href{https://github.com/apache/echarts}{https://github.com/apache/echarts}
-    \item Mantenida por Apache
+    \item URL de repositorio: \href{https://github.com/apache/echarts}{https://github.com/apache/echarts}.
+    \item Mantenida por Apache.
 \end{itemize}
 
-ECharts es una librería Javascript de código abierto creada por Apache que dispone de una gran variedad de tipos de gráficos y la posibilidad de renderizar los gráficos en forma de Canvas, SVG y VML. Además también provee componentes interactivos \say{listos para usarse} que pueden ser agregados a las gráficas para crear leyendas, tooltips, enfocar los datos, entre otras cosas.
+ECharts es una librería Javascript de código abierto creada por Apache que dispone de una gran variedad de tipos de gráficos y la posibilidad de renderizar los gráficos en forma de Canvas, SVG y VML. Además también provee componentes interactivos \say{listos para usarse} que pueden ser agregados a las gráficas para crear leyendas, \textit{tooltips} \footnote{\textit{Tooltip}: elemento gráfico de las interfaces de usuario el cual al hacerle \textit{hover}, muestra información sobre ese elemento.} , enfocar los datos, entre otras cosas.
 
 \section{ Comparación de librerías }
 
-Después de comparar estas librerías, sus APIs y leer otras investigaciones la decisión final es utilizar ECharts
+Después de comparar estas librerías, sus APIs y leer otras investigaciones la decisión final es utilizar ECharts.
 
 La base de esta conclusión es la simplicidad \cite{EchartsDecision}, mientras que d3 permite una gran flexibilidad, la curva de aprendizaje tiene una inclinación pronunciada. 
-En comparación, ECharts se ve como una herramienta plug and play que requiere mínima configuración y ahorra al desarrollador días de esfuerzo.
+En comparación, ECharts se ve como una herramienta \textit{plug and play} que requiere mínima configuración y ahorra al desarrollador días de esfuerzo.
 
 El tipo de gráficas a utilizar son las siguientes:
 \begin{itemize}    

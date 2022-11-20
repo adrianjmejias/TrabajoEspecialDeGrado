@@ -11,7 +11,7 @@ Con el tiempo, y si los usuarios tienen una experiencia positiva este "libro" we
   \item Deseabilidad: cuando un producto es deseable, los usuarios se sienten atraídos a él.
   \item Encontrable: se debe construir un sistema que sea navegable e instintivo al recorrer, de tal forma que los usuarios puedan encontrar lo que necesiten fácilmente.
   \item Accesibilidad: el sistema debe ser fácilemente usado por la mayor cantidad de personas posibles.
-  \item Credibilidad: el sistema debe proporcionar seguridad al usuario acerca de la veracidad de su contenido
+  \item Credibilidad: el sistema debe proporcionar seguridad al usuario acerca de la veracidad de su contenido.
   \item Valor: una experiencia de usuario valiosa implica un buen uso de los demás factores.
 \end{itemize}
 
@@ -20,8 +20,10 @@ TODO revisar
 Cumpliendo con las características mencionadas se puede apostar por el éxito de la web, pero para dar el salto de la teoría a la práctica hay que realmente entender la buena experiencia del usuario. Razón por la cual se desglosarán los factores en el presente capítulo.
 
 \section{Arquitectura}
-TODO Eugenio propone cambiar el nombre del capitulo
+TODO Eugenio propone cambiar el nombre del capítulo
+
 TODO Explicar como el SEO tiene que ver con la arquitectura
+
 TODO revisar
 
 Para que una aplicación sea encontrable — y así usada — por internautas es fundamental que tenga una buena relación con los motores de búsqueda.
@@ -54,7 +56,7 @@ Las principales características de Fastify son \cite{FastifyCoreFeatures}:
 
 \begin{itemize}
     \item Alto rendimiento: si se compara la velocidad de Fastify con otros frameworks web como Express, tal como se aprecia en la figura \ref{fig:fastify_vs_express}, notamos que Fastify es aproximadamente un 20\% más rápido que Express.
-    \item Extensible: Fastify es completamente extensible mediante el uso de \textit{hooks} \footnote{\textit{Hook}: es una técnica que permite interceptar llamados a funciones con el propósito de alterar el comportamiento de la aplicación a eventos específicos.}, plugins \footnote{\textit{Plugin}: en el contexto de Fastify, un plugin permite agregar a funcionalidades extra (rutas, decoradores entre otras cosas) para que puedan ser usadas por el framework.} o decoradores \footnote{\textit{Decoradores}: permite agregar funcionalidades extra al núcleo de Fastify o las peticiones HTTP usadas durante su cíclo de vida.}.
+    \item Extensible: Fastify es completamente extensible mediante el uso de \textit{hooks} \footnote{\textit{Hook}: es una técnica que permite interceptar llamados a funciones con el propósito de alterar el comportamiento de la aplicación a eventos específicos.}, plugins \footnote{\textit{Plugin}: en el contexto de Fastify, un plugin permite agregar a funcionalidades extra (rutas, decoradores entre otras cosas) para que puedan ser usadas por el framework.} o decoradores \footnote{\textit{Decoradores}: permite agregar funcionalidades al núcleo de Fastify o a las peticiones HTTP usadas, durante su cíclo de vida.}.
     \item Basado en esquemas: a pesar de no ser obligatorio, es recomendado usar el esquema JSON para validar las rutas y serializar las salidas, internamente Fastify compila el esquema en una función de alto rendimiento.
     \item Registro: usualmente el guardar un registro puede ser costoso, por esa razón Fastify hace uso de un logger eficiente que casi remueve ese costo.
     \item Amigable para los desarrolladores: este framework está desarrollado para ser bastante expresivo y ayudar a los desarrolladores en su uso, sin sacrificar rendimiento o seguridad.
@@ -90,7 +92,7 @@ Algunas de las características más importantes de MongoDB son:
   \item Consultas ad-hoc optimizadas para análisis en tiempo real.
   \item Indexación adecuada para mejores tiempos de ejecución de consultas.
   \item Replicación para una mejor disponibilidad y estabilidad de los datos.
-  \item \textit{Sharding}\footnote{\textit{Sharding}: proceso de distribuir un conjunto de datos en múltiples bases de datos, que después pueden ser almacenados en múltiples ordenadores.}
+  \item \textit{Sharding}\footnote{\textit{Sharding}: proceso de distribuir un conjunto de datos en múltiples bases de datos, que después pueden ser almacenados en múltiples ordenadores.}.
   \item Balanceo de carga.
 \end{itemize}
 
@@ -123,7 +125,7 @@ TODO por qué escogimos las que escogimos?
 
 ReactJS es una librería de JavaScript de código abierto desarrollada por Facebook para facilitar la creación de componentes interactivos y reutilizables, para desarrollo de interfaces de usuario, especialmente aplicaciones de una sola página.
 
-React maneja el concepto de \say{programación reactiva} \cite{ReactiveProgramming} haciendo uso de un DOM Virtual, lo que le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada en el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, la aplicación \say {reacciona} a cambios en los datos ejecutando una serie de eventos y re-renderizando solo aquellos componentes que lo ameriten. Se entiende pues por qué React es altamente eficiente. 
+React maneja el concepto de \say{programación reactiva} \cite{ReactiveProgramming} haciendo uso de un DOM Virtual, lo que le permite determinar qué partes del DOM han cambiado comparando contenidos entre la versión nueva y la almacenada en el DOM virtual, para así propagar los datos generando cambios en la aplicación, es decir, la aplicación \say {reacciona} a cambios en los datos ejecutando una serie de eventos y re-renderizando solo aquellos componentes que lo ameriten (característica que lo hace altamente eficiente). 
 
 Otras características que destacan en React se explican a continuación.
 
@@ -135,7 +137,7 @@ Otras características que destacan en React se explican a continuación.
             ReactDOM.render(<Greeter greeting="Hello World!" />, document.getElementById('myReactApp'));
         \end{lstlisting}
 
-        Las 2 formas de declarar componentes en React es mediante el uso de funciones o clases, y generalmente se usa una de las dos opciones de forma situacional.
+        React ofrece 2 formas de declarar componentes: mediante el uso de funciones o clases. Generalmente se usa una de las dos opciones de forma situacional.
 
    \noindent \textbf{JSX} \hfill
 
