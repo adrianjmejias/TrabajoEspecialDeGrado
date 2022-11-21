@@ -15,15 +15,15 @@ En esta sección se busca investigar y comparar esos productos probados, refinad
 
 \section{Librerías para la visualización de datos}
 
-El gran conjunto de librerías web para la visualización de datos puede ser dividido en aquellas que dan soporte a uno de los 2 formatos que predominan en el mundo de las visualizaciones web: SVG y Canvas. Ambas tecnologías poseen sus altibajos, por lo que es importante saber identificar cuándo se debe escoger una tecnología sobre otra para resolver el problema planteado. 
+El gran conjunto de librerías web para la visualización de datos se encuentra dividido en aquellas que dan soporte a uno de los 2 formatos que predominan en el mundo de las visualizaciones web: SVG y Canvas. Ambas tecnologías poseen sus altibajos, por lo que es importante saber identificar cuándo se debe escoger una tecnología sobre otra para resolver el problema planteado. 
 
-El principal problema que posee SVG es su rendimiento a medida que la gráfica crece en complejidad, es decir, aumenta la cantidad de datos. Esto debido a su estructura basada en elementos DOM, los cuales son constantemente recalculados por el explorador conduciendo a un mal rendimiento. Canvas trabaja a un nivel de pixeles, sin almacenar estructuras extra en memoria, por lo que ofrece un mejor rendimiento a medida que los datos aumentan, como se puede ver en la imagen \ref{fig:canvasvssvg}. Por otro lado, el uso de elementos DOM en SVG proporciona una forma fácil de crear gráficas interactivas, ya que cada elemento DOM provee una interfaz para adjuntar eventos Javascript. Canvas, el cual trabaja a nivel de pixeles, requeriría un sistema de eventos proporcionado por la librería para lograr dicha interactividad.
+El principal problema que posee SVG es su rendimiento a medida que la gráfica crece en complejidad, es decir, aumenta la cantidad de datos. Esto debido a su estructura basada en elementos DOM, los cuales en gran cantidad pueden conducir a un mal rendimiento\cite{SVGPerformance}. Canvas trabaja a un nivel de pixeles, sin almacenar estructuras extra en memoria, por lo que ofrece un mejor rendimiento a medida que los datos aumentan, como se puede ver en la imagen \ref{fig:canvasvssvg}. Por otro lado, el uso de elementos DOM en SVG proporciona una forma fácil de crear gráficas interactivas, ya que cada elemento DOM provee una interfaz para adjuntar eventos Javascript. Canvas, el cual trabaja a nivel de pixeles, requeriría un sistema de eventos proporcionado por la librería para lograr dicha interactividad.
 
 Para la selección de librería se consideran los siguientes factores:
 
 \begin{enumerate}
     \item {Debe ser un proyecto open source.}
-    \item {De ser posible, debe tener \textit{bindings} \footnote{\textit{Binding}: Proceso de conectar la interfaz de usuario con los datos que la populan.} de ReactJS para facilidad en el desarrollo.}
+    \item {De ser posible, debe tener \textit{bindings} \footnote{\textit{Binding}: facilita el uso en ReactJs de una librería hecha en JavaScript vanilla.} de ReactJs para facilidad en el desarrollo.}
     \item {Debe ser extensible para poder implementar aquellas visualizaciones que sean muy específicas.}
     \item {Deben ser longevas y tener cierta garantía de que será mantenida en el tiempo,
     asegurando así que para futuras mejoras de este TEG sigan disponibles.}
@@ -33,7 +33,7 @@ Para la selección de librería se consideran los siguientes factores:
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{seminario/images/svg-vs-canvas.png}
-    \caption{Comparación de rendimiento entre SVG y Canvas a medida que se incrementa el numero de objetos}
+    \caption{Comparación de rendimiento entre SVG y Canvas a medida que se incrementa el número de objetos\cite{WhenToUseHTMLCanvas}}
     \label{fig:canvasvssvg}
 \end{figure}
 
