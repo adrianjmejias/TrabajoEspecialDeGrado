@@ -3,13 +3,13 @@
 
 \section{Motivación e identificación del problema}
 
-El éxito de Wikipedia como la mayor fuente información (en forma de artículos sobre eventos, personajes, definiciones, conceptos, locaciones y entre otros...) se debe a su extensa red de colaboradores.
+El éxito de Wikipedia como la mayor fuente información (en forma de artículos sobre eventos, personajes, definiciones, conceptos, locaciones y entre otros...) y su utilidad se debe a su extensa red de colaboradores.
 
 Cada vez que estos ejecutan una acción en la Wikipedia -ya sea si aportan un artículo complejo o corrigen una tilde- dejan una huella llamada metadatos. Estos "rastros", conformados por fechas, número de líneas editadas, direcciones IP y demás, son de suma importancia para analistas de datos. Estos analistas, si tienen la experiencia, la práctica y tienen el tiempo para dedicarse a estudiar la API de Wikipedia, pueden tomar los metadatos, procesarlos y generar gráficos para buscar patrones de interés y sacarle el máximo rendimiento a esta función de la enciclopedia.
 
-Puede tratarse de un proceso largo, y su complejidad limita quién puede formar parte. Si se tuviera una solución a esa dificultad, donde aquellos interesados "no técnicos" puedan aportar y donde los expertos (bien pueden ser los WikiWatchers que supervisan la calidad de la información) no tengan que dedicarle exhaustivas cantidades de tiempo para poder ayudar, podrían notarse cambios significativamente positivos en el crecimiento de la información, desarrollo de la página y consiguiente alcance de la misma.
+Puede tratarse de un proceso largo, y su complejidad limita quién puede formar parte. Si se tuviera una solución a esa dificultad, donde aquellos interesados "no técnicos" puedan aportar y donde los expertos (bien pueden ser los WikiWatchers que supervisan la calidad de la información) no tengan que dedicarle exhaustivas cantidades de tiempo para poder ayudar, podrían notarse cambios significativamente positivos en el crecimiento de la información, y discusión.
 
-Es entendiendo estas razones que el presente trabajo final de grado (seminario?) propone una herramienta que facilite esta tarea para todo tipo de usuarios, dándoles una interfaz fácil de usar y flexible para generar gráficos y métricas.
+Es entendiendo estas razones que el presente seminario propone una herramienta que facilite esta tarea para todo tipo de usuarios, dándoles una interfaz fácil de usar y flexible para generar gráficos y métricas.
 
 \section{Objetivos del trabajo}
 
@@ -209,19 +209,19 @@ Wiki History Flow es un proyecto que posee varios archivos de PHP que crean el h
 
 
 \section{Herramientas}
-En esta sección se enumerará 
+En esta sección se enumerarán aquellas tecnologías a utilizarse en el desarrollo de la aplicación 
 
 \subsection{Tecnologías para el ambiente de desarrollo}
 \begin{itemize}
-    \item Visual Studio Code.
+    \item Visual Studio Code como editor de código fuente.
     \item Git, como control de versiones.
-    \item Navegadores web (Google Chrome, Firefox, etc).
-    \item Base de Datos (MongoDB).
-    \item Servidor (Nodejs).
-    \item Manejador de paquetes de NPM (pnpm).
+    \item Navegadores web para hacer pruebas(Google Chrome, Firefox, etc).
+    \item MongoDB como Base de Datos .
+    \item Nodejs como servidor.
+    \item Yan como manejador de paquetes de javascript.
 \end{itemize}
 
-\subsection{Tecnologías o librerías web a utilizar}
+Tecnologías o librerías web a utilizar:
 \begin{itemize}
     \item Material UI.
     \item Next.js + ReactJS.
@@ -232,18 +232,20 @@ En esta sección se enumerará
 
 \section{Requerimientos}
 
-    TODO pequeña descripcion
-    TODO justificar tecnologias
+    Para poder satisfacer las necesidades de los usuarios de la aplicación primero que hay que ponerse en sus zapatos para definir la solución y priorizar. Por ejemplo, es imperativo que los usuarios puedan solicitar gráficas de visualizaciones pero podría a la vez también podrían prescindir de personalizar su perfil en la aplicación, e incluso el perfil en sí también podría ser obviado.
+
+    Ahora, el hecho de que estas funcionalidades puedan omitirse no quiere decir que no enriquezcan la experiencia de usuario y en consecuencia aseguren el éxito de la aplicación, por lo que serán listadas de igual manera, refinadas e implementadas si así se decide.
+
 
 \begin{enumerate}
-    \item{La herramienta tiene que ser una aplicación web.}
+    \item{La herramienta debe ser una aplicación web para la mayor facilidad de uso.}
+    \item{La aplicación debe que estar alojada en un servidor, para poder ser accedida de manera remota y por cualquier usuario.}
     \item{La aplicación tiene que contar con una vista principal que incluya gráfica e información general de cada uno de los wikis del watchlist.}
-    \item{Una herramienta capaz de visualizar gráficas sobre propiedades de edición de un wiki.}
+    \item{Una página capaz de visualizar gráficas sobre propiedades de edición de un wiki.}
     \item{Los wikis a visualizar son extraídas del watchlist del usuario autenticado a través de Wikipedia (usando API de MediaWiki).}
     \item{Permitir editar las visualizaciones (alternar tipo de gráfica, cambiar los tipos de datos a visualizar).}
     \item{Los datos a representar en las visualizaciones son proporcionados a través del API Wikimetrics 2.0.}
-    \item{Permitir al usuario crear una visualización nueva y guardarla de forma permanente, para este caso es necesario el uso de una base de datos (preferiblemente MongoDB).}
-    \item{La aplicación tiene que estar alojada en un servidor, para poder ser accedida de manera remota.}
+    \item{Permitir al usuario crear una visualización nueva y guardarla de forma permanente, para este caso es necesario el uso de una base de datos, dado la poca cantidad de ediciones y la escala de datos que se puede llegar a manejar, es aconsejable inclinarse por una base de datos basada en  documentos}
 \end{enumerate}
 
 \section{Prototipo de interfaz}
