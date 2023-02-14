@@ -73,7 +73,7 @@ El tipo de gráficas a utilizar son las siguientes:
     \item History flow.
 \end{itemize}
 
-Para estas gráficas ECharts provee soluciones pre-hechas y si es el caso de gráficos de interés en nichos específicos, como es el caso del History Flow, permite que fácilmente crees gráficas completamente nuevas.
+Para estas gráficas ECharts provee soluciones pre-hechas y si es el caso de gráficos de interés en nichos específicos, como es el caso del History Flow, permite crear gráficas completamente nuevas.
 También provee gráficos de Sankey y Stacked Area Chart que son bastante parecidos y podrían ser personalizados para parecerse al History Flow.
 
 \section{ Proyectos alternos }
@@ -84,3 +84,20 @@ Para facilidad del desarrollo de la aplicación se utilizará una librería que 
 \begin{itemize}
     \item URL del repositorio \href{https://github.com/hustcc/echarts-for-react}{https://github.com/hustcc/echarts-for-react}
 \end{itemize}
+
+\emph{Echarts for React} es un wrapper que permite usar Echarts en conjunto con ReactJS, de forma que se pueda aprovechar los beneficios que provee el framework. Su uso resulta bastante intuitivo ya que consiste en pasar los parámetros para construir la gráfica a un único componente React \emph{ReactECharts} como se muestra a continuación:
+
+\begin{lstlisting}
+    import ReactECharts from 'echarts-for-react';
+    const option={...}
+    <ReactECharts option={option} /> 
+\end{lstlisting}
+
+Donde el parámetro \emph{option} (cuyo contenido fue omitido por simplicidad) provee todas las especificaciones necesarias para crear la gráfica
+
+Además \emph{Echarts for React} ofrece la posibilidad de hacer uso del core de Echarts y de todas las propiedades que este ofrece, tal como la creación de temas, estilos personalizados, \textit{lazy update} \footnote{\textit{Lazy update}: en el contexto de Echarts, \emph{Lazy update} permite actualizar las gráficas de forma asíncrona, ofreciendo mayor control al usuario y gráficas mas optimizadas}
+
+
+
+
+
